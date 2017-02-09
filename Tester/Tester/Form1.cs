@@ -18,10 +18,14 @@ namespace Tester
         public Form1()
         {
             InitializeComponent();
-            System.Diagnostics.Process.GetCurrentProcess().ProcessorAffinity = (System.IntPtr)5;
+
+            //affinity testen
+            System.Diagnostics.Process.GetCurrentProcess().ProcessorAffinity = (System.IntPtr)4;
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
         }
-
+        /**
+         * Test voor de timer
+         */
         private void button1_Click(object sender, EventArgs e)
         {
             GC.Collect();

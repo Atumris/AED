@@ -11,7 +11,7 @@ namespace MainDLL
         private long start;
         private long stop;
         private long frequency;
-        Decimal multiplier = new Decimal(1.0e6);
+        Decimal multiplier = new Decimal(1.0e6); //time in miliseconds
 
         [DllImport("KERNEL32")]
         private static extern bool QueryPerformanceCounter(out long lpPerformanceCount);
@@ -44,8 +44,7 @@ namespace MainDLL
 
         public double Duration(int iterations)
         {
-            var time = ((((double) (stop - start)*(double) multiplier)/(double) frequency)/iterations);
-            return time ;
+            return ((((double) (stop - start)*(double) multiplier)/(double) frequency)/iterations);
         }
     }
 }
