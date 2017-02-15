@@ -40,12 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="H02\ArrayList.cs" />
     <Compile Include="QueryPerformance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="H01\" />
-    <Folder Include="H02\" />
     <Folder Include="H03\" />
     <Folder Include="H04\" />
     <Folder Include="H05\" />
