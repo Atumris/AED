@@ -102,6 +102,11 @@ namespace MainDLL.H02
             return equals;
         }
 
+        public int Lenght()
+        {
+            return size;
+        }
+
 
     }
 }
