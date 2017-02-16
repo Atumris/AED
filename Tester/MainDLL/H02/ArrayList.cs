@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MainDLL.H02
 {
-    class ArrayList <T> where T : IComparable
+    class ArrayList <T> where T : IComparable, IEnumerable<T>
     {
         private T[] array;
         private int size;
@@ -104,6 +104,10 @@ namespace MainDLL.H02
             return equals;
         }
 
+        /// <summary>
+        /// Returns lenght of the ArrayList
+        /// </summary>
+        /// <returns>int lenght</returns>
         public int Lenght()
         {
             return size;
