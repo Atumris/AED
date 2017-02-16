@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="H03\BubbleSort.cs" />
+    <Compile Include="H03\InsertionSort.cs" />
+    <Compile Include="H03\SmartBubbleSort.cs" />
     <Compile Include="H04\MinMax.cs" />
     <Compile Include="QueryPerformance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -47,7 +50,6 @@
   <ItemGroup>
     <Folder Include="H01\" />
     <Folder Include="H02\" />
-    <Folder Include="H03\" />
     <Folder Include="H05\" />
     <Folder Include="H06\" />
     <Folder Include="H07\" />
