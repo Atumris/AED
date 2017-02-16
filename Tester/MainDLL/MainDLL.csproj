@@ -44,6 +44,7 @@
     <Compile Include="H03\InsertionSort.cs" />
     <Compile Include="H03\SmartBubbleSort.cs" />
     <Compile Include="H04\MinMax.cs" />
+    <Compile Include="H04\SequenTialSearch.cs" />
     <Compile Include="QueryPerformance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
