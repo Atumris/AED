@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MainDLL.H02
 {
-    class ArrayList <T> where T : IComparable, IEnumerable<T>
+    class ArrayList <T> where T : IComparable
     {
         private T[] array;
         private int size;
