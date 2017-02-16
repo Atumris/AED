@@ -1,10 +1,12 @@
 ﻿using MainDLL;
 using System;
+using System.Collections;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using MainDLL.H04;
+using MainDLL.H02;
 namespace Tester
 {
     public partial class Form1 : Form
@@ -15,13 +17,27 @@ namespace Tester
         {
             InitializeComponent();
 
+            
+            ArrayList<int> arr = new ArrayList<int>();
+
             //affinity testen
             System.Diagnostics.Process.GetCurrentProcess().ProcessorAffinity = (System.IntPtr)2;
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
 
+            arr.Add(8);
+            arr.Add(5);
+            arr.Add(9);
+            arr.Add(20);
+            arr.Add(55);
+            arr.Add(30919785);
+            arr.Add(1);
+            arr.Add(2);
+            arr.Add(3);
+            //arr = {8, 5, 9, 20, 55, 30919785, 1, 2, 3};
+            MinMax<ArrayList> minMax = new MinMax<ArrayList>();
 
-            int[] arr = {0, 1, 2, 3, 4, 5};
-            CheckMax  
+            Console.WriteLine(minMax.CheckMax(arr));
+            Console.WriteLine(minMax.CheckMin(arr));
         }
         /**
          * Test voor de timer

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace MainDLL.H04
 {
-    class MinMax<T> where T : IComparable
+    public class MinMax<T> where T : IComparable
     {
 
-        private T CheckMax<T>(params T[] values) where T : IComparable<T>
+        public T CheckMax(params T[] values)
         {
             T max = values[0];
             for (int i = 1; i < values.Length; i++)
@@ -14,7 +14,7 @@ namespace MainDLL.H04
             return max;
         }
 
-        private T Min<T>(params T[] values) where T : IComparable<T>
+        public T CheckMin(params T[] values)
         {
             T min = values[0];
             for (int i = 1; i < values.Length; i++)
