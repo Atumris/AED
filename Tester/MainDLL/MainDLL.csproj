@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="H04\MinMax.cs" />
     <Compile Include="QueryPerformance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -47,7 +48,6 @@
     <Folder Include="H01\" />
     <Folder Include="H02\" />
     <Folder Include="H03\" />
-    <Folder Include="H04\" />
     <Folder Include="H05\" />
     <Folder Include="H06\" />
     <Folder Include="H07\" />
