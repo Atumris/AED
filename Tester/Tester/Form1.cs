@@ -1,9 +1,10 @@
 ﻿using MainDLL;
 using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-
+using MainDLL.H04;
 namespace Tester
 {
     public partial class Form1 : Form
@@ -17,6 +18,10 @@ namespace Tester
             //affinity testen
             System.Diagnostics.Process.GetCurrentProcess().ProcessorAffinity = (System.IntPtr)2;
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
+
+
+            int[] arr = {0, 1, 2, 3, 4, 5};
+            CheckMax  
         }
         /**
          * Test voor de timer

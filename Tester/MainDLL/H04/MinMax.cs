@@ -6,19 +6,38 @@ namespace MainDLL.H04
     class MinMax<T> where T : IComparable
     {
 
+        private T CheckMax<T>(params T[] values) where T : IComparable<T>
+        {
+            T max = values[0];
+            for (int i = 1; i < values.Length; i++)
+                if (values[i].CompareTo(max) > 0) max = values[i];
+            return max;
+        }
+
+        private T Min<T>(params T[] values) where T : IComparable<T>
+        {
+            T min = values[0];
+            for (int i = 1; i < values.Length; i++)
+                if (values[i].CompareTo(min) < 0) min = values[i];
+            return min;
+        }
+
         /// <summary>
         /// Finds the lowest value in an array.
         /// </summary>
         /// <param name="arr">Int array for the function</param>
         /// <returns>min</returns>
-        private T FindMin(T[] arr)
+        private int FindMin(int[] arr)
         {
-            var min = arr[0];
-            for (int i = 0; i < arr.Length - 1; i++)
-                if (arr[i] < min)
-                    min = arr[i];
-            return min;
+                int min = arr[0];
+                for (int i = 0; i < arr.Length - 1; i++)
+                    if (arr[i] < min)
+                        min = arr[i];
+                return min;
         }
+
+
+
 
         /// <summary>
         /// Finds the highest value in an array
