@@ -11,6 +11,8 @@ namespace MainDLL.H02
         private T[] array;
         private int size;
 
+        public int Length { get; internal set; }
+
         /// <summary>
         /// Takes all preperations for a functional arraylist
         /// </summary>

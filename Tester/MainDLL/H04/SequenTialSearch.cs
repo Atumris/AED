@@ -9,11 +9,14 @@ namespace MainDLL.H04
 {
     class SequenTialSearch <T> where T : IComparable
     {
-        ArrayList<T> asdf = new ArrayList<T>();
-        static bool SeqSearch(T[] arr, int sValue)
+        static bool SeqSearch(ArrayList<T> arr, int sValue)
         {
+            foreach(T value in arr)
+            {
+
+            }
             for (int index = 0; index < arr.Length - 1; index++)
-                if (T[index] == sValue)
+                if (arr[index] == sValue)
                     return true;
             return false;
         }
