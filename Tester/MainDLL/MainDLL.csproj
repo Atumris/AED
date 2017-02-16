@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="H02\ArrayList.cs" />
+    <Compile Include="H03\BubbleSort.cs" />
     <Compile Include="H03\InsertionSort.cs" />
+    <Compile Include="H03\SmartBubbleSort.cs" />
     <Compile Include="QueryPerformance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

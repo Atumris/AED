@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MainDLL.H03
 {
-    class InsertionSort<X> where X : IComparable
+    class InsertionSort<T> where T : IComparable
     {
-        private X[] array;
+        private T[] array;
 
         /// <summary>
         /// Method that performs an Insertion Sort on the input array X
@@ -16,7 +16,7 @@ namespace MainDLL.H03
         /// <param name="inputarray"></param>
         /// <param name="comparer"></param>
         /// <returns></returns>
-        public static X[] PerformInsertionSort(X[] inputarray)
+        public static T[] PerformInsertionSort(T[] inputarray)
         {
             // start looping the array from first item
             for (var i = 0; i < inputarray.Length - 1; i++)
