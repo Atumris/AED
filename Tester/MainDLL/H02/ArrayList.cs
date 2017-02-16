@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MainDLL.H02
 {
-    class ArrayList <X> where X : IComparable
+    class ArrayList <T> where T : IComparable
     {
-        private X[] array;
+        private T[] array;
         private int size;
 
         /// <summary>
@@ -19,21 +19,21 @@ namespace MainDLL.H02
             //size of 0, start of the array
             size = 0;
             //New generic array
-            array = new X[size];
+            array = new T[size];
         }
 
         /// <summary>
         /// Add item to the internal array
         /// </summary>
-        /// <param name="val">The item X[]</param>
-        public void Add(X val)
+        /// <param name="val">The item T[]</param>
+        public void Add(T val)
         {
             //Make copy of array
-            X[] overloadArray = array;
+            T[] overloadArray = array;
             //Increment size of array
             size++;
             //Make new array with new size
-            array = new X[size];
+            array = new T[size];
             //Copy old array to new array
             overloadArray.CopyTo(array, 0);
             //Put value in place
@@ -46,7 +46,7 @@ namespace MainDLL.H02
         public void Clear()
         {
             //Makes new array with a size of 0
-            array = new X[0];
+            array = new T[0];
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace MainDLL.H02
         /// </summary>
         /// <param name="val">Target array</param>
         /// <returns>Copied array</returns>
-        public X[] CopyTo(X[] val)
+        public T[] CopyTo(T[] val)
         {
             //Internal array gets coppied to supplied array
             val = array;
@@ -65,17 +65,18 @@ namespace MainDLL.H02
         /// <summary>
         /// Check if array contains given value
         /// </summary>
-        /// <param name="val">X val, value to check if array contains</param>
+        /// <param name="val">T val, value to check if array contains</param>
         /// <returns>Boolean true for contains or false when it does not contain</returns>
-        public Boolean Contains(X val)
+        /*
+         * Opsplitsen wanneer array groot is.
+         */
+        public Boolean Contains(T val)
         {
             //Boolean if it contains or not, init on false.
             bool contains = false;
             //While contains is false, look for a value
-            while (contains == false)
-            {
                 //Go through internal array to look for a value
-                foreach (X value in array)
+                foreach (T value in array)
                 {
                     //Compare value to given parameter
                     if (value.Equals(val))
@@ -84,12 +85,23 @@ namespace MainDLL.H02
                         contains = true;
                     }
                 }
-                //If not found, return this
+                //Return if the contains
                 return contains;
-            }
-            //If found, return this
-            return contains;
         }
+
+        /// <summary>
+        /// Checks if given array is equal to internal array
+        /// </summary>
+        /// <param name="val">Array to check if equal</param>
+        /// <returns>Bool if equal = true</returns>
+        public bool Equals(T[] val)
+        {
+            //Set the value of the boolean
+            bool equals = val.Equals(array);
+            //Returns the boolean
+            return equals;
+        }
+
 
     }
 }
