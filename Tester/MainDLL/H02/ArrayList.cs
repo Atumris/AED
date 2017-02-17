@@ -114,10 +114,38 @@ namespace MainDLL.H02
             return size;
         }
 
+
+        /// <summary>
+        /// Returns the internal array
+        /// </summary>
+        /// <returns>Array</returns>
         public T[] ToArray()
         {
             return array;
         }
+
+        /// <summary>
+        /// Adds multiple values from input array to internal array
+        /// </summary>
+        /// <param name="value">Array with values to add</param>
+        public void Add(T[] value)
+        {
+            foreach (var var in value)
+            {
+                //Make copy of array
+                T[] overloadArray = array;
+                //Increment size of array
+                size++;
+                //Make new array with new size
+                array = new T[size];
+                //Copy old array to new array
+                overloadArray.CopyTo(array, 0);
+                //Put value in place
+                array[size - 1] = var;
+            }
+        }
+
+
 
     }
 }
