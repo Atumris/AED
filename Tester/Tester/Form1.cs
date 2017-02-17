@@ -34,10 +34,10 @@ namespace Tester
             arr.Add(2);
             arr.Add(3);
             //arr = {8, 5, 9, 20, 55, 30919785, 1, 2, 3};
-            MinMax<ArrayList> minMax = new MinMax<ArrayList>();
+            MinMax<int> minMax = new MinMax<int>();
 
-            Console.WriteLine(minMax.CheckMax(arr));
-            Console.WriteLine(minMax.CheckMin(arr));
+            Console.WriteLine(minMax.Max(arr.ToArray()));
+            Console.WriteLine(minMax.Min(arr.ToArray()));
         }
         /**
          * Test voor de timer
