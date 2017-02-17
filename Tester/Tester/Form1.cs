@@ -21,7 +21,7 @@ namespace Tester
             ArrayList<int> arr = new ArrayList<int>();
 
             //affinity testen
-            System.Diagnostics.Process.GetCurrentProcess().ProcessorAffinity = (System.IntPtr)2;
+            Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)2;
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
 
             arr.Add(8);
@@ -36,8 +36,12 @@ namespace Tester
             //arr = {8, 5, 9, 20, 55, 30919785, 1, 2, 3};
             MinMax<int> minMax = new MinMax<int>();
 
+            //test minmax functions
             Console.WriteLine(minMax.Max(arr.ToArray()));
             Console.WriteLine(minMax.Min(arr.ToArray()));
+
+            int[] findMinMax = minMax.FindMinMax(arr.ToArray());
+            Console.WriteLine(findMinMax[0] + " " + findMinMax[1]);
         }
         /**
          * Test voor de timer

@@ -1,13 +1,9 @@
 ﻿using System;
-using MainDLL.H02;
 
 namespace MainDLL.H04
 {
     public class MinMax<T> where T : IComparable
     {
-
-
-
         /// <summary>
         /// Finds the highest value in an array
         /// </summary>
@@ -15,9 +11,18 @@ namespace MainDLL.H04
         /// <returns>max</returns>
         public T Max(T[] values)
         {
-            T max = values[0]; //veranderen zonder getter
+            //get first value of the array
+            T max = values[0];
+
+            //loop trough the array to find highest value where i = index
             for (int i = 1; i < values.Length; i++)
-                if (values[i].CompareTo(max) > 0) max = values[i];
+            {
+                //Check if values[index] is more then max and overwrite
+                if (values[i].CompareTo(max) > 0)
+                {
+                    max = values[i];
+                }
+            }
             return max;
         }
 
@@ -28,9 +33,18 @@ namespace MainDLL.H04
         /// <returns>min</returns>
         public T Min(T[] values)
         {
+            //get first value of the array
             T min = values[0];
+
+            //loop trough the array to find lowest value where i = index
             for (int i = 1; i < values.Length; i++)
-                if (values[i].CompareTo(min) < 0) min = values[i];
+            {
+                //Check if values[index] is less then min and overwrite
+                if (values[i].CompareTo(min) < 0)
+                {
+                    min = values[i];
+                }
+            }
             return min;
         }
         
@@ -40,11 +54,13 @@ namespace MainDLL.H04
         /// </summary>
         /// <param name="arr">An array of generic T</param>
         /// <returns>minmax an array wich contain lowest and highest values</returns>
-        private T[] FindMinMax(T[] arr)
+        public T[] FindMinMax(T[] arr)
         {
+            //runs trough functions Min() and Max()
             T min = Min(arr);
             T max = Max(arr);
 
+            //Make the array and returns it
             T[] minmax = {min, max};
 
             return minmax;
