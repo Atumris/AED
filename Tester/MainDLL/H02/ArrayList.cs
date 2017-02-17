@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MainDLL.H02
 {
-    public class ArrayList <T> where T : IComparable
+    public class ArrayList <T> where T : IComparable, IEnumerator
     {
         private T[] array;
         private int size;
