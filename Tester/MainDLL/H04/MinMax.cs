@@ -23,6 +23,7 @@ namespace MainDLL.H04
                     max = values[i];
                 }
             }
+            //return highest value of the ArrayList
             return max;
         }
 
@@ -45,6 +46,7 @@ namespace MainDLL.H04
                     min = values[i];
                 }
             }
+            //return lowest value of the ArrayList
             return min;
         }
         
