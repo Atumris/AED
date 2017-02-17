@@ -114,7 +114,10 @@ namespace MainDLL.H02
             return size;
         }
 
-
+        public T[] ToArray()
+        {
+            return array;
+        }
 
     }
 }
