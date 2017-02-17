@@ -59,6 +59,8 @@ namespace MainDLL.H02
         /// <returns>Copied array</returns>
         public T[] CopyTo(T[] val)
         {
+            /*Aanpassing nodig
+             */
             //Internal array gets coppied to supplied array
             val = array;
             //Return spupplied array
