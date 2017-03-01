@@ -72,7 +72,7 @@ namespace MainDLL.H03
             }
             return arr;
         }
-        static void Swap<T>(ref T lhs, ref T rhs)
+        static void Swap(ref T lhs, ref T rhs)
         {
             var temp = lhs;
             lhs = rhs;
