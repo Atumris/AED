@@ -1,12 +1,11 @@
 ﻿using MainDLL;
 using System;
-using System.Collections;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using MainDLL.H04;
 using MainDLL.H02;
+using MainDLL.H03;
 namespace Tester
 {
     public partial class Form1 : Form
@@ -35,13 +34,32 @@ namespace Tester
             arr.Add(3);
             //arr = {8, 5, 9, 20, 55, 30919785, 1, 2, 3};
             MinMax<int> minMax = new MinMax<int>();
+            BubbleSort<int> bubble = new BubbleSort<int>();
+            // seq
 
             //test minmax functions
             Console.WriteLine(minMax.Max(arr.ToArray()));
             Console.WriteLine(minMax.Min(arr.ToArray()));
 
+
             int[] findMinMax = minMax.FindMinMax(arr.ToArray());
             Console.WriteLine(findMinMax[0] + " " + findMinMax[1]);
+
+
+            //test bubblesort
+            Console.WriteLine(@"Without bubblesort");
+            foreach (var ar in arr.ToArray())
+            {
+                Console.WriteLine(ar);
+            }
+
+            Console.WriteLine(@"With bubblesort");
+            int[] bubblearr = bubble.Bubble(arr.ToArray());
+
+            foreach (var ar in bubblearr)
+            {
+                Console.WriteLine(ar);
+            }
         }
         /**
          * Test voor de timer
@@ -83,6 +101,11 @@ namespace Tester
             QPC.Stop();
             ////Thread.EndThreadAffinity();
             Console.WriteLine(QPC.Duration(1) + " ms");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

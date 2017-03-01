@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MainDLL.H03
 {
-    class BubbleSortt<T> where T : IComparable
+    public class BubbleSort<T> where T : IComparable
     {
         private T[] array;
 
@@ -15,21 +11,19 @@ namespace MainDLL.H03
         /// </summary>
         /// <param name="inputarray"></param>
         /// <returns name="inputarray"></returns>
-        public static T[] PerformBubbleSort(T[] inputarray)
+        public T[] PerformBubbleSort(T[] inputarray)
         {
-            //int containing the lenght of inputarray
-            int lenght = inputarray.Length;
             //int to temporarily store data
             T temp = inputarray[0];
 
             //loop trough the lenght of the array
-            for (int i = 0; i < lenght; i++)
+            for (int i = 0; i < inputarray.Length; i++)
             {
                 //loop trough the array from index one
-                for (int j = i+1; j < lenght; j++)
+                for (int j = 0; j < inputarray.Length - 1; j++)
                 {
                     //compare inputarray element to the next element in array
-                    if (inputarray[i].CompareTo(inputarray[i + 1]) > 0)
+                    if (inputarray[j].CompareTo(inputarray[i + 1]) > 0)
                     {
                         //store the data in a temporary array
                         temp = inputarray[i];
@@ -41,6 +35,31 @@ namespace MainDLL.H03
                 }
               //return sorted array.
             } return inputarray; 
+        }
+
+        /// <summary>
+        /// Bubblesort sorts the array with lowest value first
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
+        public T[] Bubble(T[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = 0; j < arr.Length - 1; j++)
+                {
+                    if (arr[j].CompareTo(arr[j + 1]) > 0)
+                        Swap(ref arr[j], ref arr[j + 1]);
+                }
+            }
+            return arr;
+        }
+
+        static void Swap<T>(ref T lhs, ref T rhs)
+        {
+            var temp = lhs;
+            lhs = rhs;
+            rhs = temp;
         }
     }
 }

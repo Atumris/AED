@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MainDLL.H03
 {
-    class SmartBubbleSortt<T> where T : IComparable
+    class SmartBubbleSort<T> where T : IComparable
     {
         private T[] array;
 
@@ -28,7 +24,7 @@ namespace MainDLL.H03
                 //set the state of the local variable to true to stop the loop in case the array is already sorted.
                 isSorted = true;
                 //loop trough the array length
-                for (int i = 0; i < inputarray.Length -1; i++)
+                for (int i = 0; i < inputarray.Length - 1; i++)
                 {
                     //check if the inputarray is already sorted or not.
                     if (inputarray[i].CompareTo(inputarray[i + 1]) > 0)
@@ -46,6 +42,41 @@ namespace MainDLL.H03
             }
             //return inputarray.
             return inputarray;
+        }
+
+        /// <summary>
+        /// Bubblesort sorts the array with lowest value first
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
+        public T[] SmartBubble(T[] arr)
+        {
+            bool isSorted = false;
+
+            //loop while the list is not sorted
+            while (!isSorted)
+            {
+                //set the state of the local variable to true to stop the loop in case the array is already sorted.
+                isSorted = true;
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    for (int j = 0; j < arr.Length - 1; j++)
+                    {
+                        if (arr[j].CompareTo(arr[j + 1]) > 0)
+                        {
+                            Swap(ref arr[j], ref arr[j + 1]);
+                            isSorted = false;
+                        }
+                    }
+                }
+            }
+            return arr;
+        }
+        static void Swap<T>(ref T lhs, ref T rhs)
+        {
+            var temp = lhs;
+            lhs = rhs;
+            rhs = temp;
         }
     }
 }
