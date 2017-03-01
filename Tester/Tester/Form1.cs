@@ -6,6 +6,8 @@ using System.Windows.Forms;
 using MainDLL.H04;
 using MainDLL.H02;
 using MainDLL.H03;
+using MainDLL.H05;
+
 namespace Tester
 {
     public partial class Form1 : Form
@@ -32,12 +34,12 @@ namespace Tester
             arr.Add(1);
             arr.Add(2);
             arr.Add(3);
-            //arr = {8, 5, 9, 20, 55, 30919785, 1, 2, 3};
-            MinMax<int> minMax = new MinMax<int>();
-            BubbleSort<int> bubble = new BubbleSort<int>();
+            //arr = {8, 5, 9, 20, 55, 30919785, 1, 2, 3};   
             // seq
 
             //test minmax functions
+            MinMax<int> minMax = new MinMax<int>();
+
             Console.WriteLine(minMax.Max(arr.ToArray()));
             Console.WriteLine(minMax.Min(arr.ToArray()));
 
@@ -47,6 +49,7 @@ namespace Tester
 
 
             //test bubblesort
+            BubbleSort<int> bubble = new BubbleSort<int>();
             Console.WriteLine(@"Without bubblesort");
             foreach (var ar in arr.ToArray())
             {
@@ -59,6 +62,43 @@ namespace Tester
             foreach (var ar in bubblearr)
             {
                 Console.WriteLine(ar);
+            }
+
+            //Queue test
+            Console.WriteLine(@"==========================");
+            Console.WriteLine(@"Queue Test");
+            Console.WriteLine(@"==========================");
+            Console.WriteLine();
+
+            Queue<String> que = new Queue<String>();
+
+            que.EnQueue("If it work correct the next test will say: I am blue");
+            que.EnQueue("I am blue");
+
+            Console.WriteLine(@"==========================");
+            Console.WriteLine(@"Test Peek and Dequeue");
+            Console.WriteLine(@"==========================");
+            Console.WriteLine(que.Peek());
+            Console.WriteLine();
+            que.DeQueue();
+
+            Console.WriteLine(@"==========================");
+            Console.WriteLine(@"Test Peek 2");
+            Console.WriteLine(@"==========================");
+            Console.WriteLine(que.Peek());
+            Console.WriteLine();
+
+            Console.WriteLine(@"==========================");
+            Console.WriteLine(@"Test Clear Queue");
+            Console.WriteLine(@"==========================");
+            que.ClearQueue();
+            if (que.Length() == 0)
+            {
+                Console.WriteLine(@"Que is cleared");
+            }
+            else
+            {
+                Console.WriteLine(@"Clear failed");
             }
         }
         /**

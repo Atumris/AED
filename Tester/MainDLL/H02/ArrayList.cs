@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MainDLL.H02
 {
@@ -147,7 +143,17 @@ namespace MainDLL.H02
             }
         }
 
-
-
+        /// <summary>
+        /// RemoveAt is a function to remove entry at given index number.
+        /// </summary>
+        /// <param name="i">index number</param>
+        public void RemoveAt(int i)
+        {
+            if (i > array.Length)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            array = array.Skip(i + 1).ToArray();
+        }
     }
 }

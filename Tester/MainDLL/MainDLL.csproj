@@ -46,12 +46,12 @@
     <Compile Include="H03\SmartBubbleSort.cs" />
     <Compile Include="H04\MinMax.cs" />
     <Compile Include="H04\SequenTialSearch.cs" />
+    <Compile Include="H05\Queue.cs" />
     <Compile Include="QueryPerformance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="H01\" />
-    <Folder Include="H05\" />
     <Folder Include="H06\" />
     <Folder Include="H07\" />
     <Folder Include="H08\" />
