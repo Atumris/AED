@@ -52,15 +52,16 @@ namespace MainDLL.Sort
         public T[] SmartBubble(T[] arr)
         {
             bool isSorted = false;
+            int length = arr.Length;
 
             //loop while the list is not sorted
             while (!isSorted)
             {
                 //set the state of the local variable to true to stop the loop in case the array is already sorted.
                 isSorted = true;
-                for (int i = 0; i < arr.Length; i++)
+                for (int i = 0; i < length; i++)
                 {
-                    for (int j = 0; j < arr.Length - 1; j++)
+                    for (int j = 0; j < length - 1; j++)
                     {
                         if (arr[j].CompareTo(arr[j + 1]) > 0)
                         {

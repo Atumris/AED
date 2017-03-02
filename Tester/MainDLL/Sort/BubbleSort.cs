@@ -44,9 +44,11 @@ namespace MainDLL.Sort
         /// <returns></returns>
         public T[] Bubble(T[] arr)
         {
-            for (int i = 0; i < arr.Length; i++)
+            int length = arr.Length;
+
+            for (int i = 0; i < length; i++)
             {
-                for (int j = 0; j < arr.Length - 1; j++)
+                for (int j = 0; j < length - 1; j++)
                 {
                     if (arr[j].CompareTo(arr[j + 1]) > 0)
                         Swap(ref arr[j], ref arr[j + 1]);
