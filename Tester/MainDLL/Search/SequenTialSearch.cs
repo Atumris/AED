@@ -6,9 +6,11 @@ namespace MainDLL.Search
     {
         static bool SeqSearch(T[] arr, T sValue)
         {
-            for (int index = 0; index < arr.Length - 1; index++)
-                if (arr[index].CompareTo(sValue) == 1)
+            int arrLength = arr.Length - 1;
+            for (int index = 0; index < arrLength; index++)
+                if (arr[index].CompareTo(sValue) == 1) { 
                     return true;
+                }
             return false;
         }
     }
