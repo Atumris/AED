@@ -1,37 +1,36 @@
 ﻿using System;
-using MainDLL.H02;
 
-namespace MainDLL.H05
+namespace MainDLL.Collection
 {
     public class Queue<T> where T : IComparable
     {
-        private ArrayList<T> queue;
+        private readonly ArrayList<T> _queue;
 
         public Queue()
         {
-            queue = new ArrayList<T>();
+            _queue = new ArrayList<T>();
         }
 
         public void EnQueue(T item)
-        {
-            queue.Add(item);
+        { 
+            _queue.Add(item);
         }
         public void DeQueue()
         {
-            queue.RemoveAt(0);
+            _queue.RemoveAt(0);
         }
         public T Peek()
         {
-                return queue.ToArray()[0];
+            return _queue.ToArray()[0];
         }
         public void ClearQueue()
         {
-            queue.Clear();
+            _queue.Clear();
         }
 
         public int Length()
         {
-            return queue.Length;
+            return _queue.Length;
         }
     }
 }

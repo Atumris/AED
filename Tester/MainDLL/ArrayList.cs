@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace MainDLL.H02
+namespace MainDLL
 {
     public class ArrayList <T> where T : IComparable
     {

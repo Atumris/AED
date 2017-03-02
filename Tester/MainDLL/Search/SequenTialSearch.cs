@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MainDLL.H02;
 
-namespace MainDLL.H04
+namespace MainDLL.Search
 {
     class SequenTialSearch <T> where T : IComparable
     {

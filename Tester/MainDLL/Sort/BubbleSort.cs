@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MainDLL.H03
+namespace MainDLL.Sort
 {
     public class BubbleSort<T> where T : IComparable
     {

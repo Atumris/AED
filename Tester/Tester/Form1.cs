@@ -1,12 +1,10 @@
-﻿using MainDLL;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
-using MainDLL.H04;
-using MainDLL.H02;
-using MainDLL.H03;
-using MainDLL.H05;
+using MainDLL;
+using MainDLL.Collection;
+using MainDLL.Sort;
 
 namespace Tester
 {

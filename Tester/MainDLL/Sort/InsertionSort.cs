@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MainDLL.H03
+namespace MainDLL.Sort
 {
     class InsertionSort<T> where T : IComparable
     {

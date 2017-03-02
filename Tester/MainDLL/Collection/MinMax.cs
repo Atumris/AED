@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MainDLL.H04
+namespace MainDLL.Collection
 {
     public class MinMax<T> where T : IComparable
     {

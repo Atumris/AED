@@ -40,26 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="H02\ArrayList.cs" />
-    <Compile Include="H03\BubbleSort.cs" />
-    <Compile Include="H03\InsertionSort.cs" />
-    <Compile Include="H03\SmartBubbleSort.cs" />
-    <Compile Include="H04\MinMax.cs" />
-    <Compile Include="H04\SequenTialSearch.cs" />
-    <Compile Include="H05\Queue.cs" />
+    <Compile Include="ArrayList.cs" />
+    <Compile Include="Sort\BubbleSort.cs" />
+    <Compile Include="Sort\InsertionSort.cs" />
+    <Compile Include="Sort\SmartBubbleSort.cs" />
+    <Compile Include="Collection\MinMax.cs" />
+    <Compile Include="Search\SequenTialSearch.cs" />
+    <Compile Include="Collection\Queue.cs" />
     <Compile Include="QueryPerformance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="H01\" />
-    <Folder Include="H06\" />
-    <Folder Include="H07\" />
-    <Folder Include="H08\" />
-    <Folder Include="H09\" />
-    <Folder Include="H10\" />
-    <Folder Include="H11\" />
-    <Folder Include="H12\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
