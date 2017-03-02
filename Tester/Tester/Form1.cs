@@ -163,5 +163,14 @@ namespace Tester
             QPC.Start();
             MessageBox.Show(QPC.Duration(1).ToString());
         }
+
+        //Priority queue test
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PriorityQueue<int> test = new PriorityQueue<int>();
+            test.EnQueue(0, 1);
+            test.EnQueue(0, 2);
+            Console.WriteLine(test.Peek());
+        }
     }
 }

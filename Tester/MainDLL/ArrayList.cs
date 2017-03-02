@@ -149,11 +149,53 @@ namespace MainDLL
         /// <param name="i">index number</param>
         public void RemoveAt(int i)
         {
+            //Check if index is out of range
             if (i < 0 || i > array.Length - 1)
             {
+                //Throw exception if index is out of range
                 throw new IndexOutOfRangeException("index");
             }
+            //Remove item at correct point
             array = array.Skip(i + 1).ToArray();
+        }
+        /// <summary>
+        /// Insert item at given index
+        /// </summary>
+        /// <param name="newItem">The item to add</param>
+        /// <param name="index">The index where the item should go</param>
+        public void Insert(T newItem, int index)
+        {
+            //Check if there are items in the array, if not, just add the item
+            if (Length == 0)
+            {
+                Add(newItem);
+            }
+            else
+            {
+                //Convert value to right index value
+                index = index - 1;
+                //Take items from array to seperate array till desired index
+                T[] arr1 = array.Take(index).ToArray();
+                //Take items from array to seperate array from desired index
+                T[] arr2 = array.Skip(index + 1).Take(Length - index).ToArray();
+                //Clear array
+                Clear();
+                //Add first part to the array
+                foreach (var item in arr1)
+                {
+                    Add(item);
+                }
+                //Add the new item to the array
+                Add(newItem);
+                //Add last part to the array
+                if (arr2.Length != 0)
+                {
+                    foreach (var item in arr2)
+                    {
+                        Add(item);
+                    }
+                }
+            }
         }
     }
 }
