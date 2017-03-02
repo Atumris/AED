@@ -9,7 +9,7 @@ namespace MainDLL
         private long start;
         private long stop;
         private long frequency;
-        Decimal multiplier = new Decimal(1.0e6); //time in miliseconds
+        Decimal multiplier = new Decimal(1.0e9);
 
         [DllImport("KERNEL32")]
         private static extern bool QueryPerformanceCounter(out long lpPerformanceCount);

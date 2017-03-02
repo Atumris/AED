@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace MainDLL
 {
-    public class ArrayList <T> where T : IComparable
+    public class ArrayList <T>
     {
         private T[] array;
         private int size;
@@ -149,9 +149,9 @@ namespace MainDLL
         /// <param name="i">index number</param>
         public void RemoveAt(int i)
         {
-            if (i > array.Length)
+            if (i < 0 || i > array.Length - 1)
             {
-                throw new IndexOutOfRangeException();
+                throw new IndexOutOfRangeException("index");
             }
             array = array.Skip(i + 1).ToArray();
         }

@@ -15,10 +15,12 @@ namespace MainDLL.Collection
         { 
             _queue.Add(item);
         }
+
         public void DeQueue()
         {
             _queue.RemoveAt(0);
         }
+
         public T Peek()
         {
             return _queue.ToArray()[0];

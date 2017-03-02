@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
+using System.Xml.Schema;
 using MainDLL;
 using MainDLL.Collection;
 using MainDLL.Sort;
@@ -18,6 +19,7 @@ namespace Tester
 
             
             ArrayList<int> arr = new ArrayList<int>();
+            
 
             //affinity testen
             Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)2;
@@ -120,14 +122,15 @@ namespace Tester
                 Console.WriteLine(QPC.Duration(1) + " ms");
             }
         }
-
+        QueryPerformance QPC = new QueryPerformance();
+        
         private void button2_Click(object sender, EventArgs e)
         {
             GC.Collect();
             GC.WaitForPendingFinalizers();
 
 
-            QueryPerformance QPC = new QueryPerformance();
+            
             Thread thread = new Thread(QPC.Start);
             thread.Priority = ThreadPriority.Highest;
 
@@ -140,10 +143,25 @@ namespace Tester
             ////Thread.EndThreadAffinity();
             Console.WriteLine(QPC.Duration(1) + " ms");
         }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
+            ArrayList<int> arr = new ArrayList<int>();
+            for (int i = 0; i < 1000; i++)
+            {
+                arr.Add(i);
+            }
 
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            QPC.Start();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr.RemoveAt(i);
+            }
+            QPC.Start();
+            MessageBox.Show(QPC.Duration(1).ToString());
         }
     }
 }
