@@ -8,8 +8,6 @@ namespace MainDLL
         private T[] array;
         private int size;
 
-        public int Length { get; internal set; }
-
         /// <summary>
         /// Takes all preperations for a functional arraylist
         /// </summary>
@@ -104,10 +102,10 @@ namespace MainDLL
         }
 
         /// <summary>
-        /// Returns lenght of the ArrayList
+        /// Returns length of the ArrayList
         /// </summary>
-        /// <returns>int lenght</returns>
-        public int Lenght()
+        /// <returns>int length</returns>
+        public int Length()
         {
             return size;
         }
@@ -166,7 +164,7 @@ namespace MainDLL
         public void Insert(T newItem, int index)
         {
             //Check if there are items in the array, if not, just add the item
-            if (Length == 0)
+            if (size == 0)
             {
                 Add(newItem);
             }
@@ -177,7 +175,7 @@ namespace MainDLL
                 //Take items from array to seperate array till desired index
                 T[] arr1 = array.Take(index).ToArray();
                 //Take items from array to seperate array from desired index
-                T[] arr2 = array.Skip(index + 1).Take(Length - index).ToArray();
+                T[] arr2 = array.Skip(index + 1).Take(size - index).ToArray();
                 //Clear array
                 Clear();
                 //Add first part to the array
