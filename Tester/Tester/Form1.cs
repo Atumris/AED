@@ -19,9 +19,9 @@ namespace Tester
         {
             InitializeComponent();
 
-            
+
             ArrayList<int> arr = new ArrayList<int>();
-            
+
 
             //affinity testen
             Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)2;
@@ -113,7 +113,7 @@ namespace Tester
 
 
             QueryPerformance QPC = new QueryPerformance();
-            
+
 
             lock (_object)
             {
@@ -125,14 +125,14 @@ namespace Tester
             }
         }
         QueryPerformance QPC = new QueryPerformance();
-        
+
         private void button2_Click(object sender, EventArgs e)
         {
             GC.Collect();
             GC.WaitForPendingFinalizers();
 
 
-            
+
             Thread thread = new Thread(QPC.Start);
             thread.Priority = ThreadPriority.Highest;
 
@@ -145,7 +145,7 @@ namespace Tester
             ////Thread.EndThreadAffinity();
             Console.WriteLine(QPC.Duration(1) + " ms");
         }
-        
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -169,20 +169,38 @@ namespace Tester
         //Priority queue test
         private void button4_Click(object sender, EventArgs e)
         {
-            PriorityQueue<int> test = new PriorityQueue<int>();
+            var test = new PriorityQueue<int>();
             test.EnQueue(0, 1);
-            test.EnQueue(0, 2);
-            Console.WriteLine(test.Peek());
+            test.EnQueue(0, 1);
+            test.EnQueue(42, 1);
+            test.EnQueue(42, 1);
+            test.EnQueue(2, 1);
+            test.EnQueue(2, 1);
+            test.EnQueue(0, 1);
+            test.EnQueue(4298, 1);
+            test.EnQueue(55, 1);
+            test.EnQueue(82, 1);
+            test.EnQueue(16, 1);
+
+
+            Console.WriteLine(@"===========================");
+            Console.WriteLine(@"Priority Queue Test");
+            Console.WriteLine(@"Items: " + test.Length());
+            Console.WriteLine(@"===========================");
+
+            foreach (var bla in test.ToArray())
+            {
+                Console.WriteLine(bla.Priority);
+            }
         }
 
         private void seqSearch_btn_Click(object sender, EventArgs e)
         {
-           var seq = Enumerable.Range(0, 10);
+            var seq = Enumerable.Range(0, 10);
 
-           SequenTialSearch<int> search = new SequenTialSearch<int>();
-              
-           Console.WriteLine(search.SeqSearch(seq.ToArray(), 5));
+            SequenTialSearch<int> search = new SequenTialSearch<int>();
+
+            Console.WriteLine(search.SeqSearch(seq.ToArray(), 5));
         }
     }
-
-    }
+}

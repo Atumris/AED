@@ -29,7 +29,6 @@ namespace MainDLL.Sort
                         //loop to get second index
                         for (int j = 0; j < length - 1; j++)
                         {
-<<<<<<< HEAD
                             //swap the indexes when the second is smaller than the first3
 
                             var temp = arr[j];
@@ -37,16 +36,6 @@ namespace MainDLL.Sort
                             arr[j + i] = temp;
                             //set the boolean to false so the loop continues untill it is sorted.
                             isSorted = false;
-=======
-                            //check if the second index is smaller than the first
-                            if (arr[j].CompareTo(arr[j + 1]) > 0)
-                            {
-                                //swap the indexes when the second is smaller than the first
-                                Swap(ref arr[j], ref arr[j + 1]);
-                                //set the boolean to false so the loop continues untill it is sorted.
-                                isSorted = false;
-                            }
->>>>>>> origin/master
                         }
                     }
                 }

@@ -4,8 +4,6 @@ namespace MainDLL.Sort
 {
     public class BubbleSort<T> where T : IComparable
     {
-        private T[] array;
-
         /// <summary>
         /// Bubblesort sorts the array with lowest value first
         /// </summary>

@@ -4,78 +4,136 @@ namespace MainDLL.Collection
 {
     public class PriorityQueue<T> where T : IComparable
     {
-        private readonly ArrayList<Array> _queue;
+        //field for the ArrayList used by the queue
+        private readonly ArrayList<PqItem> _queue;
 
+        /// <summary>
+        /// Constructor for queue, makes an new arraylist with PqItem
+        /// </summary>
         public PriorityQueue()
         {
-            _queue = new ArrayList<Array>();
+            _queue = new ArrayList<PqItem>();
         }
 
+        /// <summary>
+        /// Create a struct to propererly add an item with priority to the ArrayList
+        /// </summary>
+        public struct PqItem
+        {
+            public int Priority;
+            public T Item;
+
+            /// <summary>
+            /// Constructor PqItem stores the priorty and item in the struct
+            /// </summary>
+            /// <param name="priority">Priority of queue item</param>
+            /// <param name="item">queue item</param>
+            public PqItem(int priority, T item)
+            {
+                Priority = priority;
+                Item = item;
+            }
+        }
+
+        /// <summary>
+        /// Adds an item to the queue based on priority where 0 is the highest priority
+        /// </summary>
+        /// <param name="priority">Priority given to the item</param>
+        /// <param name="item">Item that is added to the que</param>
         public void EnQueue(int priority, T item)
         {
-            //Create new object
-            object[] newPq = { priority, item };
-            //Get lenght of the current Array
-            int length = _queue.Lenght();
-            //Current index number
-            int index = 0;
-            //Field to add object to array add specified index
-            int addIndex = 0;
-            //flag to stop while loop if positoin is found
-            bool foundPriority = false;
-
-            if (length > 0)
+            //Check if index is out of range
+            if (priority < 0)
             {
-                while (!foundPriority)
-                {
-                    foundPriority = true;
+                //Throw exception if index is out of range
+                throw new IndexOutOfRangeException("priority must be 0 or higher");
+            }
+            //Create new object
+            var newPq = new PqItem(priority, item);
 
-                    if (index < length)
-                        foreach (var queueItem in _queue.ToArray()[index])
+            //Get array and store it into field
+            var pqArray = _queue.ToArray();
+
+            //Get length of the current Array
+            var length = _queue.Length() - 1;
+
+            //if queue array is empty add the item
+            if (length < 0)
+            {
+                _queue.Add(newPq);
+            }
+            else
+            {
+                //Get the lowest priority of the items in the queue
+                var lowestPriority = pqArray[length].Priority;
+
+                //if lower or equal to the lowest add to back of the queue
+                if (newPq.Priority > lowestPriority || newPq.Priority.Equals(lowestPriority))
+                {
+                    _queue.Add(newPq);
+                }
+                else
+                {
+                    //Create an index field for insert method
+                    var index = 0;
+
+                    //Determine the index for the insert method
+                    for (var i = 0; i < length; i++)
+                    {
+                        //if priority is higher then item in queue increment index
+                        if (newPq.Priority >= pqArray[i].Priority)
                         {
-                            //Get first item in the object
-                            if (index % 2 == 0)
-                            {
-                                addIndex = (int)queueItem;
-                            }
-                            //If priority is not yet found continue the loop
-                            if (addIndex <= priority)
-                            {
-                                foundPriority = false;
-                            }
                             index++;
                         }
+                    }
+
+                    //Insert item into the array at given index value
+                    _queue.Insert(newPq, index - 1);
                 }
             }
-            //Insert item into the array
-            _queue.Insert(newPq, index);
         }
 
+        /// <summary>
+        /// Removes item from the front of the queue
+        /// </summary>
         public void DeQueue()
         {
             _queue.RemoveAt(0);
         }
 
+        /// <summary>
+        /// Returns first item of the queue
+        /// </summary>
+        /// <returns>First item</returns>
         public T Peek()
         {
-            int index = 0;
-            if (_queue.Lenght() > 0)
-            {
-                foreach (var queueItem in _queue.ToArray()[0])
-                {
-                    if (index == 1)
-                    {
-                        return (T) queueItem;
-                    }
-                    index++;
-                }
-            }
-            return default(T);
+            return _queue.ToArray()[0].Item;
         }
 
+        /// <summary>
+        /// Clears the queue
+        /// </summary>
         public void ClearQueue()
         {
             _queue.Clear();
+        }
+
+        /// <summary>
+        /// Get the queue back as a array
+        /// </summary>
+        /// <returns>PqItem array</returns>
+        public PqItem[] ToArray()
+        {
+            return _queue.ToArray();
+        }
+
+        /// <summary>
+        /// Returns the length of the Queue Array
+        /// </summary>
+        /// <returns>Length of the array as an int</returns>
+        public int Length()
+        {
+            return _queue.Length();
         }
     }
 }
