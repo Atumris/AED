@@ -2,36 +2,28 @@
 
 namespace MainDLL.Sort
 {
-    class InsertionSort<T> where T : IComparable
+    public class InsertionSort<T> where T : IComparable
     {
         /// <summary>
         /// Method that performs an Insertion Sort on the input array X
         /// </summary>
         /// <param name="inputarray"></param>
         /// <returns></returns>
-        public static T[] PerformInsertionSort(T[] inputarray)
+        public T[] InsertSort(T[] inputarray)
         {
-            // start looping the array from first item
-            for (var i = 0; i < inputarray.Length - 1; i++)
+            int upper = inputarray.Length - 1;
+            for (int outer = 1; outer <= upper; outer++)
             {
-                // index set to second item
-                var index = i + 1;
-                // loop while there are still items in array
-                // Dit klopt niet helemaal miscchien een for each of een flag
-                while (index > 0)
+                var temp = inputarray[outer];
+                var inner = outer;
+                while (inner > 0 && inputarray[inner - 1].CompareTo(temp) > 0)
                 {
-                    // a temporary array is generated
-                    var temp = inputarray[index - 1];
-
-                    inputarray[index - 1] = inputarray[index];
-                    inputarray[index] = temp;
-                    // index is lowered by 1
-                    index--;
+                    inputarray[inner] = inputarray[inner - 1];
+                    inner -= 1;
                 }
+                inputarray[inner] = temp;
             }
-            // return the sorted array
             return inputarray;
         }
     }
-
 }
