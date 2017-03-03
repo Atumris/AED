@@ -3,12 +3,10 @@ using System.Linq;
 
 namespace MainDLL
 {
-    public class ArrayList <T> where T : IComparable
+    public class ArrayList <T>
     {
         private T[] array;
         private int size;
-
-        public int Length { get; internal set; }
 
         /// <summary>
         /// Takes all preperations for a functional arraylist
@@ -104,10 +102,10 @@ namespace MainDLL
         }
 
         /// <summary>
-        /// Returns lenght of the ArrayList
+        /// Returns length of the ArrayList
         /// </summary>
-        /// <returns>int lenght</returns>
-        public int Lenght()
+        /// <returns>int length</returns>
+        public int Length()
         {
             return size;
         }
@@ -149,11 +147,53 @@ namespace MainDLL
         /// <param name="i">index number</param>
         public void RemoveAt(int i)
         {
-            if (i > array.Length)
+            //Check if index is out of range
+            if (i < 0 || i > array.Length - 1)
             {
-                throw new IndexOutOfRangeException();
+                //Throw exception if index is out of range
+                throw new IndexOutOfRangeException("index");
             }
+            //Remove item at correct point
             array = array.Skip(i + 1).ToArray();
+        }
+        /// <summary>
+        /// Insert item at given index
+        /// </summary>
+        /// <param name="newItem">The item to add</param>
+        /// <param name="index">The index where the item should go</param>
+        public void Insert(T newItem, int index)
+        {
+            //Check if there are items in the array, if not, just add the item
+            if (size == 0)
+            {
+                Add(newItem);
+            }
+            else
+            {
+                //Convert value to right index value
+                index = index - 1;
+                //Take items from array to seperate array till desired index
+                T[] arr1 = array.Take(index).ToArray();
+                //Take items from array to seperate array from desired index
+                T[] arr2 = array.Skip(index + 1).Take(size - index).ToArray();
+                //Clear array
+                Clear();
+                //Add first part to the array
+                foreach (var item in arr1)
+                {
+                    Add(item);
+                }
+                //Add the new item to the array
+                Add(newItem);
+                //Add last part to the array
+                if (arr2.Length != 0)
+                {
+                    foreach (var item in arr2)
+                    {
+                        Add(item);
+                    }
+                }
+            }
         }
     }
 }

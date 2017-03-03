@@ -2,9 +2,12 @@
 using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
+using System.Xml.Schema;
 using MainDLL;
 using MainDLL.Collection;
 using MainDLL.Sort;
+using MainDLL.Search;
+using System.Linq;
 
 namespace Tester
 {
@@ -18,6 +21,7 @@ namespace Tester
 
             
             ArrayList<int> arr = new ArrayList<int>();
+            
 
             //affinity testen
             Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)2;
@@ -120,14 +124,15 @@ namespace Tester
                 Console.WriteLine(QPC.Duration(1) + " ms");
             }
         }
-
+        QueryPerformance QPC = new QueryPerformance();
+        
         private void button2_Click(object sender, EventArgs e)
         {
             GC.Collect();
             GC.WaitForPendingFinalizers();
 
 
-            QueryPerformance QPC = new QueryPerformance();
+            
             Thread thread = new Thread(QPC.Start);
             thread.Priority = ThreadPriority.Highest;
 
@@ -140,10 +145,43 @@ namespace Tester
             ////Thread.EndThreadAffinity();
             Console.WriteLine(QPC.Duration(1) + " ms");
         }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
+            ArrayList<int> arr = new ArrayList<int>();
+            for (int i = 0; i < 1000; i++)
+            {
+                arr.Add(i);
+            }
 
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            QPC.Start();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr.RemoveAt(i);
+            }
+            QPC.Start();
+            MessageBox.Show(QPC.Duration(1).ToString());
+        }
+
+        //Priority queue test
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PriorityQueue<int> test = new PriorityQueue<int>();
+            test.EnQueue(0, 1);
+            test.EnQueue(0, 2);
+            Console.WriteLine(test.Peek());
+        }
+
+        private void seqSearch_btn_Click(object sender, EventArgs e)
+        {
+           var seq = Enumerable.Range(0, 10);
+
+           SequenTialSearch<int> search = new SequenTialSearch<int>();
+              
+           Console.WriteLine(search.SeqSearch(seq.ToArray(), 5));
         }
     }
 }
