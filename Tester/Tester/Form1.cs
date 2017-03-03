@@ -6,6 +6,8 @@ using System.Xml.Schema;
 using MainDLL;
 using MainDLL.Collection;
 using MainDLL.Sort;
+using MainDLL.Search;
+using System.Linq;
 
 namespace Tester
 {
@@ -171,6 +173,14 @@ namespace Tester
             test.EnQueue(0, 1);
             test.EnQueue(0, 2);
             Console.WriteLine(test.Peek());
+        }
+
+        private void seqSearch_btn_Click(object sender, EventArgs e)
+        {
+            var seq = Enumerable.Range(0, 10);
+
+           SequenTialSearch<int> search = new SequenTialSearch<int>();
+            Console.WriteLine(search.SeqSearch(seq.ToArray(), 5));
         }
     }
 }
