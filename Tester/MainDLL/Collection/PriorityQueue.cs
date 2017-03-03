@@ -1,6 +1,4 @@
-﻿
-using System;
-using System.Collections;
+﻿using System;
 
 namespace MainDLL.Collection
 {
@@ -15,12 +13,15 @@ namespace MainDLL.Collection
 
         public void EnQueue(int priority, T item)
         {
+            //Create new object
             object[] newPq = { priority, item };
-
+            //Get lenght of the current Array
             int length = _queue.Lenght();
+            //Current index number
             int index = 0;
+            //Field to add object to array add specified index
             int addIndex = 0;
-
+            //flag to stop while loop if positoin is found
             bool foundPriority = false;
 
             if (length > 0)
@@ -32,21 +33,21 @@ namespace MainDLL.Collection
                     if (index < length)
                         foreach (var queueItem in _queue.ToArray()[index])
                         {
+                            //Get first item in the object
                             if (index % 2 == 0)
                             {
                                 addIndex = (int)queueItem;
                             }
-                            if (addIndex == priority)
+                            //If priority is not yet found continue the loop
+                            if (addIndex <= priority)
                             {
                                 foundPriority = false;
                             }
                             index++;
                         }
                 }
-
-                Console.WriteLine("found");
             }
-            //veranderen naar insert
+            //Insert item into the array
             _queue.Insert(newPq, index);
         }
 

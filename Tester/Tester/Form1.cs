@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
-using System.Xml.Schema;
 using MainDLL;
 using MainDLL.Collection;
 using MainDLL.Sort;
@@ -171,6 +171,23 @@ namespace Tester
             test.EnQueue(0, 1);
             test.EnQueue(0, 2);
             Console.WriteLine(test.Peek());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ArrayList<String> stringtest = new ArrayList<String>();
+            InsertionSort<String> sort = new InsertionSort<String>();
+            stringtest.Add("C");
+            stringtest.Add("H");
+            stringtest.Add("A");
+            stringtest.Add("B");
+            String[] test = sort.jemoeder(stringtest.ToArray());
+
+
+            foreach (var te in test)
+            {
+                Console.WriteLine(te);
+            }
         }
     }
 }

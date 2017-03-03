@@ -4,8 +4,6 @@ namespace MainDLL.Sort
 {
     class SmartBubbleSort<T> where T : IComparable
     {
-        private T[] array;
-
         /// <summary>
         /// Bubblesort sorts the array with lowest value first
         /// </summary>
@@ -32,8 +30,11 @@ namespace MainDLL.Sort
                         //check if the second index is smaller than the first
                         if (arr[j].CompareTo(arr[j + 1]) > 0)
                         {
-                            //swap the indexes when the second is smaller than the first
-                            Swap(ref arr[j], ref arr[j + 1]);
+                            //swap the indexes when the second is smaller than the first3
+
+                            var temp = arr[j];
+                            arr[j] = arr[j + i];
+                            arr[j + i] = temp;
                             //set the boolean to false so the loop continues untill it is sorted.
                             isSorted = false;
                         }
@@ -42,17 +43,6 @@ namespace MainDLL.Sort
             }
             //return sorted array
             return arr;
-        }
-        /// <summary>
-        /// method to handle index swapping.
-        /// </summary>
-        /// <param name="lhs"></param>
-        /// <param name="rhs"></param>
-        static void Swap(ref T lhs, ref T rhs)
-        {
-            var temp = lhs;
-            lhs = rhs;
-            rhs = temp;
         }
     }
 }
