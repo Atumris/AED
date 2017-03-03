@@ -20,7 +20,7 @@ namespace MainDLL.Collection
         {
             get
             {
-                return list.Length;
+                return list.Length();
             }
         }
         public void push(T item)
