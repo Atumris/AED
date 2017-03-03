@@ -5,7 +5,7 @@ namespace MainDLL.Sort
     public class InsertionSort<T> where T : IComparable
     {
         /// <summary>
-        /// Method that performs an Insertion Sort on the input array X
+        /// Method that performs an Insertion Sort on the inputarray
         /// </summary>
         /// <param name="inputarray"></param>
         /// <returns></returns>

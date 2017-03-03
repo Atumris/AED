@@ -6,6 +6,8 @@ using System.Windows.Forms;
 using MainDLL;
 using MainDLL.Collection;
 using MainDLL.Sort;
+using MainDLL.Search;
+using System.Linq;
 
 namespace Tester
 {
@@ -156,7 +158,7 @@ namespace Tester
             GC.Collect();
             GC.WaitForPendingFinalizers();
             QPC.Start();
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arr.Length(); i++)
             {
                 arr.RemoveAt(i);
             }
@@ -173,21 +175,14 @@ namespace Tester
             Console.WriteLine(test.Peek());
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void seqSearch_btn_Click(object sender, EventArgs e)
         {
-            ArrayList<String> stringtest = new ArrayList<String>();
-            InsertionSort<String> sort = new InsertionSort<String>();
-            stringtest.Add("C");
-            stringtest.Add("H");
-            stringtest.Add("A");
-            stringtest.Add("B");
-            String[] test = sort.jemoeder(stringtest.ToArray());
+           var seq = Enumerable.Range(0, 10);
 
-
-            foreach (var te in test)
-            {
-                Console.WriteLine(te);
-            }
+           SequenTialSearch<int> search = new SequenTialSearch<int>();
+              
+           Console.WriteLine(search.SeqSearch(seq.ToArray(), 5));
         }
     }
-}
+
+    }
