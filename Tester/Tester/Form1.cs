@@ -177,10 +177,11 @@ namespace Tester
 
         private void seqSearch_btn_Click(object sender, EventArgs e)
         {
-            var seq = Enumerable.Range(0, 10);
+           var seq = Enumerable.Range(0, 10);
 
            SequenTialSearch<int> search = new SequenTialSearch<int>();
-            Console.WriteLine(search.SeqSearch(seq.ToArray(), 5));
+              
+           Console.WriteLine(search.SeqSearch(seq.ToArray(), 5));
         }
     }
 }
