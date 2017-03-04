@@ -202,5 +202,22 @@ namespace Tester
 
             Console.WriteLine(search.SeqSearch(seq.ToArray(), 5));
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var HPC = new HiPerfCounter();;
+            var arr = new ArrayList<int>();
+
+
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            HPC.Start();
+            for (int i = 0; i < 1000; i++)
+            {
+                arr.Add(i);
+            }
+            HPC.Start();
+            MessageBox.Show(HPC.Duration.ToString());
+        }
     }
 }

@@ -42,13 +42,13 @@ namespace MainDLL.Collection
         /// <param name="item">Item that is added to the que</param>
         public void EnQueue(int priority, T item)
         {
-            //Check if index is out of range
+            //Check if priority is out of range
             if (priority < 0)
             {
-                //Throw exception if index is out of range
+                //Throw exception if priority is out of range
                 throw new IndexOutOfRangeException("priority must be 0 or higher");
             }
-            //Create new object
+            //Create new Priorty Queue item
             var newPq = new PqItem(priority, item);
 
             //Get array and store it into field

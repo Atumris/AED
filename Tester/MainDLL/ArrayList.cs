@@ -44,6 +44,7 @@ namespace MainDLL
         {
             //Makes new array with a size of 0
             _array = new T[0];
+            _size = 0;
         }
 
         /// <summary>
@@ -172,11 +173,11 @@ namespace MainDLL
             else
             {
                 //Convert value to right index value
-                index = index - 1;
+                index = index + 1;
                 //Take items from array to seperate array till desired index
                 T[] arr1 = _array.Take(index).ToArray();
                 //Take items from array to seperate array from desired index
-                T[] arr2 = _array.Skip(index + 1).Take(_size - index).ToArray();
+                T[] arr2 = _array.Skip(index).Take(_size - index).ToArray();
                 //Clear array
                 Clear();
                 //Add first part to the array
