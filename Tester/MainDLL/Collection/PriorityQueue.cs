@@ -88,7 +88,7 @@ namespace MainDLL.Collection
                     }
 
                     //Insert item into the array at given index value
-                    _queue.Insert(newPq, index - 1);
+                    _queue.Insert(newPq, index);
                 }
             }
         }

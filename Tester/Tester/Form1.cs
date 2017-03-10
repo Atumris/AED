@@ -202,5 +202,24 @@ namespace Tester
 
             Console.WriteLine(search.SeqSearch(seq.ToArray(), 5));
         }
+
+        private void btn_binSearch_Click(object sender, EventArgs e)
+        {
+            var seq = Enumerable.Range(0, 1000);
+            BinarySearch binsrch = new BinarySearch();
+            Console.WriteLine(binsrch.BinSearch(10, seq.ToArray()));
+            Console.WriteLine(binsrch.BinSearch(43, seq.ToArray()));
+            Console.WriteLine(binsrch.BinSearch(644, seq.ToArray()));
+            Console.WriteLine(binsrch.BinSearch(999, seq.ToArray()));
+            Console.WriteLine(binsrch.BinSearch(100, seq.ToArray()));
+            Console.WriteLine(binsrch.BinSearch(1, seq.ToArray()));
+
+            Console.WriteLine(binsrch.BinSearch(1001, seq.ToArray()));
+            Console.WriteLine(binsrch.BinSearch(4300, seq.ToArray()));
+            Console.WriteLine(binsrch.BinSearch(64400, seq.ToArray()));
+            Console.WriteLine(binsrch.BinSearch(99900, seq.ToArray()));
+            Console.WriteLine(binsrch.BinSearch(10000, seq.ToArray()));
+            Console.WriteLine(binsrch.BinSearch(100000, seq.ToArray()));
+        }
     }
 }
