@@ -3,19 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LinearHashTableCollection
+namespace MainDLL
 {
     /// <summary>
     /// A Linear Hash Table Implementation.
     /// Author: Carl Laufer
-    /// Date: 18 February 2010
-    /// Last Updated: 18 February 2010
-    /// 
-    /// NOTE: Almost IDictionary Compliant
     /// </summary>
     /// <typeparam name="Tkey"></typeparam>
     /// <typeparam name="Tvalue"></typeparam>
-    public class LinearHashTable<Tkey, Tvalue>
+    public class LinearHash<Tkey, Tvalue>
     {
         private List<KeyValuePair<Tkey, Tvalue>[]> keyValue;
 
