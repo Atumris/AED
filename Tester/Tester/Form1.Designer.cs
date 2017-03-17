@@ -38,9 +38,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(117, 124);
+            this.button1.Location = new System.Drawing.Point(16, 8);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "QPC test 1";
             this.button1.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(117, 169);
+            this.button2.Location = new System.Drawing.Point(16, 44);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 1;
             this.button2.Text = "QPC test 2";
             this.button2.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(155, 216);
+            this.button3.Location = new System.Drawing.Point(16, 80);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 2;
             this.button3.Text = "QPC test 3";
             this.button3.UseVisualStyleBackColor = true;
@@ -68,9 +71,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(64, 31);
+            this.button4.Location = new System.Drawing.Point(16, 152);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 19);
+            this.button4.Size = new System.Drawing.Size(100, 23);
             this.button4.TabIndex = 3;
             this.button4.Text = "Prio Queue Test";
             this.button4.UseVisualStyleBackColor = true;
@@ -78,10 +82,10 @@
             // 
             // seqSearch_btn
             // 
-            this.seqSearch_btn.Location = new System.Drawing.Point(117, 82);
-            this.seqSearch_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.seqSearch_btn.Location = new System.Drawing.Point(16, 181);
+            this.seqSearch_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.seqSearch_btn.Name = "seqSearch_btn";
-            this.seqSearch_btn.Size = new System.Drawing.Size(113, 19);
+            this.seqSearch_btn.Size = new System.Drawing.Size(100, 47);
             this.seqSearch_btn.TabIndex = 4;
             this.seqSearch_btn.Text = "Sequential Search";
             this.seqSearch_btn.UseVisualStyleBackColor = true;
@@ -89,9 +93,10 @@
             // 
             // btn_binSearch
             // 
-            this.btn_binSearch.Location = new System.Drawing.Point(12, 82);
+            this.btn_binSearch.Location = new System.Drawing.Point(16, 116);
+            this.btn_binSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_binSearch.Name = "btn_binSearch";
-            this.btn_binSearch.Size = new System.Drawing.Size(75, 23);
+            this.btn_binSearch.Size = new System.Drawing.Size(100, 28);
             this.btn_binSearch.TabIndex = 5;
             this.btn_binSearch.Text = "BinarySearch";
             this.btn_binSearch.UseVisualStyleBackColor = true;
@@ -99,15 +104,16 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(379, 322);
             this.Controls.Add(this.btn_binSearch);
             this.Controls.Add(this.seqSearch_btn);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
