@@ -14,7 +14,7 @@ namespace MainDLL.Collection
         public void CStack()
         {
             list = new ArrayList<T>();
-            p_index = -1;
+            p_index -= 1;
         }
         public int count
         {
@@ -23,18 +23,27 @@ namespace MainDLL.Collection
                 return list.Length();
             }
         }
+
         public void push(T item)
         {
             list.Add(item);
             p_index++;
         }
-        public object pop()
+
+        public T Pop()
         {
-            object obj = list[p_index];
-            list.RemoveAt(p_index);
-            p_index--;
-            return obj;
+            if (list.Length() > 0)
+            {
+                T temp = list.ToArray()[list.Length() - 1];
+                list.RemoveAt(list.Length() - 1);
+                p_index--;
+                return temp;
+            }
+            else { 
+                return default(T);
+            }
         }
+
         public void clear()
         {
             list.Clear();
@@ -42,7 +51,7 @@ namespace MainDLL.Collection
         }
         public object peek()
         {
-            return list[p_index];
+            return list.ToArray()[list.Length() - 1];
         }
     }
 }
