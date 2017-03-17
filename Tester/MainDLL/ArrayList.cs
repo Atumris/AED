@@ -5,8 +5,8 @@ namespace MainDLL
 {
     public class ArrayList <T>
     {
-        private T[] array;
-        private int size;
+        private T[] _array;
+        private int _size;
 
         /// <summary>
         /// Takes all preperations for a functional arraylist
@@ -14,9 +14,9 @@ namespace MainDLL
         public ArrayList()
         {
             //size of 0, start of the array
-            size = 0;
+            _size = 0;
             //New generic array
-            array = new T[size];
+            _array = new T[_size];
         }
 
         /// <summary>
@@ -26,15 +26,15 @@ namespace MainDLL
         public void Add(T val)
         {
             //Make copy of array
-            T[] overloadArray = array;
+            T[] overloadArray = _array;
             //Increment size of array
-            size++;
+            _size++;
             //Make new array with new size
-            array = new T[size];
+            _array = new T[_size];
             //Copy old array to new array
-            overloadArray.CopyTo(array, 0);
+            overloadArray.CopyTo(_array, 0);
             //Put value in place
-            array[size - 1] = val;
+            _array[_size - 1] = val;
         }
 
         /// <summary>
@@ -43,7 +43,8 @@ namespace MainDLL
         public void Clear()
         {
             //Makes new array with a size of 0
-            array = new T[0];
+            _array = new T[0];
+            _size = 0;
         }
 
         /// <summary>
@@ -53,10 +54,11 @@ namespace MainDLL
         /// <returns>Copied array</returns>
         public T[] CopyTo(T[] val)
         {
+            if (val == null) throw new ArgumentNullException(nameof(val));
             /*Aanpassing nodig
              */
             //Internal array gets coppied to supplied array
-            val = array;
+            val = _array;
             //Return spupplied array
             return val;
         }
@@ -75,7 +77,7 @@ namespace MainDLL
             bool contains = false;
             //While contains is false, look for a value
                 //Go through internal array to look for a value
-                foreach (T value in array)
+                foreach (T value in _array)
                 {
                     //Compare value to given parameter
                     if (value.Equals(val))
@@ -96,7 +98,7 @@ namespace MainDLL
         public bool Equals(T[] val)
         {
             //Set the value of the boolean
-            bool equals = val.Equals(array);
+            bool equals = val.Equals(_array);
             //Returns the boolean
             return equals;
         }
@@ -107,7 +109,7 @@ namespace MainDLL
         /// <returns>int length</returns>
         public int Length()
         {
-            return size;
+            return _size;
         }
 
 
@@ -117,7 +119,7 @@ namespace MainDLL
         /// <returns>Array</returns>
         public T[] ToArray()
         {
-            return array;
+            return _array;
         }
 
         /// <summary>
@@ -129,15 +131,15 @@ namespace MainDLL
             foreach (var var in value)
             {
                 //Make copy of array
-                T[] overloadArray = array;
+                T[] overloadArray = _array;
                 //Increment size of array
-                size++;
+                _size++;
                 //Make new array with new size
-                array = new T[size];
+                _array = new T[_size];
                 //Copy old array to new array
-                overloadArray.CopyTo(array, 0);
+                overloadArray.CopyTo(_array, 0);
                 //Put value in place
-                array[size - 1] = var;
+                _array[_size - 1] = var;
             }
         }
 
@@ -148,13 +150,13 @@ namespace MainDLL
         public void RemoveAt(int i)
         {
             //Check if index is out of range
-            if (i < 0 || i > array.Length - 1)
+            if (i < 0 || i > _array.Length - 1)
             {
                 //Throw exception if index is out of range
                 throw new IndexOutOfRangeException("index");
             }
             //Remove item at correct point
-            array = array.Skip(i + 1).ToArray();
+            _array = _array.Skip(i + 1).ToArray();
         }
         /// <summary>
         /// Insert item at given index
@@ -164,18 +166,16 @@ namespace MainDLL
         public void Insert(T newItem, int index)
         {
             //Check if there are items in the array, if not, just add the item
-            if (size == 0)
+            if (_size == 0)
             {
                 Add(newItem);
             }
             else
             {
-                //Convert value to right index value
-                index = index - 1;
                 //Take items from array to seperate array till desired index
-                T[] arr1 = array.Take(index).ToArray();
+                T[] arr1 = _array.Take(index).ToArray();
                 //Take items from array to seperate array from desired index
-                T[] arr2 = array.Skip(index + 1).Take(size - index).ToArray();
+                T[] arr2 = _array.Skip(index).Take(_size - index).ToArray();
                 //Clear array
                 Clear();
                 //Add first part to the array

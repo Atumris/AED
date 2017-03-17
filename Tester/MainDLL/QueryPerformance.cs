@@ -1,15 +1,14 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace MainDLL
 {
     public class QueryPerformance
     {
-        private long start;
-        private long stop;
-        private long frequency;
-        Decimal multiplier = new Decimal(1.0e9);
+        private long _start;
+        private long _stop;
+        private readonly long _frequency;
+        readonly decimal _multiplier = new decimal(1.0e9);
 
         [DllImport("KERNEL32")]
         private static extern bool QueryPerformanceCounter(out long lpPerformanceCount);
@@ -23,7 +22,7 @@ namespace MainDLL
             //System.Diagnostics.Process.GetCurrentProcess().ProcessorAffinity = (System.IntPtr)2;
             //Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
 
-            if (QueryPerformanceFrequency(out frequency) == false)
+            if (QueryPerformanceFrequency(out _frequency) == false)
             {
                 // Frequency not supported
                 throw new Win32Exception();
@@ -32,17 +31,17 @@ namespace MainDLL
 
         public void Start()
         {
-            QueryPerformanceCounter(out start);
+            QueryPerformanceCounter(out _start);
         }
 
         public void Stop()
         {
-            QueryPerformanceCounter(out stop);
+            QueryPerformanceCounter(out _stop);
         }
 
         public double Duration(int iterations)
         {
-            return ((((double) (stop - start)*(double) multiplier)/(double) frequency)/iterations);
+            return (_stop - _start)*(double) _multiplier/_frequency/iterations;
         }
     }
 }

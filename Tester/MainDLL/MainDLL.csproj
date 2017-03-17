@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +44,7 @@
     <Compile Include="ArrayList.cs" />
     <Compile Include="Collection\PriorityQueue.cs" />
     <Compile Include="Collection\Stack.cs" />
+    <Compile Include="Search\BinarySearch.cs" />
     <Compile Include="Sort\BubbleSort.cs" />
     <Compile Include="Sort\InsertionSort.cs" />
     <Compile Include="Sort\SmartBubbleSort.cs" />

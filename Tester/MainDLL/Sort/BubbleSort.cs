@@ -4,8 +4,6 @@ namespace MainDLL.Sort
 {
     public class BubbleSort<T> where T : IComparable
     {
-        private T[] array;
-
         /// <summary>
         /// Bubblesort sorts the array with lowest value first
         /// </summary>
@@ -13,20 +11,29 @@ namespace MainDLL.Sort
         /// <returns></returns>
         public T[] Bubble(T[] arr)
         {
-            //variable to store the lenght of the array.
-            int length = arr.Length;
-
-            //Loop untill there is no more data to loop trough.
-            for (int i = 0; i < length; i++)
+            try
             {
-                //Loop to get the second index. 
-                for (int j = 0; j < length - 1; j++)
+                //variable to store the lenght of the array.
+                int length = arr.Length;
+
+                //Loop untill there is no more data to loop trough.
+                for (int i = 0; i < length; i++)
                 {
-                    //Check which number is higher and replace in case the next number is lower than the first.
-                    if (arr[j].CompareTo(arr[j + 1]) > 0)
-                        Swap(ref arr[j], ref arr[j + 1]);
+                    //Loop to get the second index. 
+                    for (int j = 0; j < length - 1; j++)
+                    {
+                        //Check which number is higher and replace in case the next number is lower than the first.
+                        if (arr[j].CompareTo(arr[j + 1]) > 0)
+                            Swap(ref arr[j], ref arr[j + 1]);
+                    }
                 }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
             //return the sorted array.
             return arr;
         }
