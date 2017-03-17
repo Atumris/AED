@@ -40,10 +40,10 @@ namespace MainDLL.Sort
                     }
                 }
             }
-            catch (Exception)
+            // catch and throw the exeption
+            catch (Exception e)
             {
-
-                throw;
+                throw e;
             }
             //return sorted array
             return arr;
