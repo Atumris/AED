@@ -34,6 +34,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.seqSearch_btn = new System.Windows.Forms.Button();
             this.btn_binSearch = new System.Windows.Forms.Button();
+            this.Stacktest_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -102,11 +103,22 @@
             this.btn_binSearch.UseVisualStyleBackColor = true;
             this.btn_binSearch.Click += new System.EventHandler(this.btn_binSearch_Click);
             // 
+            // Stacktest_btn
+            // 
+            this.Stacktest_btn.Location = new System.Drawing.Point(16, 233);
+            this.Stacktest_btn.Name = "Stacktest_btn";
+            this.Stacktest_btn.Size = new System.Drawing.Size(100, 23);
+            this.Stacktest_btn.TabIndex = 6;
+            this.Stacktest_btn.Text = "Stack test";
+            this.Stacktest_btn.UseVisualStyleBackColor = true;
+            this.Stacktest_btn.Click += new System.EventHandler(this.Stacktest_btn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 322);
+            this.Controls.Add(this.Stacktest_btn);
             this.Controls.Add(this.btn_binSearch);
             this.Controls.Add(this.seqSearch_btn);
             this.Controls.Add(this.button4);
@@ -128,6 +140,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button seqSearch_btn;
         private System.Windows.Forms.Button btn_binSearch;
+        private System.Windows.Forms.Button Stacktest_btn;
     }
 }
 

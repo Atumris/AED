@@ -221,5 +221,16 @@ namespace Tester
             Console.WriteLine(binsrch.BinSearch(10000, seq.ToArray()));
             Console.WriteLine(binsrch.BinSearch(100000, seq.ToArray()));
         }
+
+        private void Stacktest_btn_Click(object sender, EventArgs e)
+        {
+            Stack<int> stack = new Stack<int>();
+            for(var i = 0; i <= 10; i++)
+            {
+                stack.push(i);
+            }
+            Console.WriteLine(stack.count);
+            Console.WriteLine(stack.peek());
+        }
     }
 }

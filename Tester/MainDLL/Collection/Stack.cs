@@ -5,17 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using MainDLL.Collection;
 
+
 namespace MainDLL.Collection
 {
+    /// <summary>
+    /// Pushes, pops and peeks at items in the element. 
+    /// </summary>
+    /// <typeparam name="T">Item the put in the ArrayList</typeparam>
     public class Stack<T> where T : IComparable
     {
         private int p_index;
-        private ArrayList<T> list;
-        public void CStack()
-        {
-            list = new ArrayList<T>();
-            p_index -= 1;
-        }
+        private ArrayList<T> list = new ArrayList<T>();
+
+        /// <summary>
+        /// Returns the number of items in the ArrayList
+        /// </summary>
         public int count
         {
             get
@@ -24,12 +28,20 @@ namespace MainDLL.Collection
             }
         }
 
+        /// <summary>
+        /// Pushes new items in the ArrayList
+        /// </summary>
+        /// <param name="item"></param>
         public void push(T item)
         {
             list.Add(item);
             p_index++;
         }
 
+        /// <summary>
+        /// Pops the top item in the ArrayList
+        /// </summary>
+        /// <returns>Last item in the ArrayList</returns>
         public T Pop()
         {
             if (list.Length() > 0)
@@ -44,14 +56,21 @@ namespace MainDLL.Collection
             }
         }
 
+        /// <summary>
+        /// Clears the ArrayList
+        /// </summary>
         public void clear()
         {
             list.Clear();
-            p_index = -1;
         }
+
+        /// <summary>
+        /// Get the top item in the ArrayList
+        /// </summary>
+        /// <returns></returns>
         public object peek()
         {
-            return list.ToArray()[list.Length() - 1];
+            return list.ToArray()[list.Length()-1];
         }
     }
 }
