@@ -1,8 +1,9 @@
 ﻿using System;
+using MainDLL.Lists;
 
 namespace MainDLL.Collection
 {
-    public class LinkedList<T> where T : IComparable
+    public class DoublyLinkedList<T> where T : IComparable
     {
         private readonly Node<T> _head;
         private int _size;
@@ -10,7 +11,7 @@ namespace MainDLL.Collection
         /// <summary>
         /// Constructor for LinkedList, creates an empty node to start the List
         /// </summary>
-        public LinkedList()
+        public DoublyLinkedList()
         {
             _head = new Node<T>();
         }
@@ -41,14 +42,17 @@ namespace MainDLL.Collection
             else
             {
                 //create the new node
-                var newNode = new Node<T> {Data = data};
+                var newNode = new Node<T> { Data = data };
                 // add new variable for the while loop
-                var current = _head;
+                Node<T> current = _head;
+                Node<T> previous = null;
                 // as long as there is an next node this loop will continue and adds it to the last node
                 while (current.Next != null)
                 {
                     current = current.Next;
+                    previous = current;
                 }
+                newNode.Previous = current;
                 current.Next = newNode;
                 //increase the size for the count method
                 _size++;
@@ -77,7 +81,12 @@ namespace MainDLL.Collection
                 current = current.Next;
             }
             //Saves previous node to current node
-            if (previous != null) previous.Next = current.Next;
+            if (previous != null)
+            {
+                previous.Next = current.Next;
+                current.Next.Previous = previous;
+            }
+            
         }
 
         /// <summary>
@@ -107,9 +116,5 @@ namespace MainDLL.Collection
         }
     }
 
-    public class Node<T> where T : IComparable
-    {
-        public Node<T> Next { get; set; }
-        public T Data { get; set; }
-    }
+
 }
