@@ -42,9 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayList.cs" />
-    <Compile Include="Collection\LinkedList.cs" />
+    <Compile Include="Lists\DoublyLinkedList.cs" />
+    <Compile Include="Lists\LinkedList.cs" />
     <Compile Include="Collection\PriorityQueue.cs" />
     <Compile Include="Collection\Stack.cs" />
+    <Compile Include="Lists\Node.cs" />
     <Compile Include="Search\BinarySearch.cs" />
     <Compile Include="Sort\BubbleSort.cs" />
     <Compile Include="Sort\InsertionSort.cs" />
