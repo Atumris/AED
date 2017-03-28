@@ -55,7 +55,7 @@ namespace MainDLL
             int bucket = GetHashCode(key);
             buckets[bucket] = new Node<T, U>(key, value, buckets[bucket]);
         }
-        public void Remove(T key)
+        public bool Remove(T key)
         {
             // catch null argument exeption
             if (key == null){
@@ -67,9 +67,11 @@ namespace MainDLL
             {
                 if (current.key.Equals(key)){
                     // remove current entry
+                    current.key = default(T);
                     current.value = default(U);
                     // search next item
                     current = current.next;
+                    return true;
                 }
             }
             throw new Exception(key + "Not found");
