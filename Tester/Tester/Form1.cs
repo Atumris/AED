@@ -232,5 +232,15 @@ namespace Tester
             Console.WriteLine(stack.count);
             Console.WriteLine(stack.peek());
         }
+
+        private void BtnLinearHash_Click(object sender, EventArgs e)
+        {
+           var test = new LinearHash<int, int>();
+            test.Add(2, 80085);
+            test.LinearHashTable(16, 5);
+
+            Console.WriteLine(test.ContainsKey(2));
+            Console.WriteLine(test);
+        }
     }
 }

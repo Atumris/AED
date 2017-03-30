@@ -5,6 +5,13 @@ using System.Text;
 
 namespace MainDLL
 {
+    // to do
+    // List maken met key, value pair
+    // add function that skips collisions
+    // size of the lineair hash
+    // modulo dus geen 10, 20, 30 alleen priem getallen
+    // key hashen
+
     /// <summary>
     /// A Linear Hash Table Implementation.
     /// Author: Carl Laufer
@@ -30,7 +37,7 @@ namespace MainDLL
         /// </summary>
         /// <param name="capacity">The initial capacity this table has</param>
         /// <param name="loadToMaintain">The hash table load this table will maintain</param>
-        public LinearHashTable(int capacity, int loadToMaintain)
+        public void LinearHashTable(int capacity, int loadToMaintain)
         {
             this.loadToMaintain = loadToMaintain;
             this.capacity = capacity;
@@ -52,9 +59,6 @@ namespace MainDLL
             maxP = capacity; // Not divided by two, so this is effectively premultiplied by 2
             originalMaxP = capacity;
         }
-
-        public LinearHashTable()
-            : this(16, 5) { }
 
         #region LINEAR HASH FUNCTIONS
         /// <summary>
@@ -198,22 +202,26 @@ namespace MainDLL
         public void Add(Tkey key, Tvalue value)
         {
             int addr = GetHashAddress(key);
-            KeyValuePair<Tkey, Tvalue>[] keyValueCache = keyValue[addr];
-            int length = keyValueCache.Length;
+            if (addr != null)
+            {
+                KeyValuePair<Tkey, Tvalue>[] keyValueCache = keyValue[addr];
 
-            // NOTE: Here manually resizing is faster than using a List and converting to an array
 
-            // Resize the array
-            Array.Resize<KeyValuePair<Tkey, Tvalue>>(ref keyValueCache, length + 1);
+                int length = keyValueCache.Length;
 
-            // Set the temporary keyValueCache entry to the key/value pair
-            keyValueCache[length] = new KeyValuePair<Tkey, Tvalue>(key, value);
+                // NOTE: Here manually resizing is faster than using a List and converting to an array
 
-            // Replace the old key/value pair with the new one
-            keyValue[addr] = keyValueCache;
+                // Resize the array
+                Array.Resize<KeyValuePair<Tkey, Tvalue>>(ref keyValueCache, length + 1);
 
-            elementsOfArrayUsed++;
+                // Set the temporary keyValueCache entry to the key/value pair
+                keyValueCache[length] = new KeyValuePair<Tkey, Tvalue>(key, value);
 
+                // Replace the old key/value pair with the new one
+                keyValue[addr] = keyValueCache;
+
+                elementsOfArrayUsed++;
+            }
             while (LoadOver())
             {
                 IncreaseBuckets();
@@ -371,6 +379,10 @@ namespace MainDLL
                 }
                 return (mem * 8f) / 1024f;
             }
+        }
+        public void AddData()
+        {
+            
         }
 
     }
