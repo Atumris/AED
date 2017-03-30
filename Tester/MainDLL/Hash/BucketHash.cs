@@ -17,17 +17,20 @@ namespace MainDLL
         }
     }
 
+    // hashtable class
     public class HashTable<T, U>
     {
         int length;
         Node<T, U>[] buckets;
         IEqualityComparer<T> iec;
+        // hashtable method, takes int lenght
         public HashTable(int length)
         {
             this.length = length;
             buckets = new Node<T, U>[length];
         }
 
+        // method to display output in console
         public void Display()
         {
             for (int bucket = 0; bucket < buckets.Length; bucket++)
@@ -51,11 +54,14 @@ namespace MainDLL
             return hashCode;
         }
 
+        // insert key value pair into bucketlist
         public void Insert(T key, U value)
         {
             int bucket = GetHashCode(key);
             buckets[bucket] = new Node<T, U>(key, value, buckets[bucket]);
         }
+
+        // remove item from list, takes key as parameter
         public bool Remove(T key)
         {
             // catch null argument exeption
@@ -77,6 +83,7 @@ namespace MainDLL
             }
             throw new Exception(key + "Not found");
         }
+        // search method, search for specific key in list
         public U Search(T key)
         {
             Node<T, U> current = buckets[GetHashCode(key)];
