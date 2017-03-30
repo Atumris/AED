@@ -9,7 +9,6 @@ namespace MainDLL
         {
             public Tkey key;
             public Tvalue value;
-            public IEqualityComparer<Tkey> iec;
             public hashentry(Tkey key, Tvalue value)
             {
                 this.key = key;

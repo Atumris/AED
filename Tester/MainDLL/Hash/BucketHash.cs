@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace MainDLL
 {
+    // Represents an element which contains a value
     class Node<T, U>
     {
         public T key;
