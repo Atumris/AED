@@ -59,6 +59,7 @@
     <Compile Include="Sort\SmartBubbleSort.cs" />
     <Compile Include="Collection\MinMax.cs" />
     <Compile Include="Search\SequenTialSearch.cs" />
+    <Compile Include="Search\BinarySearchTree.cs" />
     <Compile Include="Collection\Queue.cs" />
     <Compile Include="QueryPerformance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

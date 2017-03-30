@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace MainDLL
 {
+    // Represents an element which contains a value
     class Node<T, U>
     {
         public T key;
@@ -16,17 +17,20 @@ namespace MainDLL
         }
     }
 
+    // hashtable class
     public class HashTable<T, U>
     {
         int length;
         Node<T, U>[] buckets;
         IEqualityComparer<T> iec;
+        // hashtable method, takes int lenght
         public HashTable(int length)
         {
             this.length = length;
             buckets = new Node<T, U>[length];
         }
 
+        // method to display output in console
         public void Display()
         {
             for (int bucket = 0; bucket < buckets.Length; bucket++)
@@ -50,12 +54,15 @@ namespace MainDLL
             return hashCode;
         }
 
+        // insert key value pair into bucketlist
         public void Insert(T key, U value)
         {
             int bucket = GetHashCode(key);
             buckets[bucket] = new Node<T, U>(key, value, buckets[bucket]);
         }
-        public void Remove(T key)
+
+        // remove item from list, takes key as parameter
+        public bool Remove(T key)
         {
             // catch null argument exeption
             if (key == null){
@@ -67,13 +74,16 @@ namespace MainDLL
             {
                 if (current.key.Equals(key)){
                     // remove current entry
+                    current.key = default(T);
                     current.value = default(U);
                     // search next item
                     current = current.next;
+                    return true;
                 }
             }
             throw new Exception(key + "Not found");
         }
+        // search method, search for specific key in list
         public U Search(T key)
         {
             Node<T, U> current = buckets[GetHashCode(key)];
