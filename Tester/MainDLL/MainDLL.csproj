@@ -45,6 +45,7 @@
     <Compile Include="Hash\BucketHash.cs" />
     <Compile Include="Hash\LinearHash.cs" />
     <Compile Include="Hash\LinearHashing.cs" />
+    <Compile Include="Lists\CircularLinkedList.cs" />
     <Compile Include="Lists\DoublyLinkedList.cs" />
     <Compile Include="Lists\LinkedList.cs" />
     <Compile Include="Collection\PriorityQueue.cs" />
