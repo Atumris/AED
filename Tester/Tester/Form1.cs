@@ -7,6 +7,7 @@ using MainDLL;
 using MainDLL.Collection;
 using MainDLL.Sort;
 using MainDLL.Search;
+using MainDLL.Hash;
 using System.Linq;
 
 namespace Tester
@@ -235,12 +236,10 @@ namespace Tester
 
         private void BtnLinearHash_Click(object sender, EventArgs e)
         {
-           var test = new LinearHash<int, int>();
-            test.Add(2, 80085);
-            test.LinearHashTable(16, 5);
+            var test = new LinearHashRob<int>();
+            test.Insert(2, 55637);
+            Console.WriteLine(test.Retrieve(2));
 
-            Console.WriteLine(test.ContainsKey(2));
-            Console.WriteLine(test);
         }
     }
 }

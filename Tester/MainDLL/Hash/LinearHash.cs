@@ -181,11 +181,6 @@ namespace MainDLL
         }
         #endregion
 
-        public void Add(KeyValuePair<Tkey, Tvalue> keyValuePair)
-        {
-            Add(keyValuePair.Key, keyValuePair.Value);
-        }
-
         public void Clear()
         {
             keyValue.Clear();
@@ -202,26 +197,25 @@ namespace MainDLL
         public void Add(Tkey key, Tvalue value)
         {
             int addr = GetHashAddress(key);
-            if (addr != null)
-            {
+
                 KeyValuePair<Tkey, Tvalue>[] keyValueCache = keyValue[addr];
+      
 
+            int length = keyValueCache.Length;
 
-                int length = keyValueCache.Length;
+            // NOTE: Here manually resizing is faster than using a List and converting to an array
 
-                // NOTE: Here manually resizing is faster than using a List and converting to an array
+            // Resize the array
+            Array.Resize<KeyValuePair<Tkey, Tvalue>>(ref keyValueCache, length + 1);
 
-                // Resize the array
-                Array.Resize<KeyValuePair<Tkey, Tvalue>>(ref keyValueCache, length + 1);
+            // Set the temporary keyValueCache entry to the key/value pair
+            keyValueCache[length] = new KeyValuePair<Tkey, Tvalue>(key, value);
 
-                // Set the temporary keyValueCache entry to the key/value pair
-                keyValueCache[length] = new KeyValuePair<Tkey, Tvalue>(key, value);
+            // Replace the old key/value pair with the new one
+            keyValue[addr] = keyValueCache;
 
-                // Replace the old key/value pair with the new one
-                keyValue[addr] = keyValueCache;
+            elementsOfArrayUsed++;
 
-                elementsOfArrayUsed++;
-            }
             while (LoadOver())
             {
                 IncreaseBuckets();
@@ -382,7 +376,7 @@ namespace MainDLL
         }
         public void AddData()
         {
-            
+
         }
 
     }
