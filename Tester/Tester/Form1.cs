@@ -236,7 +236,7 @@ namespace Tester
 
         private void BtnLinearHash_Click(object sender, EventArgs e)
         {
-            var test = new LinearHashRob<int>();
+            var test = new LinearHash<int>();
             test.Insert(2, 55637);
             Console.WriteLine(test.Retrieve(2));
 
