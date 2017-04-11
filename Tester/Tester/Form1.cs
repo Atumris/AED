@@ -241,5 +241,19 @@ namespace Tester
             Console.WriteLine(test.Retrieve(2));
 
         }
+
+        private void BinarySearchTreeBtn_Click(object sender, EventArgs e)
+        {
+            BinarySearchTree<int> BinarySearchTree = new BinarySearchTree<int>();
+            BinarySearchTree.add(50);
+            BinarySearchTree.add(40);
+            BinarySearchTree.add(60);
+            BinarySearchTree.add(20);
+            BinarySearchTree.add(45);
+            BinarySearchTree.add(55);
+            BinarySearchTree.add(65);
+
+            Console.WriteLine(BinarySearchTree);
+        }
     }
 }
