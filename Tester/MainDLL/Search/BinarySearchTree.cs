@@ -57,60 +57,77 @@ public class BinarySearchTree<T> where T : IComparable<T>
     /// Find a node
     /// </summary>
     /// <param name="data">Data for searching</param>
-    public void FindNode(T data)
+    public Node<T> FindNode(T data)
     {
        Node<T> newNode = new Node<T>();
+       Node<T> current = null;
        newNode.Data = data;
-        if (root == null)
-        {
-            root = newNode;
-        }
-        else
-        {
-            Node<T> current = root;
-            Node<T> parent;
-            while (true)
-            {
-                parent = current;
-                if (Int32.Parse(data.ToString()) == Int32.Parse(current.Data.ToString()))
-                {
-                    Console.Write(current.Data);
-                    break;
-                }
-                else
-                {
-                    if (Int32.Parse(data.ToString()) < Int32.Parse(current.Data.ToString()))
-                    {
-                        current = current.Left;
-                        if (current == null)
-                        {
-                            Console.Write("Not found");
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        current = current.Right;
-                        if (current == null)
-                        {
-                            Console.Write("Not found");
-                            break;
-                        }
-                    }
-                }
-            }
-        }
+       if (root == null)
+       {
+           root = newNode;
+       }
+       else
+       {
+           current = root;
+           while (true)
+           {
+               if (Int32.Parse(data.ToString()) == Int32.Parse(current.Data.ToString()))
+               {
+                   return current;
+                   break;
+               }
+               else
+               {
+                   if (Int32.Parse(data.ToString()) < Int32.Parse(current.Data.ToString()))
+                   {
+                       current = current.Left;
+                       if (current == null)
+                       {
+                           return current;
+                           break;
+                       }
+                   }
+                   else
+                   {
+                       current = current.Right;
+                       if (current == null)
+                       {
+                           return current;
+                           break;
+                       }
+                   }
+               }
+           }
+       }
+       return current;
     }
 
-
-    public void InOrder(Node<T> theRoot)
+    /// <summary>
+    /// Find lowest value in the binary search tree
+    /// </summary>
+    /// <returns>Lowest value</returns>
+    public Node<T> FindMin()
     {
-        if (theRoot != null)
+        Node<T> current = root;
+        while (current.Left != null)
         {
-            InOrder(theRoot.Left);
-            theRoot.DisplayNode();
-            InOrder(theRoot.Right);
+            current = current.Left;
         }
+        return current;
+    }
+
+    /// <summary>
+    /// Find lowest value in the binary search tree
+    /// </summary>
+    /// <returns>Lowest value</returns>
+    public Node<T> FindMax()
+    {
+        Node<T> current = root;
+        while (current.Right != null)
+        {
+            current = current.Right;
+        }
+        return current;
     }
 
 

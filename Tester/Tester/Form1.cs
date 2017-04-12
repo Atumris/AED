@@ -256,7 +256,7 @@ namespace Tester
             BinarySearchTree.Add(65);
 
 
-            BinarySearchTree.FindNode(35);
+            Console.Write(BinarySearchTree.FindMax().Data);
         }
 
         private void Form1_Load(object sender, EventArgs e)
