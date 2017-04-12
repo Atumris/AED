@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace MainDLL
@@ -31,6 +32,7 @@ namespace MainDLL
 
         public void Start()
         {
+            GC.Collect();
             QueryPerformanceCounter(out _start);
         }
 
