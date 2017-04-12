@@ -42,7 +42,7 @@ public class BinarySearchTree<T>
                         parent.Left = newNode;
                         break;
                     }
-                }
+                } 
                 else
                 {
                     current = current.Right;
