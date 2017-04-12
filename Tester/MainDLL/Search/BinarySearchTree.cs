@@ -1,27 +1,23 @@
 using System;
-using System.Collections.Generic;
-using MainDLL;
-using MainDLL.Lists;
+using MainDLL.Search;
 
-public class Node
-{
-    public int Data;
-    public Node Left;
-    public Node Right;
-}
 
-public class BinarySearchTree<T>
+public class BinarySearchTree<T> where T : IComparable<T>
 {
-    public Node root;
+    public Node<T> root;
 
     public BinarySearchTree()
     {
         root = null;
     }
 
-    public void add(int data)
+    /// <summary>
+    /// Add data to the binary search tree
+    /// </summary>
+    /// <param name="data">Data to add</param>
+    public void Add(T data)
     {
-        Node newNode = new Node();
+        Node<T> newNode = new Node<T>();
         newNode.Data = data;
         if (root == null)
         {
@@ -29,12 +25,12 @@ public class BinarySearchTree<T>
         }
         else
         {
-            Node current = root;
-            Node parent;
+            Node<T> current = root;
+            Node<T> parent;
             while (true)
             {
                 parent = current;
-                if (data < current.Data)
+                if (Int32.Parse(data.ToString()) < Int32.Parse(current.Data.ToString()))
                 {
                     current = current.Left;
                     if (current == null)
@@ -54,6 +50,68 @@ public class BinarySearchTree<T>
                 }
             }
         }
+
     }
-    
+
+    /// <summary>
+    /// Find a node
+    /// </summary>
+    /// <param name="data">Data for searching</param>
+    public void FindNode(T data)
+    {
+       Node<T> newNode = new Node<T>();
+       newNode.Data = data;
+        if (root == null)
+        {
+            root = newNode;
+        }
+        else
+        {
+            Node<T> current = root;
+            Node<T> parent;
+            while (true)
+            {
+                parent = current;
+                if (Int32.Parse(data.ToString()) == Int32.Parse(current.Data.ToString()))
+                {
+                    Console.Write(current.Data);
+                    break;
+                }
+                else
+                {
+                    if (Int32.Parse(data.ToString()) < Int32.Parse(current.Data.ToString()))
+                    {
+                        current = current.Left;
+                        if (current == null)
+                        {
+                            Console.Write("Not found");
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        current = current.Right;
+                        if (current == null)
+                        {
+                            Console.Write("Not found");
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    public void InOrder(Node<T> theRoot)
+    {
+        if (theRoot != null)
+        {
+            InOrder(theRoot.Left);
+            theRoot.DisplayNode();
+            InOrder(theRoot.Right);
+        }
+    }
+
+
 }

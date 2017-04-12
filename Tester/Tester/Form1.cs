@@ -245,15 +245,16 @@ namespace Tester
         private void BinarySearchTreeBtn_Click(object sender, EventArgs e)
         {
             BinarySearchTree<int> BinarySearchTree = new BinarySearchTree<int>();
-            BinarySearchTree.add(50);
-            BinarySearchTree.add(40);
-            BinarySearchTree.add(60);
-            BinarySearchTree.add(20);
-            BinarySearchTree.add(45);
-            BinarySearchTree.add(55);
-            BinarySearchTree.add(65);
+            BinarySearchTree.Add(50);
+            BinarySearchTree.Add(40);
+            BinarySearchTree.Add(60);
+            BinarySearchTree.Add(20);
+            BinarySearchTree.Add(45);
+            BinarySearchTree.Add(55);
+            BinarySearchTree.Add(65);
 
-            Console.WriteLine(BinarySearchTree);
+
+            BinarySearchTree.FindNode(35);
         }
     }
 }
