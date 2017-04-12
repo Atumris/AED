@@ -63,8 +63,7 @@ namespace MainDLL.Hash
         private bool CheckOpenSpace()//checks for open spaces in the table for insertion
         {
             bool isOpen = false;
-            while (isOpen == false)
-            { 
+
                 for (int i = 0; i < MaxSize; i++)
                 {
                     if (table[i] == null)
@@ -72,7 +71,7 @@ namespace MainDLL.Hash
                         isOpen = true;
                     }
                 }
-            }
+            
             return isOpen;
         }
         public bool Remove(int key)
