@@ -63,11 +63,14 @@ namespace MainDLL.Hash
         private bool CheckOpenSpace()//checks for open spaces in the table for insertion
         {
             bool isOpen = false;
-            for (int i = 0; i < MaxSize; i++)
-            {
-                if (table[i] == null)
+            while (isOpen == false)
+            { 
+                for (int i = 0; i < MaxSize; i++)
                 {
-                    isOpen = true;
+                    if (table[i] == null)
+                    {
+                        isOpen = true;
+                    }
                 }
             }
             return isOpen;
