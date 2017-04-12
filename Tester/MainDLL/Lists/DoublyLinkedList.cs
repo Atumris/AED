@@ -5,7 +5,7 @@ namespace MainDLL.Collection
 {
     public class DoublyLinkedList<T> where T : IComparable
     {
-        private readonly Node<T> _head;
+        private Node<T> _head;
         private int _size;
 
         /// <summary>
@@ -63,8 +63,6 @@ namespace MainDLL.Collection
         /// remove the data of the given node and stitch the list back together
         /// </summary>
         /// <param name="data">Which node that has to be deleted</param>
-        /// 
-        /// Hier zit een fout in.. wat nou als er maar 1 node is???
         public void Remove(T data)
         {
             //Field to remember previous node
@@ -81,12 +79,20 @@ namespace MainDLL.Collection
                 current = current.Next;
             }
             //Saves previous node to current node
-            if (previous != null)
+            if (previous != null && current.Next != null)
             {
                 previous.Next = current.Next;
                 current.Next.Previous = previous;
             }
-            
+            else if (current == _head)
+            {
+                Clear();
+            }
+            else if (current.Next == null && previous != null)
+            {
+                previous.Next = null;
+            }
+
         }
 
         /// <summary>
