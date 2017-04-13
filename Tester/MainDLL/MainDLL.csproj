@@ -44,6 +44,7 @@
     <Compile Include="ArrayList.cs" />
     <Compile Include="Hash\BucketHash.cs" />
     <Compile Include="Hash\LinearHash.cs" />
+    <Compile Include="HiPerfCounter.cs" />
     <Compile Include="Lists\CircularLinkedList.cs" />
     <Compile Include="Lists\DoublyLinkedList.cs" />
     <Compile Include="Lists\LinkedList.cs" />
@@ -53,6 +54,9 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="QPC\ActionMeasurement.cs" />
+    <Compile Include="QPC\MassiveMeasurement.cs" />
+    <Compile Include="QPC\QPC.cs" />
     <Compile Include="Search\BinarySearch.cs" />
     <Compile Include="Search\Node.cs" />
     <Compile Include="Sort\BubbleSort.cs" />

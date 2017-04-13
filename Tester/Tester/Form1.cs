@@ -9,6 +9,7 @@ using MainDLL.Sort;
 using MainDLL.Search;
 using MainDLL.Hash;
 using System.Linq;
+using MainDLL.QPC;
 
 namespace Tester
 {
@@ -113,7 +114,7 @@ namespace Tester
             GC.WaitForPendingFinalizers();
 
 
-            QueryPerformance QPC = new QueryPerformance();
+            HiPerfCounter QPC = new HiPerfCounter();
 
 
             lock (_object)
@@ -122,10 +123,11 @@ namespace Tester
                 thread.Priority = ThreadPriority.Highest;
                 Console.WriteLine("Hello World!");
                 QPC.Stop();
-                Console.WriteLine(QPC.Duration(1) + " ms");
+                MessageBox.Show(QPC.Duration.ToString());
+                Console.WriteLine(QPC.Duration + " ms");
             }
         }
-        QueryPerformance QPC = new QueryPerformance();
+        HiPerfCounter QPC = new HiPerfCounter();
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -144,7 +146,7 @@ namespace Tester
             Console.WriteLine("Hello World!");
             QPC.Stop();
             ////Thread.EndThreadAffinity();
-            Console.WriteLine(QPC.Duration(1) + " ms");
+            Console.WriteLine(QPC.Duration + " ms");
         }
 
 
@@ -164,7 +166,7 @@ namespace Tester
                 arr.RemoveAt(i);
             }
             QPC.Start();
-            MessageBox.Show(QPC.Duration(1).ToString());
+            MessageBox.Show(QPC.Duration.ToString());
         }
 
         //Priority queue test
@@ -255,6 +257,62 @@ namespace Tester
 
 
             BinarySearchTree.FindNode(35);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine("[Testing ActionMeasurement]");
+
+            var actionMeasurement = new ActionMeasurement();
+            var massiveMeasurement = new MassiveMeasurement();
+
+            Console.WriteLine();
+            Console.WriteLine(">>All tests are done on the RandomIteration method<<");
+            var result = actionMeasurement.MeasureMilliseconds(minmax);
+            System.Console.WriteLine("MeasureMilliseconds result: " + result);
+
+            result = actionMeasurement.MeasureNanoseconds(minmax);
+            System.Console.WriteLine("MeasurenanoSeconds result: " + result);
+
+            result = massiveMeasurement.MeasureAverageMilliseconds(minmax, 1000);
+            System.Console.WriteLine("Average of 1000 tests in Milliseconds: " + result);
+            Console.WriteLine("---------------------------------------------------");
+
+
+        }
+
+        private void minmax()
+        {
+            ArrayList<int> arr = new ArrayList<int>();
+            arr.Add(8);
+            arr.Add(5);
+            arr.Add(9);
+            arr.Add(20);
+            arr.Add(55);
+            arr.Add(30919785);
+            arr.Add(1);
+            arr.Add(2);
+            arr.Add(3);
+            //arr = {8, 5, 9, 20, 55, 30919785, 1, 2, 3};   
+            // seq
+
+            //test minmax functions
+
+            MinMax<int> minMax = new MinMax<int>();
+
+            //Console.WriteLine(minMax.Max(arr.ToArray()));
+            //Console.WriteLine(minMax.Min(arr.ToArray()));
+
+
+            int[] findMinMax = minMax.FindMinMax(arr.ToArray());
+            var asdf = findMinMax[0] + " " + findMinMax[1];
         }
     }
 }
