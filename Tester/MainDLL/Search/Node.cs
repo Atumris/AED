@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MainDLL.Search
 {
@@ -12,12 +8,17 @@ namespace MainDLL.Search
         public Node<T> Left;
         public Node<T> Right;
 
+        public int Parse(T value)
+        {
+            return Int32.Parse(value.ToString());
+        }
+        
         /// <summary>
         /// Display Node Data
         /// </summary>
         public void DisplayNode()
         {
-            Console.Write(Data + "\r\n");
+            Console.Write(Data + " ");
         }
     }
 }

@@ -246,7 +246,9 @@ namespace Tester
 
         private void BinarySearchTreeBtn_Click(object sender, EventArgs e)
         {
+
             BinarySearchTree<int> BinarySearchTree = new BinarySearchTree<int>();
+            // TEST ADDING ELEMENTS
             BinarySearchTree.Add(50);
             BinarySearchTree.Add(40);
             BinarySearchTree.Add(60);
@@ -255,8 +257,16 @@ namespace Tester
             BinarySearchTree.Add(55);
             BinarySearchTree.Add(65);
 
+            //Console.Write(BinarySearchTree.Find(20).Data);
 
-            Console.Write(BinarySearchTree.FindMax().Data);
+            // TEST DELETE
+            Console.Write(BinarySearchTree.Delete(45));
+
+            // TEST POSTORDER / PREORDER / INORDER
+            BinarySearchTree.PostOrder(BinarySearchTree.root);
+
+            // FIND NODE
+            //Console.Write(BinarySearchTree.FindNode(45).Data);
         }
 
         private void Form1_Load(object sender, EventArgs e)
