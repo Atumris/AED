@@ -28,61 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.tabFunctions = new System.Windows.Forms.TabPage();
+            this.groupSearch = new System.Windows.Forms.GroupBox();
+            this.btnSequentialSearch = new System.Windows.Forms.Button();
+            this.btnBinarySearch = new System.Windows.Forms.Button();
             this.btnBinarySearchTree = new System.Windows.Forms.Button();
-            this.btnLinkedList = new System.Windows.Forms.Button();
-            this.btnIterator = new System.Windows.Forms.Button();
-            this.btnDoublyNode = new System.Windows.Forms.Button();
-            this.btnDoublyLinkedList = new System.Windows.Forms.Button();
-            this.btnCircularLinkedList = new System.Windows.Forms.Button();
-            this.btnQuadraticHash = new System.Windows.Forms.Button();
+            this.groupQueue = new System.Windows.Forms.GroupBox();
+            this.btnQueue = new System.Windows.Forms.Button();
+            this.btnPriorityQueue = new System.Windows.Forms.Button();
+            this.groupHash = new System.Windows.Forms.GroupBox();
             this.btnLinearHash = new System.Windows.Forms.Button();
             this.btnBucketHash = new System.Windows.Forms.Button();
-            this.btnStack = new System.Windows.Forms.Button();
-            this.btnPriorityQueue = new System.Windows.Forms.Button();
-            this.btnQueue = new System.Windows.Forms.Button();
-            this.btnSequentialSearch = new System.Windows.Forms.Button();
-            this.btnMinMax = new System.Windows.Forms.Button();
-            this.btnBinarySearch = new System.Windows.Forms.Button();
-            this.btnSmartBubbleSort = new System.Windows.Forms.Button();
-            this.btnInsertionSort = new System.Windows.Forms.Button();
+            this.btnQuadraticHash = new System.Windows.Forms.Button();
+            this.groupList = new System.Windows.Forms.GroupBox();
+            this.btnCircularLinkedList = new System.Windows.Forms.Button();
+            this.btnDoublyLinkedList = new System.Windows.Forms.Button();
+            this.btnLinkedList = new System.Windows.Forms.Button();
+            this.groupSort = new System.Windows.Forms.GroupBox();
             this.btnBubbleSort = new System.Windows.Forms.Button();
+            this.btnInsertionSort = new System.Windows.Forms.Button();
+            this.btnSmartBubbleSort = new System.Windows.Forms.Button();
+            this.groupEtc = new System.Windows.Forms.GroupBox();
+            this.btnMinMax = new System.Windows.Forms.Button();
+            this.btnDoublyNode = new System.Windows.Forms.Button();
+            this.btnStack = new System.Windows.Forms.Button();
+            this.btnIterator = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnClearConsole = new System.Windows.Forms.Button();
             this.txtConsole = new System.Windows.Forms.TextBox();
-            this.groupSort = new System.Windows.Forms.GroupBox();
-            this.groupList = new System.Windows.Forms.GroupBox();
-            this.groupHash = new System.Windows.Forms.GroupBox();
-            this.groupQueue = new System.Windows.Forms.GroupBox();
-            this.groupSearch = new System.Windows.Forms.GroupBox();
-            this.groupEtc = new System.Windows.Forms.GroupBox();
-            this.tabControl1.SuspendLayout();
+            this.btnTestAll = new System.Windows.Forms.Button();
+            this.tabControl.SuspendLayout();
             this.tabFunctions.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.groupSort.SuspendLayout();
-            this.groupList.SuspendLayout();
-            this.groupHash.SuspendLayout();
-            this.groupQueue.SuspendLayout();
             this.groupSearch.SuspendLayout();
+            this.groupQueue.SuspendLayout();
+            this.groupHash.SuspendLayout();
+            this.groupList.SuspendLayout();
+            this.groupSort.SuspendLayout();
             this.groupEtc.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabFunctions);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(908, 594);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl.Controls.Add(this.tabFunctions);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Location = new System.Drawing.Point(12, 12);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(908, 594);
+            this.tabControl.TabIndex = 0;
             // 
             // tabFunctions
             // 
+            this.tabFunctions.Controls.Add(this.btnTestAll);
             this.tabFunctions.Controls.Add(this.groupSearch);
             this.tabFunctions.Controls.Add(this.groupQueue);
             this.tabFunctions.Controls.Add(this.groupHash);
@@ -97,6 +99,38 @@
             this.tabFunctions.Text = "Functions";
             this.tabFunctions.UseVisualStyleBackColor = true;
             // 
+            // groupSearch
+            // 
+            this.groupSearch.Controls.Add(this.btnSequentialSearch);
+            this.groupSearch.Controls.Add(this.btnBinarySearch);
+            this.groupSearch.Controls.Add(this.btnBinarySearchTree);
+            this.groupSearch.Location = new System.Drawing.Point(212, 126);
+            this.groupSearch.Name = "groupSearch";
+            this.groupSearch.Size = new System.Drawing.Size(254, 113);
+            this.groupSearch.TabIndex = 22;
+            this.groupSearch.TabStop = false;
+            this.groupSearch.Text = "Search";
+            // 
+            // btnSequentialSearch
+            // 
+            this.btnSequentialSearch.Location = new System.Drawing.Point(7, 19);
+            this.btnSequentialSearch.Name = "btnSequentialSearch";
+            this.btnSequentialSearch.Size = new System.Drawing.Size(109, 23);
+            this.btnSequentialSearch.TabIndex = 5;
+            this.btnSequentialSearch.Text = "Sequential Search";
+            this.btnSequentialSearch.UseVisualStyleBackColor = true;
+            this.btnSequentialSearch.Click += new System.EventHandler(this.btnSequentialSearch_Click);
+            // 
+            // btnBinarySearch
+            // 
+            this.btnBinarySearch.Location = new System.Drawing.Point(7, 48);
+            this.btnBinarySearch.Name = "btnBinarySearch";
+            this.btnBinarySearch.Size = new System.Drawing.Size(109, 23);
+            this.btnBinarySearch.TabIndex = 3;
+            this.btnBinarySearch.Text = "Binary Search";
+            this.btnBinarySearch.UseVisualStyleBackColor = true;
+            this.btnBinarySearch.Click += new System.EventHandler(this.btnBinarySearch_Click);
+            // 
             // btnBinarySearchTree
             // 
             this.btnBinarySearchTree.Location = new System.Drawing.Point(7, 76);
@@ -107,65 +141,48 @@
             this.btnBinarySearchTree.UseVisualStyleBackColor = true;
             this.btnBinarySearchTree.Click += new System.EventHandler(this.btnBinarySearchTree_Click);
             // 
-            // btnLinkedList
+            // groupQueue
             // 
-            this.btnLinkedList.Location = new System.Drawing.Point(6, 20);
-            this.btnLinkedList.Name = "btnLinkedList";
-            this.btnLinkedList.Size = new System.Drawing.Size(109, 23);
-            this.btnLinkedList.TabIndex = 16;
-            this.btnLinkedList.Text = "LinkedList";
-            this.btnLinkedList.UseVisualStyleBackColor = true;
-            this.btnLinkedList.Click += new System.EventHandler(this.btnLinkedList_Click);
+            this.groupQueue.Controls.Add(this.btnQueue);
+            this.groupQueue.Controls.Add(this.btnPriorityQueue);
+            this.groupQueue.Location = new System.Drawing.Point(213, 6);
+            this.groupQueue.Name = "groupQueue";
+            this.groupQueue.Size = new System.Drawing.Size(253, 113);
+            this.groupQueue.TabIndex = 21;
+            this.groupQueue.TabStop = false;
+            this.groupQueue.Text = "Queue";
             // 
-            // btnIterator
+            // btnQueue
             // 
-            this.btnIterator.Location = new System.Drawing.Point(121, 19);
-            this.btnIterator.Name = "btnIterator";
-            this.btnIterator.Size = new System.Drawing.Size(109, 23);
-            this.btnIterator.TabIndex = 15;
-            this.btnIterator.Text = "Iterator";
-            this.btnIterator.UseVisualStyleBackColor = true;
-            this.btnIterator.Click += new System.EventHandler(this.btnIterator_Click);
+            this.btnQueue.Location = new System.Drawing.Point(6, 19);
+            this.btnQueue.Name = "btnQueue";
+            this.btnQueue.Size = new System.Drawing.Size(109, 23);
+            this.btnQueue.TabIndex = 6;
+            this.btnQueue.Text = "Queue";
+            this.btnQueue.UseVisualStyleBackColor = true;
+            this.btnQueue.Click += new System.EventHandler(this.btnQueue_Click);
             // 
-            // btnDoublyNode
+            // btnPriorityQueue
             // 
-            this.btnDoublyNode.Location = new System.Drawing.Point(6, 48);
-            this.btnDoublyNode.Name = "btnDoublyNode";
-            this.btnDoublyNode.Size = new System.Drawing.Size(109, 23);
-            this.btnDoublyNode.TabIndex = 14;
-            this.btnDoublyNode.Text = "Doubly Node";
-            this.btnDoublyNode.UseVisualStyleBackColor = true;
-            this.btnDoublyNode.Click += new System.EventHandler(this.btnDoublyNode_Click);
+            this.btnPriorityQueue.Location = new System.Drawing.Point(6, 48);
+            this.btnPriorityQueue.Name = "btnPriorityQueue";
+            this.btnPriorityQueue.Size = new System.Drawing.Size(109, 23);
+            this.btnPriorityQueue.TabIndex = 7;
+            this.btnPriorityQueue.Text = "Priority Queue";
+            this.btnPriorityQueue.UseVisualStyleBackColor = true;
+            this.btnPriorityQueue.Click += new System.EventHandler(this.btnPriorityQueue_Click);
             // 
-            // btnDoublyLinkedList
+            // groupHash
             // 
-            this.btnDoublyLinkedList.Location = new System.Drawing.Point(6, 49);
-            this.btnDoublyLinkedList.Name = "btnDoublyLinkedList";
-            this.btnDoublyLinkedList.Size = new System.Drawing.Size(109, 23);
-            this.btnDoublyLinkedList.TabIndex = 13;
-            this.btnDoublyLinkedList.Text = "Doubly Linked List";
-            this.btnDoublyLinkedList.UseVisualStyleBackColor = true;
-            this.btnDoublyLinkedList.Click += new System.EventHandler(this.btnDoublyLinkedList_Click);
-            // 
-            // btnCircularLinkedList
-            // 
-            this.btnCircularLinkedList.Location = new System.Drawing.Point(6, 77);
-            this.btnCircularLinkedList.Name = "btnCircularLinkedList";
-            this.btnCircularLinkedList.Size = new System.Drawing.Size(109, 23);
-            this.btnCircularLinkedList.TabIndex = 12;
-            this.btnCircularLinkedList.Text = "Circular Linked List";
-            this.btnCircularLinkedList.UseVisualStyleBackColor = true;
-            this.btnCircularLinkedList.Click += new System.EventHandler(this.btnCircularLinkedList_Click);
-            // 
-            // btnQuadraticHash
-            // 
-            this.btnQuadraticHash.Location = new System.Drawing.Point(6, 77);
-            this.btnQuadraticHash.Name = "btnQuadraticHash";
-            this.btnQuadraticHash.Size = new System.Drawing.Size(109, 23);
-            this.btnQuadraticHash.TabIndex = 11;
-            this.btnQuadraticHash.Text = "Quadratic Hash";
-            this.btnQuadraticHash.UseVisualStyleBackColor = true;
-            this.btnQuadraticHash.Click += new System.EventHandler(this.btnQuadraticHash_Click);
+            this.groupHash.Controls.Add(this.btnLinearHash);
+            this.groupHash.Controls.Add(this.btnBucketHash);
+            this.groupHash.Controls.Add(this.btnQuadraticHash);
+            this.groupHash.Location = new System.Drawing.Point(6, 245);
+            this.groupHash.Name = "groupHash";
+            this.groupHash.Size = new System.Drawing.Size(200, 111);
+            this.groupHash.TabIndex = 20;
+            this.groupHash.TabStop = false;
+            this.groupHash.Text = "Hash";
             // 
             // btnLinearHash
             // 
@@ -187,75 +204,79 @@
             this.btnBucketHash.UseVisualStyleBackColor = true;
             this.btnBucketHash.Click += new System.EventHandler(this.btnBucketHash_Click);
             // 
-            // btnStack
+            // btnQuadraticHash
             // 
-            this.btnStack.Location = new System.Drawing.Point(6, 77);
-            this.btnStack.Name = "btnStack";
-            this.btnStack.Size = new System.Drawing.Size(109, 23);
-            this.btnStack.TabIndex = 8;
-            this.btnStack.Text = "Stack";
-            this.btnStack.UseVisualStyleBackColor = true;
-            this.btnStack.Click += new System.EventHandler(this.btnStack_Click);
+            this.btnQuadraticHash.Location = new System.Drawing.Point(6, 77);
+            this.btnQuadraticHash.Name = "btnQuadraticHash";
+            this.btnQuadraticHash.Size = new System.Drawing.Size(109, 23);
+            this.btnQuadraticHash.TabIndex = 11;
+            this.btnQuadraticHash.Text = "Quadratic Hash";
+            this.btnQuadraticHash.UseVisualStyleBackColor = true;
+            this.btnQuadraticHash.Click += new System.EventHandler(this.btnQuadraticHash_Click);
             // 
-            // btnPriorityQueue
+            // groupList
             // 
-            this.btnPriorityQueue.Location = new System.Drawing.Point(6, 48);
-            this.btnPriorityQueue.Name = "btnPriorityQueue";
-            this.btnPriorityQueue.Size = new System.Drawing.Size(109, 23);
-            this.btnPriorityQueue.TabIndex = 7;
-            this.btnPriorityQueue.Text = "Priority Queue";
-            this.btnPriorityQueue.UseVisualStyleBackColor = true;
-            this.btnPriorityQueue.Click += new System.EventHandler(this.btnPriorityQueue_Click);
+            this.groupList.Controls.Add(this.btnCircularLinkedList);
+            this.groupList.Controls.Add(this.btnDoublyLinkedList);
+            this.groupList.Controls.Add(this.btnLinkedList);
+            this.groupList.Location = new System.Drawing.Point(6, 125);
+            this.groupList.Name = "groupList";
+            this.groupList.Size = new System.Drawing.Size(200, 114);
+            this.groupList.TabIndex = 19;
+            this.groupList.TabStop = false;
+            this.groupList.Text = "List";
             // 
-            // btnQueue
+            // btnCircularLinkedList
             // 
-            this.btnQueue.Location = new System.Drawing.Point(6, 19);
-            this.btnQueue.Name = "btnQueue";
-            this.btnQueue.Size = new System.Drawing.Size(109, 23);
-            this.btnQueue.TabIndex = 6;
-            this.btnQueue.Text = "Queue";
-            this.btnQueue.UseVisualStyleBackColor = true;
-            this.btnQueue.Click += new System.EventHandler(this.btnQueue_Click);
+            this.btnCircularLinkedList.Location = new System.Drawing.Point(6, 77);
+            this.btnCircularLinkedList.Name = "btnCircularLinkedList";
+            this.btnCircularLinkedList.Size = new System.Drawing.Size(109, 23);
+            this.btnCircularLinkedList.TabIndex = 12;
+            this.btnCircularLinkedList.Text = "Circular Linked List";
+            this.btnCircularLinkedList.UseVisualStyleBackColor = true;
+            this.btnCircularLinkedList.Click += new System.EventHandler(this.btnCircularLinkedList_Click);
             // 
-            // btnSequentialSearch
+            // btnDoublyLinkedList
             // 
-            this.btnSequentialSearch.Location = new System.Drawing.Point(7, 19);
-            this.btnSequentialSearch.Name = "btnSequentialSearch";
-            this.btnSequentialSearch.Size = new System.Drawing.Size(109, 23);
-            this.btnSequentialSearch.TabIndex = 5;
-            this.btnSequentialSearch.Text = "Sequential Search";
-            this.btnSequentialSearch.UseVisualStyleBackColor = true;
-            this.btnSequentialSearch.Click += new System.EventHandler(this.btnSequentialSearch_Click);
+            this.btnDoublyLinkedList.Location = new System.Drawing.Point(6, 49);
+            this.btnDoublyLinkedList.Name = "btnDoublyLinkedList";
+            this.btnDoublyLinkedList.Size = new System.Drawing.Size(109, 23);
+            this.btnDoublyLinkedList.TabIndex = 13;
+            this.btnDoublyLinkedList.Text = "Doubly Linked List";
+            this.btnDoublyLinkedList.UseVisualStyleBackColor = true;
+            this.btnDoublyLinkedList.Click += new System.EventHandler(this.btnDoublyLinkedList_Click);
             // 
-            // btnMinMax
+            // btnLinkedList
             // 
-            this.btnMinMax.Location = new System.Drawing.Point(6, 19);
-            this.btnMinMax.Name = "btnMinMax";
-            this.btnMinMax.Size = new System.Drawing.Size(109, 23);
-            this.btnMinMax.TabIndex = 4;
-            this.btnMinMax.Text = "MinMax";
-            this.btnMinMax.UseVisualStyleBackColor = true;
-            this.btnMinMax.Click += new System.EventHandler(this.btnMinMax_Click);
+            this.btnLinkedList.Location = new System.Drawing.Point(6, 20);
+            this.btnLinkedList.Name = "btnLinkedList";
+            this.btnLinkedList.Size = new System.Drawing.Size(109, 23);
+            this.btnLinkedList.TabIndex = 16;
+            this.btnLinkedList.Text = "LinkedList";
+            this.btnLinkedList.UseVisualStyleBackColor = true;
+            this.btnLinkedList.Click += new System.EventHandler(this.btnLinkedList_Click);
             // 
-            // btnBinarySearch
+            // groupSort
             // 
-            this.btnBinarySearch.Location = new System.Drawing.Point(7, 48);
-            this.btnBinarySearch.Name = "btnBinarySearch";
-            this.btnBinarySearch.Size = new System.Drawing.Size(109, 23);
-            this.btnBinarySearch.TabIndex = 3;
-            this.btnBinarySearch.Text = "Binary Search";
-            this.btnBinarySearch.UseVisualStyleBackColor = true;
-            this.btnBinarySearch.Click += new System.EventHandler(this.btnBinarySearch_Click);
+            this.groupSort.Controls.Add(this.btnBubbleSort);
+            this.groupSort.Controls.Add(this.btnInsertionSort);
+            this.groupSort.Controls.Add(this.btnSmartBubbleSort);
+            this.groupSort.Location = new System.Drawing.Point(6, 6);
+            this.groupSort.Name = "groupSort";
+            this.groupSort.Size = new System.Drawing.Size(200, 113);
+            this.groupSort.TabIndex = 18;
+            this.groupSort.TabStop = false;
+            this.groupSort.Text = "Sort";
             // 
-            // btnSmartBubbleSort
+            // btnBubbleSort
             // 
-            this.btnSmartBubbleSort.Location = new System.Drawing.Point(6, 45);
-            this.btnSmartBubbleSort.Name = "btnSmartBubbleSort";
-            this.btnSmartBubbleSort.Size = new System.Drawing.Size(109, 23);
-            this.btnSmartBubbleSort.TabIndex = 2;
-            this.btnSmartBubbleSort.Text = "SmartBubbleSort";
-            this.btnSmartBubbleSort.UseVisualStyleBackColor = true;
-            this.btnSmartBubbleSort.Click += new System.EventHandler(this.btnSmartBubbleSort_Click);
+            this.btnBubbleSort.Location = new System.Drawing.Point(6, 19);
+            this.btnBubbleSort.Name = "btnBubbleSort";
+            this.btnBubbleSort.Size = new System.Drawing.Size(109, 23);
+            this.btnBubbleSort.TabIndex = 0;
+            this.btnBubbleSort.Text = "BubbleSort";
+            this.btnBubbleSort.UseVisualStyleBackColor = true;
+            this.btnBubbleSort.Click += new System.EventHandler(this.btnBubbleSort_Click);
             // 
             // btnInsertionSort
             // 
@@ -267,15 +288,68 @@
             this.btnInsertionSort.UseVisualStyleBackColor = true;
             this.btnInsertionSort.Click += new System.EventHandler(this.btnInsertionSort_Click);
             // 
-            // btnBubbleSort
+            // btnSmartBubbleSort
             // 
-            this.btnBubbleSort.Location = new System.Drawing.Point(6, 19);
-            this.btnBubbleSort.Name = "btnBubbleSort";
-            this.btnBubbleSort.Size = new System.Drawing.Size(109, 23);
-            this.btnBubbleSort.TabIndex = 0;
-            this.btnBubbleSort.Text = "BubbleSort";
-            this.btnBubbleSort.UseVisualStyleBackColor = true;
-            this.btnBubbleSort.Click += new System.EventHandler(this.btnBubbleSort_Click);
+            this.btnSmartBubbleSort.Location = new System.Drawing.Point(6, 45);
+            this.btnSmartBubbleSort.Name = "btnSmartBubbleSort";
+            this.btnSmartBubbleSort.Size = new System.Drawing.Size(109, 23);
+            this.btnSmartBubbleSort.TabIndex = 2;
+            this.btnSmartBubbleSort.Text = "SmartBubbleSort";
+            this.btnSmartBubbleSort.UseVisualStyleBackColor = true;
+            this.btnSmartBubbleSort.Click += new System.EventHandler(this.btnSmartBubbleSort_Click);
+            // 
+            // groupEtc
+            // 
+            this.groupEtc.Controls.Add(this.btnMinMax);
+            this.groupEtc.Controls.Add(this.btnDoublyNode);
+            this.groupEtc.Controls.Add(this.btnStack);
+            this.groupEtc.Controls.Add(this.btnIterator);
+            this.groupEtc.Location = new System.Drawing.Point(219, 245);
+            this.groupEtc.Name = "groupEtc";
+            this.groupEtc.Size = new System.Drawing.Size(247, 111);
+            this.groupEtc.TabIndex = 23;
+            this.groupEtc.TabStop = false;
+            this.groupEtc.Text = "Etc";
+            // 
+            // btnMinMax
+            // 
+            this.btnMinMax.Location = new System.Drawing.Point(6, 19);
+            this.btnMinMax.Name = "btnMinMax";
+            this.btnMinMax.Size = new System.Drawing.Size(109, 23);
+            this.btnMinMax.TabIndex = 4;
+            this.btnMinMax.Text = "MinMax";
+            this.btnMinMax.UseVisualStyleBackColor = true;
+            this.btnMinMax.Click += new System.EventHandler(this.btnMinMax_Click);
+            // 
+            // btnDoublyNode
+            // 
+            this.btnDoublyNode.Location = new System.Drawing.Point(6, 48);
+            this.btnDoublyNode.Name = "btnDoublyNode";
+            this.btnDoublyNode.Size = new System.Drawing.Size(109, 23);
+            this.btnDoublyNode.TabIndex = 14;
+            this.btnDoublyNode.Text = "Doubly Node";
+            this.btnDoublyNode.UseVisualStyleBackColor = true;
+            this.btnDoublyNode.Click += new System.EventHandler(this.btnDoublyNode_Click);
+            // 
+            // btnStack
+            // 
+            this.btnStack.Location = new System.Drawing.Point(6, 77);
+            this.btnStack.Name = "btnStack";
+            this.btnStack.Size = new System.Drawing.Size(109, 23);
+            this.btnStack.TabIndex = 8;
+            this.btnStack.Text = "Stack";
+            this.btnStack.UseVisualStyleBackColor = true;
+            this.btnStack.Click += new System.EventHandler(this.btnStack_Click);
+            // 
+            // btnIterator
+            // 
+            this.btnIterator.Location = new System.Drawing.Point(121, 19);
+            this.btnIterator.Name = "btnIterator";
+            this.btnIterator.Size = new System.Drawing.Size(109, 23);
+            this.btnIterator.TabIndex = 15;
+            this.btnIterator.Text = "Iterator";
+            this.btnIterator.UseVisualStyleBackColor = true;
+            this.btnIterator.Click += new System.EventHandler(this.btnIterator_Click);
             // 
             // tabPage2
             // 
@@ -319,104 +393,42 @@
             this.txtConsole.Size = new System.Drawing.Size(887, 526);
             this.txtConsole.TabIndex = 0;
             // 
-            // groupSort
+            // btnTestAll
             // 
-            this.groupSort.Controls.Add(this.btnBubbleSort);
-            this.groupSort.Controls.Add(this.btnInsertionSort);
-            this.groupSort.Controls.Add(this.btnSmartBubbleSort);
-            this.groupSort.Location = new System.Drawing.Point(6, 6);
-            this.groupSort.Name = "groupSort";
-            this.groupSort.Size = new System.Drawing.Size(200, 113);
-            this.groupSort.TabIndex = 18;
-            this.groupSort.TabStop = false;
-            this.groupSort.Text = "Sort";
-            // 
-            // groupList
-            // 
-            this.groupList.Controls.Add(this.btnCircularLinkedList);
-            this.groupList.Controls.Add(this.btnDoublyLinkedList);
-            this.groupList.Controls.Add(this.btnLinkedList);
-            this.groupList.Location = new System.Drawing.Point(6, 125);
-            this.groupList.Name = "groupList";
-            this.groupList.Size = new System.Drawing.Size(200, 114);
-            this.groupList.TabIndex = 19;
-            this.groupList.TabStop = false;
-            this.groupList.Text = "List";
-            // 
-            // groupHash
-            // 
-            this.groupHash.Controls.Add(this.btnLinearHash);
-            this.groupHash.Controls.Add(this.btnBucketHash);
-            this.groupHash.Controls.Add(this.btnQuadraticHash);
-            this.groupHash.Location = new System.Drawing.Point(6, 245);
-            this.groupHash.Name = "groupHash";
-            this.groupHash.Size = new System.Drawing.Size(200, 111);
-            this.groupHash.TabIndex = 20;
-            this.groupHash.TabStop = false;
-            this.groupHash.Text = "Hash";
-            // 
-            // groupQueue
-            // 
-            this.groupQueue.Controls.Add(this.btnQueue);
-            this.groupQueue.Controls.Add(this.btnPriorityQueue);
-            this.groupQueue.Location = new System.Drawing.Point(213, 6);
-            this.groupQueue.Name = "groupQueue";
-            this.groupQueue.Size = new System.Drawing.Size(253, 113);
-            this.groupQueue.TabIndex = 21;
-            this.groupQueue.TabStop = false;
-            this.groupQueue.Text = "Queue";
-            // 
-            // groupSearch
-            // 
-            this.groupSearch.Controls.Add(this.btnSequentialSearch);
-            this.groupSearch.Controls.Add(this.btnBinarySearch);
-            this.groupSearch.Controls.Add(this.btnBinarySearchTree);
-            this.groupSearch.Location = new System.Drawing.Point(212, 126);
-            this.groupSearch.Name = "groupSearch";
-            this.groupSearch.Size = new System.Drawing.Size(254, 113);
-            this.groupSearch.TabIndex = 22;
-            this.groupSearch.TabStop = false;
-            this.groupSearch.Text = "Search";
-            // 
-            // groupEtc
-            // 
-            this.groupEtc.Controls.Add(this.btnMinMax);
-            this.groupEtc.Controls.Add(this.btnDoublyNode);
-            this.groupEtc.Controls.Add(this.btnStack);
-            this.groupEtc.Controls.Add(this.btnIterator);
-            this.groupEtc.Location = new System.Drawing.Point(219, 245);
-            this.groupEtc.Name = "groupEtc";
-            this.groupEtc.Size = new System.Drawing.Size(247, 111);
-            this.groupEtc.TabIndex = 23;
-            this.groupEtc.TabStop = false;
-            this.groupEtc.Text = "Etc";
+            this.btnTestAll.Location = new System.Drawing.Point(473, 7);
+            this.btnTestAll.Name = "btnTestAll";
+            this.btnTestAll.Size = new System.Drawing.Size(298, 112);
+            this.btnTestAll.TabIndex = 24;
+            this.btnTestAll.Text = "Test all!";
+            this.btnTestAll.UseVisualStyleBackColor = true;
+            this.btnTestAll.Click += new System.EventHandler(this.btnTestAll_Click);
             // 
             // MainProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 618);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl);
             this.Name = "MainProgram";
             this.Text = "List";
             this.Load += new System.EventHandler(this.MainProgram_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.tabFunctions.ResumeLayout(false);
+            this.groupSearch.ResumeLayout(false);
+            this.groupQueue.ResumeLayout(false);
+            this.groupHash.ResumeLayout(false);
+            this.groupList.ResumeLayout(false);
+            this.groupSort.ResumeLayout(false);
+            this.groupEtc.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.groupSort.ResumeLayout(false);
-            this.groupList.ResumeLayout(false);
-            this.groupHash.ResumeLayout(false);
-            this.groupQueue.ResumeLayout(false);
-            this.groupSearch.ResumeLayout(false);
-            this.groupEtc.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabFunctions;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox txtConsole;
@@ -445,5 +457,6 @@
         private System.Windows.Forms.GroupBox groupHash;
         private System.Windows.Forms.GroupBox groupSearch;
         private System.Windows.Forms.GroupBox groupEtc;
+        private System.Windows.Forms.Button btnTestAll;
     }
 }

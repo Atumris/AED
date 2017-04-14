@@ -427,5 +427,112 @@ namespace Tester
 
             action(iterator);
         }
+
+        private void btnTestAll_Click(object sender, EventArgs e)
+        {
+            WriteToConsole("Please have patience, the system is working! ..This can take up to 5 minutes!");
+            DialogResult dialogResult = MessageBox.Show("This can freeze your computer. Are you sure?", "Deathwish", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                tabControl.SelectTab(1);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"BubbleSort Test");
+                WriteToConsole(@"===========================");
+
+                action(bubbleSort);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Smart Bubblesort Test");
+                WriteToConsole(@"===========================");
+
+                action(smartBubbleSort);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"InsertionSort Test");
+                WriteToConsole(@"===========================");
+
+                action(insertionSort);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Queue Test");
+                WriteToConsole(@"===========================");
+
+                action(queue);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Priority Queue Test");
+                WriteToConsole(@"===========================");
+
+                action(prioQue);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Linked List Test");
+                WriteToConsole(@"===========================");
+
+                action(linkedList);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Doubly List Test");
+                WriteToConsole(@"===========================");
+
+                action(doublyLinkedList);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Circular Linked List test");
+                WriteToConsole(@"===========================");
+
+                action(circularLinkedList);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Sequential Search Test");
+                WriteToConsole(@"===========================");
+
+                action(seqSearch);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Binairy Search test");
+                WriteToConsole(@"===========================");
+
+                action(binSearch);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Binairy Search Tree Test");
+                WriteToConsole(@"===========================");
+
+
+                action(binTreeSearch);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Linear Hash Test");
+                WriteToConsole(@"===========================");
+
+                action(linearHash);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Bucket Hash Test");
+                WriteToConsole(@"===========================");
+
+                action(bucketHash);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Quadratic Hash Test");
+                WriteToConsole(@"===========================");
+
+                action(QuadraticHash);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Min Max Test");
+                WriteToConsole(@"===========================");
+
+                action(minMax);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Doubly Node Test");
+                WriteToConsole(@"===========================");
+
+                action(doublyNode);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Stack Test");
+                WriteToConsole(@"===========================");
+
+                action(stack);
+                WriteToConsole(@"===========================");
+                WriteToConsole(@"Iterator Test");
+                WriteToConsole(@"===========================");
+
+                action(iterator);
+
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                txtConsole.Text = "";
+            }
+
+        }
     }
 }
