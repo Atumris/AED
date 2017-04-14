@@ -1,12 +1,6 @@
 ﻿using MainDLL.QPC;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MainDLL;
 using MainDLL.Collection;
@@ -254,7 +248,7 @@ namespace Tester
         private void btnInsertionSort_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
-            WriteToConsole(@"Insertionsort Test");
+            WriteToConsole(@"InsertionSort Test");
             WriteToConsole(@"===========================");
 
             action(insertionSort);
@@ -394,6 +388,10 @@ namespace Tester
         }
         private void btnDoublyNode_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Doubly Node Test");
+            WriteToConsole(@"===========================");
+
             action(doublyNode);
         }
 
