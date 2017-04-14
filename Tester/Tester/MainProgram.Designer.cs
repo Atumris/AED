@@ -123,7 +123,7 @@
             // 
             // btnBinarySearch
             // 
-            this.btnBinarySearch.Location = new System.Drawing.Point(7, 48);
+            this.btnBinarySearch.Location = new System.Drawing.Point(6, 47);
             this.btnBinarySearch.Name = "btnBinarySearch";
             this.btnBinarySearch.Size = new System.Drawing.Size(109, 23);
             this.btnBinarySearch.TabIndex = 3;
@@ -164,7 +164,7 @@
             // 
             // btnPriorityQueue
             // 
-            this.btnPriorityQueue.Location = new System.Drawing.Point(6, 48);
+            this.btnPriorityQueue.Location = new System.Drawing.Point(6, 45);
             this.btnPriorityQueue.Name = "btnPriorityQueue";
             this.btnPriorityQueue.Size = new System.Drawing.Size(109, 23);
             this.btnPriorityQueue.TabIndex = 7;
