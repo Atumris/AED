@@ -14,13 +14,18 @@ namespace Tester
     public partial class MainProgram : Form
     {
 
+        //Random number array for further use during testing.
         int[] randomNumberArray = new int[100];
         public MainProgram()
         {
             InitializeComponent();
         }
 
-        private void action(Action act)
+        /// <summary>
+        /// From here we start the QPC and make sure we have the right formatting
+        /// </summary>
+        /// <param name="act">The action(function) to preform in the QPC!</param>
+        private void Action(Action act)
         {
             var actionMeasurement = new ActionMeasurement();
             var massiveMeasurement = new MassiveMeasurement();
@@ -33,12 +38,20 @@ namespace Tester
             result = massiveMeasurement.MeasureAverageMilliseconds(act, 1000);
             WriteToConsole("Average of 1000 tests in Milliseconds: " + result + "..");
         }
+        /// <summary>
+        /// Clear the console of all text inside
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnClearConsole_Click(object sender, EventArgs e)
         {
             txtConsole.Text = "";
         }
 
-        public void prioQue()
+        /// <summary>
+        /// Priority Queue test
+        /// </summary>
+        public void PrioQue()
         {
             var test = new PriorityQueue<int>();
             test.EnQueue(0, 1);
@@ -54,16 +67,24 @@ namespace Tester
             test.EnQueue(16, 1);
         }
 
+        /// <summary>
+        /// Priority queue button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPriorityQueue_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Priority Queue Test");
             WriteToConsole(@"===========================");
 
-            action(prioQue);
+            Action(PrioQue);
         }
 
-        private void binSearch()
+        /// <summary>
+        /// BinarySearch test
+        /// </summary>
+        private void BinSearch()
         {
             var seq = Enumerable.Range(0, 1000);
             BinarySearch binsrch = new BinarySearch();
@@ -82,16 +103,24 @@ namespace Tester
             binsrch.BinSearch(100000, seq.ToArray());
         }
 
+        /// <summary>
+        /// BinarySearch test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBinarySearch_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Binairy Search test");
             WriteToConsole(@"===========================");
 
-            action(binSearch);
+            Action(BinSearch);
         }
 
-        private void seqSearch()
+        /// <summary>
+        /// Sequential search action
+        /// </summary>
+        private void SeqSearch()
         {
             var seq = Enumerable.Range(0, 10);
 
@@ -100,16 +129,24 @@ namespace Tester
             search.SeqSearch(seq.ToArray(), 5);
         }
 
+        /// <summary>
+        /// Sequential search button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSequentialSearch_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Sequential Search Test");
             WriteToConsole(@"===========================");
 
-            action(seqSearch);
+            Action(SeqSearch);
         }
 
-        private void stack()
+        /// <summary>
+        /// Stack test
+        /// </summary>
+        private void Stack()
         {
             MainDLL.Collection.Stack<int> stack = new MainDLL.Collection.Stack<int>();
             for (var i = 0; i <= 10; i++)
@@ -120,16 +157,25 @@ namespace Tester
             stack.peek();
         }
 
+        /// <summary>
+        /// Stack test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStack_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Stack Test");
             WriteToConsole(@"===========================");
 
-            action(stack);
+            Action(Stack);
         }
 
-        private void binTreeSearch()
+
+        /// <summary>
+        /// Binary Tree Search test
+        /// </summary>
+        private void BinTreeSearch()
         {
             BinarySearchTree<int> BinarySearchTree = new BinarySearchTree<int>();
             // TEST ADDING ELEMENTS
@@ -153,6 +199,11 @@ namespace Tester
             //Console.Write(BinarySearchTree.FindNode(45).Data);
         }
 
+        /// <summary>
+        /// BinaryTreeTest button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBinarySearchTree_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
@@ -160,26 +211,37 @@ namespace Tester
             WriteToConsole(@"===========================");
 
 
-            action(binTreeSearch);
+            Action(BinTreeSearch);
         }
 
-        private void linearHash()
+        /// <summary>
+        /// Linear hash test
+        /// </summary>
+        private void LinearHash()
         {
             var test = new LinearHash<int>();
             test.Insert(2, 55637);
             test.Retrieve(2);
         }
 
+        /// <summary>
+        /// Linear hash button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLinearHash_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Linear Hash Test");
             WriteToConsole(@"===========================");
 
-            action(linearHash);
+            Action(LinearHash);
         }
 
-        private void minMax()
+        /// <summary>
+        /// MinMax test
+        /// </summary>
+        private void MinMax()
         {
             ArrayList<int> arr = new ArrayList<int>();
             arr.Add(8);
@@ -206,27 +268,41 @@ namespace Tester
             var asdf = findMinMax[0] + " " + findMinMax[1];
         }
 
+        /// <summary>
+        /// MinMax button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMinMax_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Min Max Test");
             WriteToConsole(@"===========================");
 
-            action(minMax);
+            Action(MinMax);
         }
 
-        private void bubbleSort()
+        /// <summary>
+        /// BubbleSort test
+        /// </summary>
+        private void BubbleSort()
         {
             BubbleSort<int> sort = new BubbleSort<int>();
             sort.Bubble(randomNumberArray);
         }
+
+        /// <summary>
+        /// BubbleSort test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBubbleSort_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"BubbleSort Test");
             WriteToConsole(@"===========================");
 
-            action(bubbleSort);
+            Action(BubbleSort);
         }
 
         private void MainProgram_Load(object sender, EventArgs e)
@@ -240,19 +316,27 @@ namespace Tester
             }
         }
 
-        private void insertionSort()
+        /// <summary>
+        /// InsertionSort test
+        /// </summary>
+        private void InsertionSort()
         {
             InsertionSort<int> sort = new InsertionSort<int>();
             sort.InsertSort(randomNumberArray);
         }
 
+        /// <summary>
+        /// InsertionSort Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnInsertionSort_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"InsertionSort Test");
             WriteToConsole(@"===========================");
 
-            action(insertionSort);
+            Action(InsertionSort);
         }
 
         private void smartBubbleSort()
