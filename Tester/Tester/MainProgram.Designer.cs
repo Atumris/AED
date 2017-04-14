@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabFunctions = new System.Windows.Forms.TabPage();
             this.btnBinarySearchTree = new System.Windows.Forms.Button();
             this.btnLinkedList = new System.Windows.Forms.Button();
             this.btnIterator = new System.Windows.Forms.Button();
@@ -51,9 +51,21 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnClearConsole = new System.Windows.Forms.Button();
             this.txtConsole = new System.Windows.Forms.TextBox();
+            this.groupSort = new System.Windows.Forms.GroupBox();
+            this.groupList = new System.Windows.Forms.GroupBox();
+            this.groupHash = new System.Windows.Forms.GroupBox();
+            this.groupQueue = new System.Windows.Forms.GroupBox();
+            this.groupSearch = new System.Windows.Forms.GroupBox();
+            this.groupEtc = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabFunctions.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupSort.SuspendLayout();
+            this.groupList.SuspendLayout();
+            this.groupHash.SuspendLayout();
+            this.groupQueue.SuspendLayout();
+            this.groupSearch.SuspendLayout();
+            this.groupEtc.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -61,7 +73,7 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabFunctions);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
@@ -69,37 +81,25 @@
             this.tabControl1.Size = new System.Drawing.Size(908, 594);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tabFunctions
             // 
-            this.tabPage1.Controls.Add(this.btnBinarySearchTree);
-            this.tabPage1.Controls.Add(this.btnLinkedList);
-            this.tabPage1.Controls.Add(this.btnIterator);
-            this.tabPage1.Controls.Add(this.btnDoublyNode);
-            this.tabPage1.Controls.Add(this.btnDoublyLinkedList);
-            this.tabPage1.Controls.Add(this.btnCircularLinkedList);
-            this.tabPage1.Controls.Add(this.btnQuadraticHash);
-            this.tabPage1.Controls.Add(this.btnLinearHash);
-            this.tabPage1.Controls.Add(this.btnBucketHash);
-            this.tabPage1.Controls.Add(this.btnStack);
-            this.tabPage1.Controls.Add(this.btnPriorityQueue);
-            this.tabPage1.Controls.Add(this.btnQueue);
-            this.tabPage1.Controls.Add(this.btnSequentialSearch);
-            this.tabPage1.Controls.Add(this.btnMinMax);
-            this.tabPage1.Controls.Add(this.btnBinarySearch);
-            this.tabPage1.Controls.Add(this.btnSmartBubbleSort);
-            this.tabPage1.Controls.Add(this.btnInsertionSort);
-            this.tabPage1.Controls.Add(this.btnBubbleSort);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(900, 568);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Functions";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabFunctions.Controls.Add(this.groupSearch);
+            this.tabFunctions.Controls.Add(this.groupQueue);
+            this.tabFunctions.Controls.Add(this.groupHash);
+            this.tabFunctions.Controls.Add(this.groupList);
+            this.tabFunctions.Controls.Add(this.groupSort);
+            this.tabFunctions.Controls.Add(this.groupEtc);
+            this.tabFunctions.Location = new System.Drawing.Point(4, 22);
+            this.tabFunctions.Name = "tabFunctions";
+            this.tabFunctions.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFunctions.Size = new System.Drawing.Size(900, 568);
+            this.tabFunctions.TabIndex = 0;
+            this.tabFunctions.Text = "Functions";
+            this.tabFunctions.UseVisualStyleBackColor = true;
             // 
             // btnBinarySearchTree
             // 
-            this.btnBinarySearchTree.Location = new System.Drawing.Point(122, 247);
+            this.btnBinarySearchTree.Location = new System.Drawing.Point(7, 76);
             this.btnBinarySearchTree.Name = "btnBinarySearchTree";
             this.btnBinarySearchTree.Size = new System.Drawing.Size(109, 23);
             this.btnBinarySearchTree.TabIndex = 17;
@@ -109,7 +109,7 @@
             // 
             // btnLinkedList
             // 
-            this.btnLinkedList.Location = new System.Drawing.Point(122, 217);
+            this.btnLinkedList.Location = new System.Drawing.Point(6, 20);
             this.btnLinkedList.Name = "btnLinkedList";
             this.btnLinkedList.Size = new System.Drawing.Size(109, 23);
             this.btnLinkedList.TabIndex = 16;
@@ -119,7 +119,7 @@
             // 
             // btnIterator
             // 
-            this.btnIterator.Location = new System.Drawing.Point(122, 187);
+            this.btnIterator.Location = new System.Drawing.Point(121, 19);
             this.btnIterator.Name = "btnIterator";
             this.btnIterator.Size = new System.Drawing.Size(109, 23);
             this.btnIterator.TabIndex = 15;
@@ -129,7 +129,7 @@
             // 
             // btnDoublyNode
             // 
-            this.btnDoublyNode.Location = new System.Drawing.Point(122, 157);
+            this.btnDoublyNode.Location = new System.Drawing.Point(6, 48);
             this.btnDoublyNode.Name = "btnDoublyNode";
             this.btnDoublyNode.Size = new System.Drawing.Size(109, 23);
             this.btnDoublyNode.TabIndex = 14;
@@ -139,7 +139,7 @@
             // 
             // btnDoublyLinkedList
             // 
-            this.btnDoublyLinkedList.Location = new System.Drawing.Point(122, 127);
+            this.btnDoublyLinkedList.Location = new System.Drawing.Point(6, 49);
             this.btnDoublyLinkedList.Name = "btnDoublyLinkedList";
             this.btnDoublyLinkedList.Size = new System.Drawing.Size(109, 23);
             this.btnDoublyLinkedList.TabIndex = 13;
@@ -149,7 +149,7 @@
             // 
             // btnCircularLinkedList
             // 
-            this.btnCircularLinkedList.Location = new System.Drawing.Point(122, 97);
+            this.btnCircularLinkedList.Location = new System.Drawing.Point(6, 77);
             this.btnCircularLinkedList.Name = "btnCircularLinkedList";
             this.btnCircularLinkedList.Size = new System.Drawing.Size(109, 23);
             this.btnCircularLinkedList.TabIndex = 12;
@@ -159,7 +159,7 @@
             // 
             // btnQuadraticHash
             // 
-            this.btnQuadraticHash.Location = new System.Drawing.Point(122, 67);
+            this.btnQuadraticHash.Location = new System.Drawing.Point(6, 77);
             this.btnQuadraticHash.Name = "btnQuadraticHash";
             this.btnQuadraticHash.Size = new System.Drawing.Size(109, 23);
             this.btnQuadraticHash.TabIndex = 11;
@@ -169,7 +169,7 @@
             // 
             // btnLinearHash
             // 
-            this.btnLinearHash.Location = new System.Drawing.Point(122, 37);
+            this.btnLinearHash.Location = new System.Drawing.Point(6, 19);
             this.btnLinearHash.Name = "btnLinearHash";
             this.btnLinearHash.Size = new System.Drawing.Size(109, 23);
             this.btnLinearHash.TabIndex = 10;
@@ -179,7 +179,7 @@
             // 
             // btnBucketHash
             // 
-            this.btnBucketHash.Location = new System.Drawing.Point(122, 7);
+            this.btnBucketHash.Location = new System.Drawing.Point(6, 48);
             this.btnBucketHash.Name = "btnBucketHash";
             this.btnBucketHash.Size = new System.Drawing.Size(109, 23);
             this.btnBucketHash.TabIndex = 9;
@@ -189,7 +189,7 @@
             // 
             // btnStack
             // 
-            this.btnStack.Location = new System.Drawing.Point(7, 246);
+            this.btnStack.Location = new System.Drawing.Point(6, 77);
             this.btnStack.Name = "btnStack";
             this.btnStack.Size = new System.Drawing.Size(109, 23);
             this.btnStack.TabIndex = 8;
@@ -199,7 +199,7 @@
             // 
             // btnPriorityQueue
             // 
-            this.btnPriorityQueue.Location = new System.Drawing.Point(7, 216);
+            this.btnPriorityQueue.Location = new System.Drawing.Point(6, 48);
             this.btnPriorityQueue.Name = "btnPriorityQueue";
             this.btnPriorityQueue.Size = new System.Drawing.Size(109, 23);
             this.btnPriorityQueue.TabIndex = 7;
@@ -209,7 +209,7 @@
             // 
             // btnQueue
             // 
-            this.btnQueue.Location = new System.Drawing.Point(7, 187);
+            this.btnQueue.Location = new System.Drawing.Point(6, 19);
             this.btnQueue.Name = "btnQueue";
             this.btnQueue.Size = new System.Drawing.Size(109, 23);
             this.btnQueue.TabIndex = 6;
@@ -219,7 +219,7 @@
             // 
             // btnSequentialSearch
             // 
-            this.btnSequentialSearch.Location = new System.Drawing.Point(7, 157);
+            this.btnSequentialSearch.Location = new System.Drawing.Point(7, 19);
             this.btnSequentialSearch.Name = "btnSequentialSearch";
             this.btnSequentialSearch.Size = new System.Drawing.Size(109, 23);
             this.btnSequentialSearch.TabIndex = 5;
@@ -229,7 +229,7 @@
             // 
             // btnMinMax
             // 
-            this.btnMinMax.Location = new System.Drawing.Point(7, 127);
+            this.btnMinMax.Location = new System.Drawing.Point(6, 19);
             this.btnMinMax.Name = "btnMinMax";
             this.btnMinMax.Size = new System.Drawing.Size(109, 23);
             this.btnMinMax.TabIndex = 4;
@@ -239,7 +239,7 @@
             // 
             // btnBinarySearch
             // 
-            this.btnBinarySearch.Location = new System.Drawing.Point(7, 97);
+            this.btnBinarySearch.Location = new System.Drawing.Point(7, 48);
             this.btnBinarySearch.Name = "btnBinarySearch";
             this.btnBinarySearch.Size = new System.Drawing.Size(109, 23);
             this.btnBinarySearch.TabIndex = 3;
@@ -249,7 +249,7 @@
             // 
             // btnSmartBubbleSort
             // 
-            this.btnSmartBubbleSort.Location = new System.Drawing.Point(7, 67);
+            this.btnSmartBubbleSort.Location = new System.Drawing.Point(6, 45);
             this.btnSmartBubbleSort.Name = "btnSmartBubbleSort";
             this.btnSmartBubbleSort.Size = new System.Drawing.Size(109, 23);
             this.btnSmartBubbleSort.TabIndex = 2;
@@ -259,7 +259,7 @@
             // 
             // btnInsertionSort
             // 
-            this.btnInsertionSort.Location = new System.Drawing.Point(7, 37);
+            this.btnInsertionSort.Location = new System.Drawing.Point(6, 71);
             this.btnInsertionSort.Name = "btnInsertionSort";
             this.btnInsertionSort.Size = new System.Drawing.Size(109, 23);
             this.btnInsertionSort.TabIndex = 1;
@@ -269,7 +269,7 @@
             // 
             // btnBubbleSort
             // 
-            this.btnBubbleSort.Location = new System.Drawing.Point(7, 7);
+            this.btnBubbleSort.Location = new System.Drawing.Point(6, 19);
             this.btnBubbleSort.Name = "btnBubbleSort";
             this.btnBubbleSort.Size = new System.Drawing.Size(109, 23);
             this.btnBubbleSort.TabIndex = 0;
@@ -319,6 +319,78 @@
             this.txtConsole.Size = new System.Drawing.Size(887, 526);
             this.txtConsole.TabIndex = 0;
             // 
+            // groupSort
+            // 
+            this.groupSort.Controls.Add(this.btnBubbleSort);
+            this.groupSort.Controls.Add(this.btnInsertionSort);
+            this.groupSort.Controls.Add(this.btnSmartBubbleSort);
+            this.groupSort.Location = new System.Drawing.Point(6, 6);
+            this.groupSort.Name = "groupSort";
+            this.groupSort.Size = new System.Drawing.Size(200, 113);
+            this.groupSort.TabIndex = 18;
+            this.groupSort.TabStop = false;
+            this.groupSort.Text = "Sort";
+            // 
+            // groupList
+            // 
+            this.groupList.Controls.Add(this.btnCircularLinkedList);
+            this.groupList.Controls.Add(this.btnDoublyLinkedList);
+            this.groupList.Controls.Add(this.btnLinkedList);
+            this.groupList.Location = new System.Drawing.Point(6, 125);
+            this.groupList.Name = "groupList";
+            this.groupList.Size = new System.Drawing.Size(200, 114);
+            this.groupList.TabIndex = 19;
+            this.groupList.TabStop = false;
+            this.groupList.Text = "List";
+            // 
+            // groupHash
+            // 
+            this.groupHash.Controls.Add(this.btnLinearHash);
+            this.groupHash.Controls.Add(this.btnBucketHash);
+            this.groupHash.Controls.Add(this.btnQuadraticHash);
+            this.groupHash.Location = new System.Drawing.Point(6, 245);
+            this.groupHash.Name = "groupHash";
+            this.groupHash.Size = new System.Drawing.Size(200, 111);
+            this.groupHash.TabIndex = 20;
+            this.groupHash.TabStop = false;
+            this.groupHash.Text = "Hash";
+            // 
+            // groupQueue
+            // 
+            this.groupQueue.Controls.Add(this.btnQueue);
+            this.groupQueue.Controls.Add(this.btnPriorityQueue);
+            this.groupQueue.Location = new System.Drawing.Point(213, 6);
+            this.groupQueue.Name = "groupQueue";
+            this.groupQueue.Size = new System.Drawing.Size(253, 113);
+            this.groupQueue.TabIndex = 21;
+            this.groupQueue.TabStop = false;
+            this.groupQueue.Text = "Queue";
+            // 
+            // groupSearch
+            // 
+            this.groupSearch.Controls.Add(this.btnSequentialSearch);
+            this.groupSearch.Controls.Add(this.btnBinarySearch);
+            this.groupSearch.Controls.Add(this.btnBinarySearchTree);
+            this.groupSearch.Location = new System.Drawing.Point(212, 126);
+            this.groupSearch.Name = "groupSearch";
+            this.groupSearch.Size = new System.Drawing.Size(254, 113);
+            this.groupSearch.TabIndex = 22;
+            this.groupSearch.TabStop = false;
+            this.groupSearch.Text = "Search";
+            // 
+            // groupEtc
+            // 
+            this.groupEtc.Controls.Add(this.btnMinMax);
+            this.groupEtc.Controls.Add(this.btnDoublyNode);
+            this.groupEtc.Controls.Add(this.btnStack);
+            this.groupEtc.Controls.Add(this.btnIterator);
+            this.groupEtc.Location = new System.Drawing.Point(219, 245);
+            this.groupEtc.Name = "groupEtc";
+            this.groupEtc.Size = new System.Drawing.Size(247, 111);
+            this.groupEtc.TabIndex = 23;
+            this.groupEtc.TabStop = false;
+            this.groupEtc.Text = "Etc";
+            // 
             // MainProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,12 +398,18 @@
             this.ClientSize = new System.Drawing.Size(932, 618);
             this.Controls.Add(this.tabControl1);
             this.Name = "MainProgram";
-            this.Text = "MainProgram";
+            this.Text = "List";
             this.Load += new System.EventHandler(this.MainProgram_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabFunctions.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupSort.ResumeLayout(false);
+            this.groupList.ResumeLayout(false);
+            this.groupHash.ResumeLayout(false);
+            this.groupQueue.ResumeLayout(false);
+            this.groupSearch.ResumeLayout(false);
+            this.groupEtc.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -339,7 +417,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabFunctions;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox txtConsole;
         private System.Windows.Forms.Button btnSmartBubbleSort;
@@ -361,5 +439,11 @@
         private System.Windows.Forms.Button btnSequentialSearch;
         private System.Windows.Forms.Button btnMinMax;
         private System.Windows.Forms.Button btnBinarySearch;
+        private System.Windows.Forms.GroupBox groupList;
+        private System.Windows.Forms.GroupBox groupSort;
+        private System.Windows.Forms.GroupBox groupQueue;
+        private System.Windows.Forms.GroupBox groupHash;
+        private System.Windows.Forms.GroupBox groupSearch;
+        private System.Windows.Forms.GroupBox groupEtc;
     }
 }
