@@ -125,6 +125,7 @@
             this.btnIterator.TabIndex = 15;
             this.btnIterator.Text = "Iterator";
             this.btnIterator.UseVisualStyleBackColor = true;
+            this.btnIterator.Click += new System.EventHandler(this.btnIterator_Click);
             // 
             // btnDoublyNode
             // 

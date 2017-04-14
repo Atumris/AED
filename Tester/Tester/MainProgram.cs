@@ -312,9 +312,18 @@ namespace Tester
             action(linkedList);
         }
 
+
+        private void doublyNode()
+        {
+            Deck<int> deck = new Deck<int>();
+            for (int i = 1; i < randomNumberArray.Length; i++)
+            {
+                deck.AddLast(randomNumberArray[i - 1]);
+            }
+        }
         private void btnDoublyNode_Click(object sender, EventArgs e)
         {
-            
+            action(doublyNode);
         }
 
         /// <summary>
@@ -330,5 +339,18 @@ namespace Tester
             txtConsole.Text += text.Replace("..", "\r\n");
         }
 
+        private void iterator()
+        {
+            MainDLL.Stack<int> stack = new MainDLL.Stack<int>();
+            for (int i = 1; i < randomNumberArray.Length; i++)
+            {
+                stack.Push(randomNumberArray[i - 1]);
+            }
+        }
+
+        private void btnIterator_Click(object sender, EventArgs e)
+        {
+            action(iterator);
+        }
     }
 }
