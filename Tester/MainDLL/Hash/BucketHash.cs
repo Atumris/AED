@@ -22,7 +22,7 @@ namespace MainDLL
     {
         int length;
         Node<T, U>[] buckets;
-        IEqualityComparer<T> iec;
+        IEqualityComparer<int> iec;
         // hashtable method, takes int lenght
         public HashTable(int length)
         {
@@ -50,8 +50,12 @@ namespace MainDLL
         // returns hashCode
         private int GetHashCode(T key)
         {
-            int hashCode = iec.GetHashCode(key);
+
+            int hashCode = 0;
+            hashCode = key.GetHashCode();
+            
             return hashCode;
+            
         }
 
         // insert key value pair into bucketlist

@@ -256,7 +256,7 @@ namespace Tester
 
         private void bucketHash()
         {
-            var table = new HashTable<int, int>(5);
+            var table = new HashTable<int, int>(100);
             for (int i = 1; i < randomNumberArray.Length; i++)
             {
                 table.Insert(i,randomNumberArray[i-1]);
