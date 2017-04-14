@@ -2,7 +2,7 @@
 
 namespace MainDLL.Sort
 {
-    class SmartBubbleSort<T> where T : IComparable
+    public class SmartBubbleSort<T> where T : IComparable
     {
         /// <summary>
         /// Bubblesort sorts the array with lowest value first
