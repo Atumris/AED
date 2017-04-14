@@ -227,13 +227,11 @@ namespace Tester
 
         private void Stacktest_btn_Click(object sender, EventArgs e)
         {
-            Stack<int> stack = new Stack<int>();
+            MainDLL.Collection.Stack<int> stack = new MainDLL.Collection.Stack<int>();
             for(var i = 0; i <= 10; i++)
             {
                 stack.push(i);
             }
-            Console.WriteLine(stack.count);
-            Console.WriteLine(stack.peek());
         }
 
         private void BtnLinearHash_Click(object sender, EventArgs e)

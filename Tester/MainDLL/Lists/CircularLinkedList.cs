@@ -47,7 +47,7 @@ namespace MainDLL.Collection
                 Node<T> current = _head;
                 Node<T> previous = null;
                 // as long as there is an next node this loop will continue and adds it to the last node
-                while (current.Next != null)
+                while (current.Next != null && current.Next != _head)
                 {
                     current = current.Next;
                     previous = current;
