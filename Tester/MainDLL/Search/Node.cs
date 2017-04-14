@@ -18,7 +18,7 @@ namespace MainDLL.Search
         /// </summary>
         public void DisplayNode()
         {
-            Console.Write(Data + " ");
+            //Console.Write(Data + " ");
         }
     }
 }

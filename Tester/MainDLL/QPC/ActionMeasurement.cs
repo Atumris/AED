@@ -59,6 +59,7 @@ namespace MainDLL.QPC
         private void MeasureAction(Action act)
         {
             QPC t = new QPC();
+            
             lock (act)
             {
                 t.Start();

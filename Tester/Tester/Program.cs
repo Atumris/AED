@@ -16,6 +16,7 @@ namespace Tester
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            System.Diagnostics.Process.GetCurrentProcess().ProcessorAffinity = (System.IntPtr)2;
             Application.Run(new MainProgram());
         }
     }

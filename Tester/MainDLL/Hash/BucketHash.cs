@@ -37,13 +37,10 @@ namespace MainDLL
             for (int bucket = 0; bucket < buckets.Length; bucket++)
             {
                 Node<T, U> current = buckets[bucket];
-                Console.Write(bucket + ":");
                 while (current != null)
                 {
-                    Console.Write("[" + current.key + "," + current.value + "]");
                     current = current.next;
                 }
-                Console.WriteLine();
             }
         }
 

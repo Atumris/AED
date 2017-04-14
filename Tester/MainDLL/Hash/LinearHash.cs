@@ -50,7 +50,6 @@ namespace MainDLL.Hash
         {
             if (!CheckOpenSpace())//if no open spaces available
             {
-                Console.WriteLine("table is at full capacity!");
                 return;
             }
             int hash = (key % MaxSize);

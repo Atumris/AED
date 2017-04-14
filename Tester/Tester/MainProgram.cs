@@ -1,6 +1,7 @@
 ﻿using MainDLL.QPC;
 using System;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using MainDLL;
 using MainDLL.Collection;
@@ -434,6 +435,7 @@ namespace Tester
             DialogResult dialogResult = MessageBox.Show("This can freeze your computer. Are you sure?", "Deathwish", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+                Thread.Sleep(1000);
                 tabControl.SelectTab(1);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"BubbleSort Test");
