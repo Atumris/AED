@@ -421,6 +421,10 @@ namespace Tester
 
         private void btnIterator_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Iterator");
+            WriteToConsole(@"===========================");
+
             action(iterator);
         }
     }
