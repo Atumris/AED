@@ -557,7 +557,7 @@ namespace Tester
         {
             if (txtConsole.Text.Length > 0)
             {
-                txtConsole.Text += @"\r\n";
+                txtConsole.Text += "\r\n";
             }
             txtConsole.Text += text.Replace("..", "\r\n");
         }

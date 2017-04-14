@@ -30,7 +30,6 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabFunctions = new System.Windows.Forms.TabPage();
-            this.btnTestAll = new System.Windows.Forms.Button();
             this.groupSearch = new System.Windows.Forms.GroupBox();
             this.btnSequentialSearch = new System.Windows.Forms.Button();
             this.btnBinarySearch = new System.Windows.Forms.Button();
@@ -55,10 +54,11 @@
             this.btnDoublyNode = new System.Windows.Forms.Button();
             this.btnStack = new System.Windows.Forms.Button();
             this.btnIterator = new System.Windows.Forms.Button();
+            this.groupDeathWish = new System.Windows.Forms.GroupBox();
+            this.btnTestAll = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnClearConsole = new System.Windows.Forms.Button();
             this.txtConsole = new System.Windows.Forms.TextBox();
-            this.groupDeathWish = new System.Windows.Forms.GroupBox();
             this.tabControl.SuspendLayout();
             this.tabFunctions.SuspendLayout();
             this.groupSearch.SuspendLayout();
@@ -67,8 +67,8 @@
             this.groupList.SuspendLayout();
             this.groupSort.SuspendLayout();
             this.groupEtc.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.groupDeathWish.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -100,16 +100,6 @@
             this.tabFunctions.TabIndex = 0;
             this.tabFunctions.Text = "Functions";
             this.tabFunctions.UseVisualStyleBackColor = true;
-            // 
-            // btnTestAll
-            // 
-            this.btnTestAll.Location = new System.Drawing.Point(29, 38);
-            this.btnTestAll.Name = "btnTestAll";
-            this.btnTestAll.Size = new System.Drawing.Size(150, 41);
-            this.btnTestAll.TabIndex = 24;
-            this.btnTestAll.Text = "Test all!";
-            this.btnTestAll.UseVisualStyleBackColor = true;
-            this.btnTestAll.Click += new System.EventHandler(this.btnTestAll_Click);
             // 
             // groupSearch
             // 
@@ -363,6 +353,26 @@
             this.btnIterator.UseVisualStyleBackColor = true;
             this.btnIterator.Click += new System.EventHandler(this.btnIterator_Click);
             // 
+            // groupDeathWish
+            // 
+            this.groupDeathWish.Controls.Add(this.btnTestAll);
+            this.groupDeathWish.Location = new System.Drawing.Point(583, 126);
+            this.groupDeathWish.Name = "groupDeathWish";
+            this.groupDeathWish.Size = new System.Drawing.Size(200, 100);
+            this.groupDeathWish.TabIndex = 25;
+            this.groupDeathWish.TabStop = false;
+            this.groupDeathWish.Text = "Test all functions";
+            // 
+            // btnTestAll
+            // 
+            this.btnTestAll.Location = new System.Drawing.Point(29, 38);
+            this.btnTestAll.Name = "btnTestAll";
+            this.btnTestAll.Size = new System.Drawing.Size(150, 41);
+            this.btnTestAll.TabIndex = 24;
+            this.btnTestAll.Text = "Test all!";
+            this.btnTestAll.UseVisualStyleBackColor = true;
+            this.btnTestAll.Click += new System.EventHandler(this.btnTestAll_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.btnClearConsole);
@@ -405,16 +415,6 @@
             this.txtConsole.Size = new System.Drawing.Size(887, 526);
             this.txtConsole.TabIndex = 0;
             // 
-            // groupDeathWish
-            // 
-            this.groupDeathWish.Controls.Add(this.btnTestAll);
-            this.groupDeathWish.Location = new System.Drawing.Point(583, 126);
-            this.groupDeathWish.Name = "groupDeathWish";
-            this.groupDeathWish.Size = new System.Drawing.Size(200, 100);
-            this.groupDeathWish.TabIndex = 25;
-            this.groupDeathWish.TabStop = false;
-            this.groupDeathWish.Text = "Test all functions";
-            // 
             // MainProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,7 +422,7 @@
             this.ClientSize = new System.Drawing.Size(932, 618);
             this.Controls.Add(this.tabControl);
             this.Name = "MainProgram";
-            this.Text = "List";
+            this.Text = "AED Tester";
             this.Load += new System.EventHandler(this.MainProgram_Load);
             this.tabControl.ResumeLayout(false);
             this.tabFunctions.ResumeLayout(false);
@@ -432,9 +432,9 @@
             this.groupList.ResumeLayout(false);
             this.groupSort.ResumeLayout(false);
             this.groupEtc.ResumeLayout(false);
+            this.groupDeathWish.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.groupDeathWish.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
