@@ -339,22 +339,33 @@ namespace Tester
             Action(InsertionSort);
         }
 
-        private void smartBubbleSort()
+        /// <summary>
+        /// Smart Bubble Sort test
+        /// </summary>
+        private void SmartBubbleSort()
         {
             SmartBubbleSort<int> sbb = new SmartBubbleSort<int>();
             sbb.SmartBubble(randomNumberArray);
         }
 
+        /// <summary>
+        /// Smart Bubble Sort test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSmartBubbleSort_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Smart Bubblesort Test");
             WriteToConsole(@"===========================");
 
-            action(smartBubbleSort);
+            action(SmartBubbleSort);
         }
 
-        private void queue()
+        /// <summary>
+        /// Queue test
+        /// </summary>
+        private void Queue()
         {
             var test = new MainDLL.Collection.Queue<int>();
             test.EnQueue(0);
@@ -369,16 +380,25 @@ namespace Tester
             test.EnQueue(82);
             test.EnQueue(16);
         }
+
+        /// <summary>
+        /// Queue test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnQueue_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Queue Test");
             WriteToConsole(@"===========================");
 
-            action(queue);
+            action(Queue);
         }
 
-        private void bucketHash()
+        /// <summary>
+        /// Bucket hash test
+        /// </summary>
+        private void BucketHash()
         {
             var table = new HashTable<int, int>(100);
             for (int i = 1; i < randomNumberArray.Length; i++)
@@ -387,16 +407,23 @@ namespace Tester
             }
         }
 
-
+        /// <summary>
+        /// Bucket hash test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBucketHash_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Bucket Hash Test");
             WriteToConsole(@"===========================");
 
-            action(bucketHash);
+            action(BucketHash);
         }
 
+        /// <summary>
+        /// Quadratic hash test
+        /// </summary>
         private void QuadraticHash()
         {
             var table = new HashTable<int, int>(100);
@@ -405,6 +432,11 @@ namespace Tester
                 table.InsertQuadratic(i, randomNumberArray[i - 1]);
             }
         }
+        /// <summary>
+        /// Quadratic hash test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnQuadraticHash_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
@@ -414,7 +446,10 @@ namespace Tester
             action(QuadraticHash);
         }
 
-        private void circularLinkedList()
+        /// <summary>
+        /// Circular linked list test
+        /// </summary>
+        private void CircularLinkedList()
         {
             CircularLinkedList<int> cll = new CircularLinkedList<int>();
             for (int i = 1; i < randomNumberArray.Length; i++)
@@ -422,15 +457,25 @@ namespace Tester
                 cll.Add(randomNumberArray[i - 1]);
             }
         }
+
+        /// <summary>
+        /// Circular linked list test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCircularLinkedList_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Circular Linked List test");
             WriteToConsole(@"===========================");
 
-            action(circularLinkedList);
+            action(CircularLinkedList);
         }
-        private void doublyLinkedList()
+
+        /// <summary>
+        /// Doubly linked test
+        /// </summary>
+        private void DoublyLinkedList()
         {
             DoublyLinkedList<int> cll = new DoublyLinkedList<int>();
             for (int i = 1; i < randomNumberArray.Length; i++)
@@ -438,34 +483,51 @@ namespace Tester
                 cll.Add(randomNumberArray[i - 1]);
             }
         }
+
+        /// <summary>
+        /// Doubly linked List test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDoublyLinkedList_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Doubly List Test");
             WriteToConsole(@"===========================");
 
-            action(doublyLinkedList);
+            action(DoublyLinkedList);
         }
 
-        private void linkedList()
+        /// <summary>
+        /// Linked list test
+        /// </summary>
+        private void LinkedList()
         {
-            MainDLL.Collection.LinkedList<int> cll = new MainDLL.Collection.LinkedList<int>();
+            var cll = new LinkedList<int>();
             for (int i = 1; i < randomNumberArray.Length; i++)
             {
                 cll.Add(randomNumberArray[i - 1]);
             }
         }
+
+        /// <summary>
+        /// Linked list test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLinkedList_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Linked List Test");
             WriteToConsole(@"===========================");
 
-            action(linkedList);
+            action(LinkedList);
         }
 
-
-        private void doublyNode()
+        /// <summary>
+        /// Doubly node test
+        /// </summary>
+        private void DoublyNode()
         {
             Deck<int> deck = new Deck<int>();
             for (int i = 1; i < randomNumberArray.Length; i++)
@@ -473,29 +535,37 @@ namespace Tester
                 deck.AddLast(randomNumberArray[i - 1]);
             }
         }
+        /// <summary>
+        /// Doubly Node test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDoublyNode_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Doubly Node Test");
             WriteToConsole(@"===========================");
 
-            action(doublyNode);
+            action(DoublyNode);
         }
 
         /// <summary>
         /// Writes output to the console tab, and adds a new line when a double dot is found
         /// </summary>
         /// <param name="text"></param>
-        public void WriteToConsole(string text)
+        private void WriteToConsole(string text)
         {
             if (txtConsole.Text.Length > 0)
             {
-                txtConsole.Text += "\r\n";
+                txtConsole.Text += @"\r\n";
             }
             txtConsole.Text += text.Replace("..", "\r\n");
         }
 
-        private void iterator()
+        /// <summary>
+        /// Iterator test
+        /// </summary>
+        private void Iterator()
         {
             MainDLL.Stack<int> stack = new MainDLL.Stack<int>();
             for (int i = 1; i < randomNumberArray.Length; i++)
@@ -504,19 +574,30 @@ namespace Tester
             }
         }
 
+        /// <summary>
+        /// Iterator test button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnIterator_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
             WriteToConsole(@"Iterator Test");
             WriteToConsole(@"===========================");
 
-            action(iterator);
+            action(Iterator);
         }
 
+        /// <summary>
+        /// Test all, this button tests all the functions
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTestAll_Click(object sender, EventArgs e)
         {
-            WriteToConsole("Please have patience, the system is working! ..This can take up to 5 minutes!");
-            DialogResult dialogResult = MessageBox.Show("This can freeze your computer. Are you sure?", "Deathwish", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show(@"This can freeze your computer. Are you sure?", @"Deathwish", MessageBoxButtons.YesNo);
+            txtConsole.Text = "";
+            MessageBox.Show(@"This could take a couple of minutes");
             if (dialogResult == DialogResult.Yes)
             {
                 Thread.Sleep(1000);
@@ -530,7 +611,7 @@ namespace Tester
                 WriteToConsole(@"Smart Bubblesort Test");
                 WriteToConsole(@"===========================");
 
-                action(smartBubbleSort);
+                action(SmartBubbleSort);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"InsertionSort Test");
                 WriteToConsole(@"===========================");
@@ -540,7 +621,7 @@ namespace Tester
                 WriteToConsole(@"Queue Test");
                 WriteToConsole(@"===========================");
 
-                action(queue);
+                action(Queue);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Priority Queue Test");
                 WriteToConsole(@"===========================");
@@ -550,17 +631,17 @@ namespace Tester
                 WriteToConsole(@"Linked List Test");
                 WriteToConsole(@"===========================");
 
-                action(linkedList);
+                action(LinkedList);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Doubly List Test");
                 WriteToConsole(@"===========================");
 
-                action(doublyLinkedList);
+                action(DoublyLinkedList);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Circular Linked List test");
                 WriteToConsole(@"===========================");
 
-                action(circularLinkedList);
+                action(CircularLinkedList);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Sequential Search Test");
                 WriteToConsole(@"===========================");
@@ -586,7 +667,7 @@ namespace Tester
                 WriteToConsole(@"Bucket Hash Test");
                 WriteToConsole(@"===========================");
 
-                action(bucketHash);
+                action(BucketHash);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Quadratic Hash Test");
                 WriteToConsole(@"===========================");
@@ -601,7 +682,7 @@ namespace Tester
                 WriteToConsole(@"Doubly Node Test");
                 WriteToConsole(@"===========================");
 
-                action(doublyNode);
+                action(DoublyNode);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Stack Test");
                 WriteToConsole(@"===========================");
@@ -611,14 +692,9 @@ namespace Tester
                 WriteToConsole(@"Iterator Test");
                 WriteToConsole(@"===========================");
 
-                action(iterator);
+                action(Iterator);
 
             }
-            else if (dialogResult == DialogResult.No)
-            {
-                txtConsole.Text = "";
-            }
-
         }
     }
 }

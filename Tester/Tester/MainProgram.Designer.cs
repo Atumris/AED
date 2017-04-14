@@ -30,6 +30,7 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabFunctions = new System.Windows.Forms.TabPage();
+            this.btnTestAll = new System.Windows.Forms.Button();
             this.groupSearch = new System.Windows.Forms.GroupBox();
             this.btnSequentialSearch = new System.Windows.Forms.Button();
             this.btnBinarySearch = new System.Windows.Forms.Button();
@@ -57,7 +58,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnClearConsole = new System.Windows.Forms.Button();
             this.txtConsole = new System.Windows.Forms.TextBox();
-            this.btnTestAll = new System.Windows.Forms.Button();
+            this.groupDeathWish = new System.Windows.Forms.GroupBox();
             this.tabControl.SuspendLayout();
             this.tabFunctions.SuspendLayout();
             this.groupSearch.SuspendLayout();
@@ -67,6 +68,7 @@
             this.groupSort.SuspendLayout();
             this.groupEtc.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupDeathWish.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -84,13 +86,13 @@
             // 
             // tabFunctions
             // 
-            this.tabFunctions.Controls.Add(this.btnTestAll);
             this.tabFunctions.Controls.Add(this.groupSearch);
             this.tabFunctions.Controls.Add(this.groupQueue);
             this.tabFunctions.Controls.Add(this.groupHash);
             this.tabFunctions.Controls.Add(this.groupList);
             this.tabFunctions.Controls.Add(this.groupSort);
             this.tabFunctions.Controls.Add(this.groupEtc);
+            this.tabFunctions.Controls.Add(this.groupDeathWish);
             this.tabFunctions.Location = new System.Drawing.Point(4, 22);
             this.tabFunctions.Name = "tabFunctions";
             this.tabFunctions.Padding = new System.Windows.Forms.Padding(3);
@@ -98,6 +100,16 @@
             this.tabFunctions.TabIndex = 0;
             this.tabFunctions.Text = "Functions";
             this.tabFunctions.UseVisualStyleBackColor = true;
+            // 
+            // btnTestAll
+            // 
+            this.btnTestAll.Location = new System.Drawing.Point(29, 38);
+            this.btnTestAll.Name = "btnTestAll";
+            this.btnTestAll.Size = new System.Drawing.Size(150, 41);
+            this.btnTestAll.TabIndex = 24;
+            this.btnTestAll.Text = "Test all!";
+            this.btnTestAll.UseVisualStyleBackColor = true;
+            this.btnTestAll.Click += new System.EventHandler(this.btnTestAll_Click);
             // 
             // groupSearch
             // 
@@ -393,15 +405,15 @@
             this.txtConsole.Size = new System.Drawing.Size(887, 526);
             this.txtConsole.TabIndex = 0;
             // 
-            // btnTestAll
+            // groupDeathWish
             // 
-            this.btnTestAll.Location = new System.Drawing.Point(473, 7);
-            this.btnTestAll.Name = "btnTestAll";
-            this.btnTestAll.Size = new System.Drawing.Size(298, 112);
-            this.btnTestAll.TabIndex = 24;
-            this.btnTestAll.Text = "Test all!";
-            this.btnTestAll.UseVisualStyleBackColor = true;
-            this.btnTestAll.Click += new System.EventHandler(this.btnTestAll_Click);
+            this.groupDeathWish.Controls.Add(this.btnTestAll);
+            this.groupDeathWish.Location = new System.Drawing.Point(583, 126);
+            this.groupDeathWish.Name = "groupDeathWish";
+            this.groupDeathWish.Size = new System.Drawing.Size(200, 100);
+            this.groupDeathWish.TabIndex = 25;
+            this.groupDeathWish.TabStop = false;
+            this.groupDeathWish.Text = "Test all functions";
             // 
             // MainProgram
             // 
@@ -422,6 +434,7 @@
             this.groupEtc.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupDeathWish.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -458,5 +471,6 @@
         private System.Windows.Forms.GroupBox groupSearch;
         private System.Windows.Forms.GroupBox groupEtc;
         private System.Windows.Forms.Button btnTestAll;
+        private System.Windows.Forms.GroupBox groupDeathWish;
     }
 }
