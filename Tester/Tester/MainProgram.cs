@@ -256,9 +256,66 @@ namespace Tester
 
         private void bucketHash()
         {
-            HashTable<int, int> table = new HashTable<int, int>(5);
+            var table = new HashTable<int, int>(5);
+            for (int i = 1; i < randomNumberArray.Length; i++)
+            {
+                table.Insert(i,randomNumberArray[i-1]);
+            }
         }
 
+
+        private void btnBucketHash_Click(object sender, EventArgs e)
+        {
+            action(bucketHash);
+        }
+
+        private void btnQuadraticHash_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void circularLinkedList()
+        {
+            CircularLinkedList<int> cll = new CircularLinkedList<int>();
+            for (int i = 1; i < randomNumberArray.Length; i++)
+            {
+                cll.Add(randomNumberArray[i - 1]);
+            }
+        }
+        private void btnCircularLinkedList_Click(object sender, EventArgs e)
+        {
+            action(circularLinkedList);
+        }
+        private void doublyLinkedList()
+        {
+            DoublyLinkedList<int> cll = new DoublyLinkedList<int>();
+            for (int i = 1; i < randomNumberArray.Length; i++)
+            {
+                cll.Add(randomNumberArray[i - 1]);
+            }
+        }
+        private void btnDoublyLinkedList_Click(object sender, EventArgs e)
+        {
+            action(doublyLinkedList);
+        }
+
+        private void linkedList()
+        {
+            MainDLL.Collection.LinkedList<int> cll = new MainDLL.Collection.LinkedList<int>();
+            for (int i = 1; i < randomNumberArray.Length; i++)
+            {
+                cll.Add(randomNumberArray[i - 1]);
+            }
+        }
+        private void btnLinkedList_Click(object sender, EventArgs e)
+        {
+            action(linkedList);
+        }
+
+        private void btnDoublyNode_Click(object sender, EventArgs e)
+        {
+            
+        }
 
         /// <summary>
         /// Writes output to the console tab, and adds a new line when a double dot is found
@@ -272,5 +329,6 @@ namespace Tester
             }
             txtConsole.Text += text.Replace("..", "\r\n");
         }
+
     }
 }

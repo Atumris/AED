@@ -115,6 +115,7 @@
             this.btnLinkedList.TabIndex = 16;
             this.btnLinkedList.Text = "LinkedList";
             this.btnLinkedList.UseVisualStyleBackColor = true;
+            this.btnLinkedList.Click += new System.EventHandler(this.btnLinkedList_Click);
             // 
             // btnIterator
             // 
@@ -133,6 +134,7 @@
             this.btnDoublyNode.TabIndex = 14;
             this.btnDoublyNode.Text = "Doubly Node";
             this.btnDoublyNode.UseVisualStyleBackColor = true;
+            this.btnDoublyNode.Click += new System.EventHandler(this.btnDoublyNode_Click);
             // 
             // btnDoublyLinkedList
             // 
@@ -142,6 +144,7 @@
             this.btnDoublyLinkedList.TabIndex = 13;
             this.btnDoublyLinkedList.Text = "Doubly Linked List";
             this.btnDoublyLinkedList.UseVisualStyleBackColor = true;
+            this.btnDoublyLinkedList.Click += new System.EventHandler(this.btnDoublyLinkedList_Click);
             // 
             // btnCircularLinkedList
             // 
@@ -151,6 +154,7 @@
             this.btnCircularLinkedList.TabIndex = 12;
             this.btnCircularLinkedList.Text = "Circular Linked List";
             this.btnCircularLinkedList.UseVisualStyleBackColor = true;
+            this.btnCircularLinkedList.Click += new System.EventHandler(this.btnCircularLinkedList_Click);
             // 
             // btnQuadraticHash
             // 
@@ -160,6 +164,7 @@
             this.btnQuadraticHash.TabIndex = 11;
             this.btnQuadraticHash.Text = "Quadratic Hash";
             this.btnQuadraticHash.UseVisualStyleBackColor = true;
+            this.btnQuadraticHash.Click += new System.EventHandler(this.btnQuadraticHash_Click);
             // 
             // btnLinearHash
             // 
@@ -179,6 +184,7 @@
             this.btnBucketHash.TabIndex = 9;
             this.btnBucketHash.Text = "Bucket Hash";
             this.btnBucketHash.UseVisualStyleBackColor = true;
+            this.btnBucketHash.Click += new System.EventHandler(this.btnBucketHash_Click);
             // 
             // btnStack
             // 
