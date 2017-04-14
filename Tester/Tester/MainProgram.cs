@@ -325,6 +325,8 @@ namespace Tester
             WriteToConsole(@"===========================");
             WriteToConsole(@"Quadratic Hash Test");
             WriteToConsole(@"===========================");
+
+            action(QuadraticHash);
         }
 
         private void circularLinkedList()
@@ -420,7 +422,7 @@ namespace Tester
         private void btnIterator_Click(object sender, EventArgs e)
         {
             WriteToConsole(@"===========================");
-            WriteToConsole(@"Iterator");
+            WriteToConsole(@"Iterator Test");
             WriteToConsole(@"===========================");
 
             action(iterator);
