@@ -52,10 +52,18 @@ namespace MainDLL
         private int GetHashCode(T key)
         {
             return key.GetHashCode();
+            
         }
 
         // insert key value pair into bucketlist
-        public void Insert(T key, U value)
+        public void Insert(T key, U value, int position)
+        {
+            //int bucket = GetHashCode(key);
+            buckets[position] = new Node<T, U>(key, value, buckets[position]);
+        }
+
+        // insert key value pair into bucketlist
+        public void InsertQuadratic(T key, U value)
         {
             int bucket = GetHashCode(key);
             buckets[bucket] = new Node<T, U>(key, value, buckets[bucket]);

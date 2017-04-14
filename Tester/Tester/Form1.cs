@@ -232,8 +232,6 @@ namespace Tester
             {
                 stack.push(i);
             }
-            Console.WriteLine(stack.count);
-            Console.WriteLine(stack.peek());
         }
 
         private void BtnLinearHash_Click(object sender, EventArgs e)
