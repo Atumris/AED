@@ -1,4 +1,19 @@
-﻿using MainDLL.QPC;
+﻿/*
+=================================================================================	
+  
+               Vak:	AD
+
+
+	Gemaakt door: 	Robbie Roeten, Henri Arends, Mirek Nalepa, Patrick Niewold
+			        Joey Pieters
+
+
+	    Docenten:	Jeroen Pijpker, Rob Smit
+
+=================================================================================
+ */
+
+using MainDLL.QPC;
 using System;
 using System.Linq;
 using System.Threading;

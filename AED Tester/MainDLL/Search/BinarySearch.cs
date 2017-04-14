@@ -1,8 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+=================================================================================	
+  
+               Vak:	AD
+
+
+	Gemaakt door: 	Robbie Roeten, Henri Arends, Mirek Nalepa, Patrick Niewold
+			        Joey Pieters
+
+
+	    Docenten:	Jeroen Pijpker, Rob Smit
+
+=================================================================================
+ */
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MainDLL.Search
 {

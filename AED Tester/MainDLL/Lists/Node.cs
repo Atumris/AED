@@ -1,8 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+=================================================================================	
+  
+               Vak:	AD
+
+
+	Gemaakt door: 	Robbie Roeten, Henri Arends, Mirek Nalepa, Patrick Niewold
+			        Joey Pieters
+
+
+	    Docenten:	Jeroen Pijpker, Rob Smit
+
+=================================================================================
+ */
+using System;
+
 
 namespace MainDLL.Lists
 {

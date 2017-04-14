@@ -1,4 +1,18 @@
-﻿using System;
+﻿/*
+=================================================================================	
+  
+               Vak:	AD
+
+
+	Gemaakt door: 	Robbie Roeten, Henri Arends, Mirek Nalepa, Patrick Niewold
+			        Joey Pieters
+
+
+	    Docenten:	Jeroen Pijpker, Rob Smit
+
+=================================================================================
+ */
+using System;
 
 namespace MainDLL.Sort
 {
