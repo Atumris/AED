@@ -42,9 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayList.cs" />
+    <Compile Include="DoublyNode.cs" />
     <Compile Include="Hash\BucketHash.cs" />
     <Compile Include="Hash\LinearHash.cs" />
     <Compile Include="HiPerfCounter.cs" />
+    <Compile Include="Iterator.cs" />
     <Compile Include="Lists\CircularLinkedList.cs" />
     <Compile Include="Lists\DoublyLinkedList.cs" />
     <Compile Include="Lists\LinkedList.cs" />

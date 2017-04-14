@@ -256,8 +256,21 @@ namespace Tester
 
         private void bucketHash()
         {
-            HashTable<int, int> table = new HashTable<int, int>();
+            HashTable<int, int> table = new HashTable<int, int>(5);
+        }
 
+
+        /// <summary>
+        /// Writes output to the console tab, and adds a new line when a double dot is found
+        /// </summary>
+        /// <param name="text"></param>
+        public void WriteToConsole(string text)
+        {
+            if (txtConsole.Text.Length > 0)
+            {
+                txtConsole.Text += "\r\n";
+            }
+            txtConsole.Text += text.Replace("..", "\r\n");
         }
     }
 }
