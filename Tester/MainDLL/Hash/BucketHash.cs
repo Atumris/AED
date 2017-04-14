@@ -22,7 +22,6 @@ namespace MainDLL
     {
         int length;
         Node<T, U>[] buckets;
-        IEqualityComparer<int> iec;
         // hashtable method, takes int lenght
         public HashTable(int length)
         {
@@ -59,7 +58,14 @@ namespace MainDLL
         }
 
         // insert key value pair into bucketlist
-        public void Insert(T key, U value)
+        public void Insert(T key, U value, int position)
+        {
+            //int bucket = GetHashCode(key);
+            buckets[position] = new Node<T, U>(key, value, buckets[position]);
+        }
+
+        // insert key value pair into bucketlist
+        public void InsertQuadratic(T key, U value)
         {
             int bucket = GetHashCode(key);
             buckets[bucket] = new Node<T, U>(key, value, buckets[bucket]);
