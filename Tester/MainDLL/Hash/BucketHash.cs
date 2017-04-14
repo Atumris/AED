@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace MainDLL
@@ -22,7 +23,7 @@ namespace MainDLL
     {
         int length;
         Node<T, U>[] buckets;
-        IEqualityComparer<T> iec;
+
         // hashtable method, takes int lenght
         public HashTable(int length)
         {
@@ -50,8 +51,7 @@ namespace MainDLL
         // returns hashCode
         private int GetHashCode(T key)
         {
-            int hashCode = iec.GetHashCode(key);
-            return hashCode;
+            return key.GetHashCode();
         }
 
         // insert key value pair into bucketlist

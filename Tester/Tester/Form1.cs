@@ -185,7 +185,7 @@ namespace Tester
             test.EnQueue(82, 1);
             test.EnQueue(16, 1);
 
-
+            
             Console.WriteLine(@"===========================");
             Console.WriteLine(@"Priority Queue Test");
             Console.WriteLine(@"Items: " + test.Length());
@@ -227,7 +227,7 @@ namespace Tester
 
         private void Stacktest_btn_Click(object sender, EventArgs e)
         {
-            Stack<int> stack = new Stack<int>();
+            MainDLL.Collection.Stack<int> stack = new MainDLL.Collection.Stack<int>();
             for(var i = 0; i <= 10; i++)
             {
                 stack.push(i);

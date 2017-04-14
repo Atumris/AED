@@ -21,22 +21,20 @@ namespace MainDLL.Sort
                 //loop while the list is not sorted
                 while (!isSorted)
                 {
-                    //set the state of the local variable to true to stop the loop in case the array is already sorted.
-                    isSorted = true;
                     //loop to get the first index
                     for (int i = 0; i < length; i++)
                     {
+                        //set the state of the local variable to true to stop the loop in case the array is already sorted.
+                        isSorted = false;
                         //loop to get second index
                         for (int j = 0; j < length - 1; j++)
                         {
                             //swap the indexes when the second is smaller than the first3
-
-                            var temp = arr[j];
-                            arr[j] = arr[j + i];
-                            arr[j + i] = temp;
+                            if (arr[j].CompareTo(arr[j + 1]) > 0)
+                                Swap(ref arr[j], ref arr[j + 1]);
                             //set the boolean to false so the loop continues untill it is sorted.
-                            isSorted = false;
-                        }
+                            isSorted = true;
+                        }   
                     }
                 }
             }
@@ -47,6 +45,18 @@ namespace MainDLL.Sort
             }
             //return sorted array
             return arr;
+        }
+
+        /// <summary>
+        /// Method to swap the indexes in the array.
+        /// </summary>
+        /// <param name="lhs"></param>
+        /// <param name="rhs"></param>
+        static void Swap(ref T lhs, ref T rhs)
+        {
+            var temp = lhs;
+            lhs = rhs;
+            rhs = temp;
         }
     }
 }

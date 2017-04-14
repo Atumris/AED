@@ -33,10 +33,10 @@ namespace Tester
             var result = actionMeasurement.MeasureMilliseconds(act);
 
             result = actionMeasurement.MeasureNanoseconds(act);
-            System.Console.WriteLine("MeasurenanoSeconds result: " + result);
+            WriteToConsole("MeasurenanoSeconds result: " + result + "..");
 
             result = massiveMeasurement.MeasureAverageMilliseconds(act, 1000);
-            System.Console.WriteLine("Average of 1000 tests in Milliseconds: " + result);
+            WriteToConsole("Average of 1000 tests in Milliseconds: " + result + "..");
         }
         private void btnClearConsole_Click(object sender, EventArgs e)
         {
@@ -61,6 +61,10 @@ namespace Tester
 
         private void btnPriorityQueue_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Priority Queue Test");
+            WriteToConsole(@"===========================");
+
             action(prioQue);
         }
 
@@ -85,6 +89,10 @@ namespace Tester
 
         private void btnBinarySearch_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Binairy Search test");
+            WriteToConsole(@"===========================");
+
             action(binSearch);
         }
 
@@ -99,6 +107,10 @@ namespace Tester
 
         private void btnSequentialSearch_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Sequential Search Test");
+            WriteToConsole(@"===========================");
+
             action(seqSearch);
         }
 
@@ -115,6 +127,10 @@ namespace Tester
 
         private void btnStack_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Stack Test");
+            WriteToConsole(@"===========================");
+
             action(stack);
         }
 
@@ -144,6 +160,11 @@ namespace Tester
 
         private void btnBinarySearchTree_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Binairy Search Tree Test");
+            WriteToConsole(@"===========================");
+
+
             action(binTreeSearch);
         }
 
@@ -156,6 +177,10 @@ namespace Tester
 
         private void btnLinearHash_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Linear Hash Test");
+            WriteToConsole(@"===========================");
+
             action(linearHash);
         }
 
@@ -188,6 +213,10 @@ namespace Tester
 
         private void btnMinMax_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Min Max Test");
+            WriteToConsole(@"===========================");
+
             action(minMax);
         }
 
@@ -198,6 +227,10 @@ namespace Tester
         }
         private void btnBubbleSort_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"BubbleSort Test");
+            WriteToConsole(@"===========================");
+
             action(bubbleSort);
         }
 
@@ -220,6 +253,10 @@ namespace Tester
 
         private void btnInsertionSort_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Insertionsort Test");
+            WriteToConsole(@"===========================");
+
             action(insertionSort);
         }
 
@@ -231,6 +268,10 @@ namespace Tester
 
         private void btnSmartBubbleSort_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Smart Bubblesort Test");
+            WriteToConsole(@"===========================");
+
             action(smartBubbleSort);
         }
 
@@ -251,6 +292,10 @@ namespace Tester
         }
         private void btnQueue_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Queue Test");
+            WriteToConsole(@"===========================");
+
             action(queue);
         }
 
@@ -266,12 +311,18 @@ namespace Tester
 
         private void btnBucketHash_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Bucket Hash Test");
+            WriteToConsole(@"===========================");
+
             action(bucketHash);
         }
 
         private void btnQuadraticHash_Click(object sender, EventArgs e)
         {
-            
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Quadratic Hash Test");
+            WriteToConsole(@"===========================");
         }
 
         private void circularLinkedList()
@@ -284,6 +335,10 @@ namespace Tester
         }
         private void btnCircularLinkedList_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Circular Linked List test");
+            WriteToConsole(@"===========================");
+
             action(circularLinkedList);
         }
         private void doublyLinkedList()
@@ -296,6 +351,10 @@ namespace Tester
         }
         private void btnDoublyLinkedList_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Doubly List Test");
+            WriteToConsole(@"===========================");
+
             action(doublyLinkedList);
         }
 
@@ -309,6 +368,10 @@ namespace Tester
         }
         private void btnLinkedList_Click(object sender, EventArgs e)
         {
+            WriteToConsole(@"===========================");
+            WriteToConsole(@"Linked List Test");
+            WriteToConsole(@"===========================");
+
             action(linkedList);
         }
 
