@@ -359,7 +359,7 @@ namespace Tester
             WriteToConsole(@"Smart Bubblesort Test");
             WriteToConsole(@"===========================");
 
-            action(SmartBubbleSort);
+            Action(SmartBubbleSort);
         }
 
         /// <summary>
@@ -392,7 +392,7 @@ namespace Tester
             WriteToConsole(@"Queue Test");
             WriteToConsole(@"===========================");
 
-            action(Queue);
+            Action(Queue);
         }
 
         /// <summary>
@@ -418,7 +418,7 @@ namespace Tester
             WriteToConsole(@"Bucket Hash Test");
             WriteToConsole(@"===========================");
 
-            action(BucketHash);
+            Action(BucketHash);
         }
 
         /// <summary>
@@ -443,7 +443,7 @@ namespace Tester
             WriteToConsole(@"Quadratic Hash Test");
             WriteToConsole(@"===========================");
 
-            action(QuadraticHash);
+            Action(QuadraticHash);
         }
 
         /// <summary>
@@ -469,7 +469,7 @@ namespace Tester
             WriteToConsole(@"Circular Linked List test");
             WriteToConsole(@"===========================");
 
-            action(CircularLinkedList);
+            Action(CircularLinkedList);
         }
 
         /// <summary>
@@ -495,7 +495,7 @@ namespace Tester
             WriteToConsole(@"Doubly List Test");
             WriteToConsole(@"===========================");
 
-            action(DoublyLinkedList);
+            Action(DoublyLinkedList);
         }
 
         /// <summary>
@@ -521,7 +521,7 @@ namespace Tester
             WriteToConsole(@"Linked List Test");
             WriteToConsole(@"===========================");
 
-            action(LinkedList);
+            Action(LinkedList);
         }
 
         /// <summary>
@@ -546,7 +546,7 @@ namespace Tester
             WriteToConsole(@"Doubly Node Test");
             WriteToConsole(@"===========================");
 
-            action(DoublyNode);
+            Action(DoublyNode);
         }
 
         /// <summary>
@@ -585,7 +585,7 @@ namespace Tester
             WriteToConsole(@"Iterator Test");
             WriteToConsole(@"===========================");
 
-            action(Iterator);
+            Action(Iterator);
         }
 
         /// <summary>
@@ -606,93 +606,92 @@ namespace Tester
                 WriteToConsole(@"BubbleSort Test");
                 WriteToConsole(@"===========================");
 
-                action(bubbleSort);
+                Action(BubbleSort);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Smart Bubblesort Test");
                 WriteToConsole(@"===========================");
 
-                action(SmartBubbleSort);
+                Action(SmartBubbleSort);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"InsertionSort Test");
                 WriteToConsole(@"===========================");
 
-                action(insertionSort);
+                Action(InsertionSort);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Queue Test");
                 WriteToConsole(@"===========================");
 
-                action(Queue);
+                Action(Queue);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Priority Queue Test");
                 WriteToConsole(@"===========================");
 
-                action(prioQue);
+                Action(PrioQue);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Linked List Test");
                 WriteToConsole(@"===========================");
 
-                action(LinkedList);
+                Action(LinkedList);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Doubly List Test");
                 WriteToConsole(@"===========================");
 
-                action(DoublyLinkedList);
+                Action(DoublyLinkedList);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Circular Linked List test");
                 WriteToConsole(@"===========================");
 
-                action(CircularLinkedList);
+                Action(CircularLinkedList);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Sequential Search Test");
                 WriteToConsole(@"===========================");
 
-                action(seqSearch);
+                Action(SeqSearch);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Binairy Search test");
                 WriteToConsole(@"===========================");
 
-                action(binSearch);
+                Action(BinSearch);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Binairy Search Tree Test");
                 WriteToConsole(@"===========================");
 
-
-                action(binTreeSearch);
+                Action(BinTreeSearch);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Linear Hash Test");
                 WriteToConsole(@"===========================");
 
-                action(linearHash);
+                Action(LinearHash);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Bucket Hash Test");
                 WriteToConsole(@"===========================");
 
-                action(BucketHash);
+                Action(BucketHash);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Quadratic Hash Test");
                 WriteToConsole(@"===========================");
 
-                action(QuadraticHash);
+                Action(QuadraticHash);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Min Max Test");
                 WriteToConsole(@"===========================");
 
-                action(minMax);
+                Action(MinMax);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Doubly Node Test");
                 WriteToConsole(@"===========================");
 
-                action(DoublyNode);
+                Action(DoublyNode);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Stack Test");
                 WriteToConsole(@"===========================");
 
-                action(stack);
+                Action(Stack);
                 WriteToConsole(@"===========================");
                 WriteToConsole(@"Iterator Test");
                 WriteToConsole(@"===========================");
 
-                action(Iterator);
+                Action(Iterator);
 
             }
         }
